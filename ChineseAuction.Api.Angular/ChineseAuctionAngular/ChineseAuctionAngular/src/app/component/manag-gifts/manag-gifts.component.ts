@@ -9,10 +9,10 @@ import { environment } from '../../../../environment';
 import { EditGiftComponent } from './edit-gift/edit-gift.component';
 import { DropdownModule } from 'primeng/dropdown';
 import { AddGiftComponent } from './add-gift/add-gift.component';
-
+import { DetailsBuyersComponent } from '../manag-gifts/details-buyers/details-buyers.component';
 @Component({
   selector: 'app-manag-gifts',
-  imports: [CommonModule, DropdownModule, EditGiftComponent , AddGiftComponent],
+  imports: [CommonModule, DropdownModule, EditGiftComponent , AddGiftComponent, DetailsBuyersComponent],
   templateUrl: './manag-gifts.component.html',
   styleUrl: './manag-gifts.component.scss'
 })
@@ -32,6 +32,7 @@ imageUrl = environment.apiUrl + '/images/gift/';
   giftSearchText = signal<string>('');
   donorSearchText = signal<string>('');
   purchaseSearchCount = signal<number | null>(null);
+  isBuyersModalVisible = signal<boolean>(false);
 
 onGiftAdded() {
   this.loadGifts(); 
@@ -46,21 +47,7 @@ ngOnChanges() {
       this.editForm = { ...this.gift }; 
     }
   }
-  // loadGifts(): void {
-  //   this.giftService.getAllGifts().subscribe({
-  //     next: (data) => {
-  //       const initializedGifts = data.map(g => {
-  //         const gift = new Gift(g);
-  //         gift.customerQuantity = 0;
-  //         return gift;
-  //       });
-  //       this.gifts.set(initializedGifts);
-  //     },
-  //     error: (err: any) => {
-  //       console.error('שגיאה בטעינת הנתונים', err);
-  //     }
-  //   });
-  // }
+
   loadGifts(): void {
   this.giftService.getAllGifts().subscribe({
     next: (data) => {
@@ -136,6 +123,45 @@ edit(gift: any): void {
     this.loadGifts(); // מרענן את הרשימה מה-DB
     this.isEditModalVisible.set(false); // מוודא שהחלון נסגר
   }
+// הוסף לפונקציות בתוך ה-class ManagGiftsComponent:
 
+onSortChange(event: Event) {
+  const value = (event.target as HTMLSelectElement).value;
+  
+  if (value === 'price') {
+    this.giftService.sortByPrice().subscribe({
+      next: (data) => {
+        this.gifts.set(data.map(g => new Gift(g)));
+        this.refreshPurchaseCounts(); // רענון מונה הרוכשים לאחר המיון
+      }
+    });
+  } else if (value === 'buyers') {
+    this.giftService.sortByAmountPeople().subscribe({
+      next: (data) => {
+        this.gifts.set(data.map(g => new Gift(g)));
+        this.refreshPurchaseCounts();
+      }
+    });
+  } else {
+    this.loadGifts(); // חזרה לסדר רגיל
+  }
+}
+
+// פונקציה תומכת לרענון מונים מבלי לטעון את כל הרשימה מחדש
+private refreshPurchaseCounts() {
+  this.gifts().forEach(gift => {
+    this.giftService.getParticipantsCount(gift.idGift).subscribe(count => {
+      gift.totalPurchases = count;
+    });
+  });
+}
+// הוסף ל-imports בראש הקובץ:
+
+// בתוך ה-class:
+
+viewBuyers(gift: Gift) {
+  this.selectedGift.set(gift);
+  this.isBuyersModalVisible.set(true);
+}
 }
 

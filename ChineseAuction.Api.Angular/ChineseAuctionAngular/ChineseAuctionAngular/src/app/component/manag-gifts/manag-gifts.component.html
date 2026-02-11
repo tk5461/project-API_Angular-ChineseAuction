@@ -2,107 +2,99 @@
   
   <div style="display: flex; gap: 15px; align-items: flex-end; justify-content: flex-start; margin-bottom: 35px; background: #fdf7ff; padding: 15px 25px; border-radius: 25px; border: 1px solid #f3e5f5; box-shadow: 0 2px 10px rgba(106, 27, 154, 0.03); flex-wrap: wrap;">
     
-    <div style="position: relative; width: 180px;">
-      <label style="display: block; font-size: 0.8em; color: #6a1b9a; margin-bottom: 6px; font-weight: bold; padding-right: 5px;">חפש מתנה:</label>
+    <div style="position: relative; width: 160px;">
+      <label style="display: block; font-size: 0.8em; color: #6a1b9a; margin-bottom: 6px; font-weight: bold;">חפש מתנה:</label>
       <div style="position: relative;">
         <input type="text" (input)="updateGiftSearch($event)" placeholder="הכל..." style="width: 100%; padding: 8px 30px 8px 10px; border-radius: 12px; border: 1.5px solid #e1bee7; outline: none; font-size: 0.9em;">
         <span style="position: absolute; right: 10px; top: 50%; transform: translateY(-50%); color: #6a1b9a;">🎁</span>
       </div>
     </div>
 
-    <div style="position: relative; width: 180px;">
-      <label style="display: block; font-size: 0.8em; color: #6a1b9a; margin-bottom: 6px; font-weight: bold; padding-right: 5px;">חפש תורם:</label>
+    <div style="position: relative; width: 160px;">
+      <label style="display: block; font-size: 0.8em; color: #6a1b9a; margin-bottom: 6px; font-weight: bold;">חפש תורם:</label>
       <div style="position: relative;">
         <input type="text" (input)="updateDonorSearch($event)" placeholder="הכל..." style="width: 100%; padding: 8px 30px 8px 10px; border-radius: 12px; border: 1.5px solid #e1bee7; outline: none; font-size: 0.9em;">
         <span style="position: absolute; right: 10px; top: 50%; transform: translateY(-50%); color: #6a1b9a;">👤</span>
       </div>
     </div>
 
-    <div style="position: relative; width: 150px;">
-      <label style="display: block; font-size: 0.8em; color: #6a1b9a; margin-bottom: 6px; font-weight: bold; padding-right: 5px;">מינימום רוכשים:</label>
-      <div style="position: relative;">
-        <input type="number" min="0" (input)="updatePurchaseSearch($event)" onkeypress="return event.charCode >= 48" placeholder="ללא סינון" style="width: 100%; padding: 8px 30px 8px 10px; border-radius: 12px; border: 1.5px solid #e1bee7; outline: none; font-size: 0.9em;">
-        <span style="position: absolute; right: 10px; top: 50%; transform: translateY(-50%); color: #6a1b9a;">👥</span>
+    <div style="position: relative; width: 160px;">
+      <label style="display: block; font-size: 0.8em; color: #6a1b9a; margin-bottom: 6px; font-weight: bold;">מיין לפי:</label>
+      <div style="position: relative; display: flex; align-items: center;">
+        <span style="position: absolute; right: 10px; color: #6a1b9a; z-index: 1; pointer-events: none;">📊</span>
+        <select (change)="onSortChange($event)" style="width: 100%; padding: 10px 35px 10px 30px; border-radius: 12px; border: 1.5px solid #e1bee7; appearance: none; background: white; cursor: pointer; color: #4a148c; font-size: 0.9em;">
+          <option value="" disabled selected hidden>בחר מיון...</option>
+          <option value="">ללא מיון</option>
+          <option value="price">💰 מחיר</option>
+          <option value="buyers">👥 כמות רוכשים</option>
+        </select>
+        <span style="position: absolute; left: 12px; color: #6a1b9a; pointer-events: none; font-size: 0.7em;">▼</span>
       </div>
     </div>
 
     <div style="flex-grow: 1;"></div>
 
-    <button (click)="isAddModalVisible.set(true)" style="background: #6a1b9a; color: white; border: none; padding: 10px 25px; border-radius: 50px; font-size: 1em; font-weight: bold; cursor: pointer; box-shadow: 0 4px 12px rgba(106, 27, 154, 0.25); transition: all 0.2s; height: 40px; display: flex; align-items: center; gap: 8px;">
+    <button (click)="isAddModalVisible.set(true)" style="background: #6a1b9a; color: white; border: none; padding: 10px 25px; border-radius: 50px; font-weight: bold; cursor: pointer; box-shadow: 0 4px 12px rgba(106, 27, 154, 0.25); height: 40px; display: flex; align-items: center; gap: 8px;">
       <span>+</span> הוספת מתנה
     </button>
   </div>
 
-  <div class="gifts-grid" style="display: flex; flex-wrap: wrap; gap: 25px; justify-content: flex-start;">
+  <div class="gifts-grid" style="display: flex; flex-wrap: wrap; gap: 25px;">
     @for (gift of filteredGifts(); track gift.idGift) {
-      <div class="gift-card" 
-           style="background: white; border-radius: 20px; width: calc(25% - 19px); min-width: 250px; box-shadow: 0 4px 15px rgba(0,0,0,0.06); overflow: hidden; display: flex; flex-direction: column; border: 1px solid #f3e5f5; height: 420px; transition: transform 0.3s; position: relative;"
-           onmouseover="this.style.transform='translateY(-5px)'"
-           onmouseout="this.style.transform='translateY(0)'">
+      <div class="gift-card" style="background: white; border-radius: 20px; width: calc(25% - 19px); min-width: 250px; box-shadow: 0 4px 15px rgba(0,0,0,0.06); border: 1px solid #f3e5f5; height: 430px; display: flex; flex-direction: column; position: relative;">
         
-        <div style="position: absolute; top: 12px; left: 12px; background: rgba(232, 245, 233, 0.9); color: #2e7d32; padding: 4px 10px; border-radius: 10px; font-size: 0.75em; font-weight: bold; border: 1px solid #c8e6c9; z-index: 1; backdrop-filter: blur(2px);">
+        <div style="position: absolute; top: 12px; left: 12px; background: rgba(232, 245, 233, 0.9); color: #2e7d32; padding: 4px 10px; border-radius: 10px; font-size: 0.75em; font-weight: bold;">
           👥 {{ gift.totalPurchases || 0 }} רוכשים
-        </div> 
+        </div>
 
-        <div style="width: 100%; height: 180px; background: #fff; display: flex; align-items: center; justify-content: center; border-bottom: 1px solid #f9f0fb; padding: 10px; box-sizing: border-box;">
-          @if (gift.image && gift.image !== 'string') {
-            <img [src]="imageUrl + gift.image" style="max-width: 100%; max-height: 100%; object-fit: contain;">
-          } @else {
-            <span style="font-size: 3.5em; opacity: 0.5;">🎁</span>
-          }
+        <div style="width: 100%; height: 180px; display: flex; align-items: center; justify-content: center; border-bottom: 1px solid #f9f0fb;">
+          <img *ngIf="gift.image" [src]="imageUrl + gift.image" style="max-width: 90%; max-height: 90%; object-fit: contain;">
         </div>
 
         <div style="padding: 15px; flex-grow: 1; display: flex; flex-direction: column; justify-content: space-between; text-align: center;">
-          <div>
-            <h3 style="margin: 0 0 5px 0; color: #4a148c; font-size: 1.1em; font-weight: 800;">{{ gift.name }}</h3>
-            <p style="margin: 0; font-size: 0.85em; color: #666;">
-              <span style="color: #9c27b0; font-weight: 600;">תורם:</span> {{ gift.donor?.firstName }} {{ gift.donor?.lastName }}
-            </p>
+          <h3 style="margin: 0; color: #4a148c; font-weight: 800;">{{ gift.name }}</h3>
+          <p style="color: #666; font-size: 0.85em;">תורם: {{ gift.donor?.firstName }} {{ gift.donor?.lastName }}</p>
+          
+          <div style="display: flex; justify-content: space-between; padding: 0 10px;">
+            <span style="background: #f8f0fb; color: #7b1fa2; padding: 2px 8px; border-radius: 8px; font-size: 0.8em;">{{ gift.category?.name || 'כללי' }}</span>
+            <span style="font-weight: 900; color: #2e7d32;">₪{{ gift.price }}</span>
           </div>
 
-          <div style="display: flex; justify-content: space-between; align-items: center; margin: 12px 0; padding: 0 5px;">
-            <span style="background: #f8f0fb; color: #7b1fa2; padding: 3px 8px; border-radius: 8px; font-size: 0.8em; font-weight: 600; border: 1px solid #e1bee7;">
-              {{ gift.category?.name || 'כללי' }}
-            </span>
-            <span style="font-weight: 900; color: #2e7d32; font-size: 1.15em;">₪{{ gift.price }}</span>
-          </div>
-
-          <div style="display: flex; justify-content: center; align-items: center; min-height: 45px; background: #fafafa; padding: 5px; border-radius: 15px; border: 1px solid #f0f0f0;">
-            
+          <div style="margin-top: 15px; padding: 10px; background: #fafafa; border-radius: 15px;">
             @if (!gift.totalPurchases || gift.totalPurchases === 0) {
-              <div style="display: flex; gap: 20px;">
-                <button (click)="delete(gift)" style="border: none; background: none; font-size: 1.3em; cursor: pointer; transition: transform 0.2s;" onmouseover="this.style.transform='scale(1.2)'" onmouseout="this.style.transform='scale(1)'" title="מחיקה">🗑️</button>
-                <button (click)="edit(gift)" style="border: none; background: none; font-size: 1.3em; cursor: pointer; transition: transform 0.2s;" onmouseover="this.style.transform='scale(1.2)'" onmouseout="this.style.transform='scale(1)'" title="עריכה">✏️</button>
+              <div style="display: flex; gap: 20px; justify-content: center;">
+                <button (click)="delete(gift)" style="border: none; background: none; font-size: 1.3em; cursor: pointer;">🗑️</button>
+                <button (click)="edit(gift)" style="border: none; background: none; font-size: 1.3em; cursor: pointer;">✏️</button>
               </div>
             } @else {
-              <span style="color: #9e9e9e; font-size: 0.8em; font-style: italic;">
-                🔒 נעול לשינויים (קיימות רכישות)
-              </span>
+              <button (click)="viewBuyers(gift)" style="background: #6a1b9a; color: white; border: none; padding: 8px 15px; border-radius: 10px; cursor: pointer; width: 100%; font-weight: bold; display: flex; align-items: center; justify-content: center; gap: 8px;">
+                <span>👥</span> פרטי רוכשים
+              </button>
             }
-
           </div>
         </div>
-      </div>
-    } @empty {
-      <div style="width: 100%; text-align: center; padding: 50px; color: #999; border: 2px dashed #e1bee7; border-radius: 20px; background: #fff;">
-        <p style="font-size: 1.2em;">לא נמצאו מתנות התואמות לחיפוש 🔍</p>
       </div>
     }
   </div>
 </div>
 
-<div class="modal-overlay" *ngIf="isAddModalVisible()" 
-     style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.5); display: flex; align-items: center; justify-content: center; z-index: 1000; backdrop-filter: blur(4px);">
-  <div class="modal-content" style="background: white; padding: 30px; border-radius: 30px; width: 90%; max-width: 550px; position: relative; box-shadow: 0 20px 50px rgba(0,0,0,0.2);">
-    <button (click)="isAddModalVisible.set(false)" style="position: absolute; top: 20px; left: 20px; border: none; background: #f3e5f5; color: #6a1b9a; width: 32px; height: 32px; border-radius: 50%; cursor: pointer; font-weight: bold; display: flex; align-items: center; justify-content: center;">✕</button>
-    <h2 style="text-align: center; color: #6a1b9a; margin-top: 0; margin-bottom: 25px;">הוספת מתנה למערכת</h2>
+<div class="modal-overlay" *ngIf="isBuyersModalVisible()">
+  <div class="modal-content" style="max-width: 600px;">
+    <button class="close-button" (click)="isBuyersModalVisible.set(false)">✕</button>
+    <app-details-buyers 
+      [giftId]="selectedGift()!.idGift" 
+      [giftName]="selectedGift()!.name"
+      (close)="isBuyersModalVisible.set(false)">
+    </app-details-buyers>
+  </div>
+</div>
+
+<div class="modal-overlay" *ngIf="isAddModalVisible()">
+  <div class="modal-content">
+    <button class="close-button" (click)="isAddModalVisible.set(false)">✕</button>
+    <h2>הוספת מתנה</h2>
     <app-add-gift (giftAdded)="onGiftAdded()"></app-add-gift>
   </div>
 </div>
 
-<app-edit-gift-modal 
-    [visible]="isEditModalVisible()" 
-    [gift]="selectedGift()" 
-    (close)="isEditModalVisible.set(false)"
-    (saved)="onGiftSaved($event)">
-</app-edit-gift-modal>
+<app-edit-gift-modal [visible]="isEditModalVisible()" [gift]="selectedGift()" (close)="isEditModalVisible.set(false)" (saved)="onGiftSaved($event)"></app-edit-gift-modal>
