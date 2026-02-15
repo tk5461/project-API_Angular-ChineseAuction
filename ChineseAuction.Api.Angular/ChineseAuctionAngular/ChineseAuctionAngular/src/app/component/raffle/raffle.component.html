@@ -1,151 +1,82 @@
-<div class="raffle-page" style="direction: rtl; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background: #f8f9fa; min-height: 100vh; padding: 30px;">
+<div class="raffle-page" style="direction: rtl; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background: #f8f9fa; height: 80vh; overflow: hidden; padding: 20px; box-sizing: border-box;">
   
-  <div style="max-width: 1400px; margin: 0 auto; display: grid; grid-template-columns: 280px 1fr 320px; gap: 25px; align-items: start;">
+  <div style="max-width: 1400px; margin: 0 auto; height: 100%; display: grid; grid-template-columns: 280px 1fr 320px; gap: 20px; align-items: stretch;">
     
-    <div style="background: white; border-radius: 25px; padding: 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.05); border: 1.5px solid #f3e5f5; height: 85vh; display: flex; flex-direction: column;">
-      <h3 style="color: #6a1b9a; margin-top: 0; padding-bottom: 15px; border-bottom: 2px solid #f3e5f5; display: flex; align-items: center; gap: 10px;">
+    <div style="background: white; border-radius: 25px; padding: 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.05); border: 1.5px solid #f3e5f5; display: flex; flex-direction: column; overflow: hidden;">
+      <h3 style="color: #6a1b9a; margin-top: 0; padding-bottom: 15px; border-bottom: 2px solid #f3e5f5; display: flex; align-items: center; gap: 10px; flex-shrink: 0;">
         🎁 בחר מתנה
       </h3>
-      <div style="overflow-y: auto; flex-grow: 1; padding-left: 5px;">
+      <div style="overflow-y: auto; flex-grow: 1; padding-left: 5px; margin-top: 10px;">
         @for (gift of gifts(); track gift.idGift) {
           <div (click)="selectGift(gift)" 
                [style.background]="currentGift()?.idGift === gift.idGift ? '#f3e5f5' : (gift.isDrawn ? '#f9f9f9' : 'white')"
                [style.border-color]="gift.isDrawn ? '#2e7d32' : (currentGift()?.idGift === gift.idGift ? '#6a1b9a' : '#eee')"
-               [style.opacity]="gift.isDrawn ? '0.7' : '1'"
                style="padding: 12px; margin-bottom: 10px; border-radius: 15px; cursor: pointer; transition: all 0.2s; border: 1.5px solid; display: flex; align-items: center; gap: 10px; position: relative;">
             
             @if (gift.isDrawn) {
-              <div style="position: absolute; top: -5px; left: -5px; background: #2e7d32; color: white; border-radius: 50%; width: 22px; height: 22px; display: flex; align-items: center; justify-content: center; font-size: 0.8em; box-shadow: 0 2px 5px rgba(0,0,0,0.2); z-index: 5; border: 2px solid white;">
-                ✔
-              </div>
+              <div style="position: absolute; top: -5px; left: -5px; background: #2e7d32; color: white; border-radius: 50%; width: 22px; height: 22px; display: flex; align-items: center; justify-content: center; font-size: 0.8em; z-index: 5; border: 2px solid white;">✔</div>
             }
 
-            <div [style.filter]="gift.isDrawn ? 'grayscale(1)' : 'none'" 
-                 style="width: 40px; height: 40px; background: #fafafa; border-radius: 8px; display: flex; align-items: center; justify-content: center; font-size: 1.2em;">
+            <div style="width: 40px; height: 40px; background: #fafafa; border-radius: 8px; display: flex; align-items: center; justify-content: center;">
                @if (gift.image && gift.image !== 'string') {
                  <img [src]="imageUrl + gift.image" style="max-width: 100%; max-height: 100%; object-fit: contain;">
                } @else { 🎁 }
             </div>
 
             <div style="flex-grow: 1;">
-              <div [style.text-decoration]="gift.isDrawn ? 'line-through' : 'none'"
-                   [style.color]="gift.isDrawn ? '#888' : '#4a148c'"
-                   style="font-weight: bold; font-size: 0.9em;">
+              <div [style.text-decoration]="gift.isDrawn ? 'line-through' : 'none'" [style.color]="gift.isDrawn ? '#888' : '#4a148c'" style="font-weight: bold; font-size: 0.9em;">
                 {{ gift.name }}
               </div>
               <div style="font-size: 0.8em; color: #2e7d32; font-weight: 600;">₪{{ gift.price }}</div>
-                @if (gift.isDrawn) {
-                  <div style="font-size:0.75em; color: #555; margin-top:6px;">זוכה: {{ gift.user?.firstName ? (gift.user?.firstName + ' ' + (gift.user?.lastName || '')) : ('משתמש ' + gift.idUser) }}</div>
-                }
             </div>
           </div>
-        } @empty {
-          <p style="text-align: center; color: #999; margin-top: 20px;">אין מתנות זמינות</p>
-        } 
+        }
       </div>
     </div>
 
-    <div style="background: white; border-radius: 40px; padding: 40px; box-shadow: 0 20px 60px rgba(106, 27, 154, 0.08); text-align: center; border: 1px solid #e1bee7; min-height: 600px; display: flex; flex-direction: column; justify-content: center;">
-      
+    <div style="background: white; border-radius: 40px; padding: 40px; box-shadow: 0 20px 60px rgba(106, 27, 154, 0.08); text-align: center; border: 1px solid #e1bee7; display: flex; flex-direction: column; justify-content: center; height: 100%;">
       @if (currentGift()) {
-        <div style="margin-bottom: 30px; animation: fadeIn 0.5s;">
-          <span [style.background]="currentGift()?.isDrawn ? '#e8f5e9' : '#f3e5f5'" 
-                [style.color]="currentGift()?.isDrawn ? '#2e7d32' : '#6a1b9a'"
-                style="padding: 8px 25px; border-radius: 50px; font-weight: 800; font-size: 0.9em; text-transform: uppercase;">
+        <div style="margin-bottom: 30px;">
+          <span [style.background]="currentGift()?.isDrawn ? '#e8f5e9' : '#f3e5f5'" [style.color]="currentGift()?.isDrawn ? '#2e7d32' : '#6a1b9a'" style="padding: 8px 25px; border-radius: 50px; font-weight: 800; font-size: 0.9em;">
             {{ currentGift()?.isDrawn ? 'הגרלה הושלמה ✅' : 'מגרילים כעת' }}
           </span>
           <h1 style="color: #4a148c; font-size: 3.5em; margin: 15px 0; font-weight: 900; line-height: 1.1;">{{ currentGift()?.name }}</h1>
-          <div style="font-size: 1.2em; color: #7b1fa2;">
-            בשתתפות <strong>{{ participants().length }}</strong> כרטיסים
-          </div>
         </div>
 
         <div [style.background]="isSpinning() ? '#2a0a4a' : (selectedWinner() || currentGift()?.isDrawn ? '#2e7d32' : '#4a148c')"
-             style="height: 220px; border-radius: 35px; display: flex; align-items: center; justify-content: center; overflow: hidden; position: relative; border: 8px solid #ffd700; transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1); box-shadow: 0 15px 35px rgba(0,0,0,0.2);">
-          
-          <div style="color: white; font-size: 4em; font-weight: 900; text-shadow: 0 4px 15px rgba(0,0,0,0.4); padding: 0 20px; text-align: center;">
-            {{ displayText() }}
-          </div>
-
-          @if (isSpinning()) {
-            <div class="scanner-effect"></div>
-          }
+             style="height: 220px; border-radius: 35px; display: flex; align-items: center; justify-content: center; overflow: hidden; position: relative; border: 8px solid #ffd700; transition: all 0.5s; box-shadow: 0 15px 35px rgba(0,0,0,0.2);">
+          <div style="color: white; font-size: 4em; font-weight: 900;">{{ displayText() }}</div>
+          @if (isSpinning()) { <div class="scanner-effect"></div> }
         </div>
-
-        @if (selectedWinner() || (currentGift()?.isDrawn && !isSpinning())) {
-          <div style="margin-top: 25px; color: #2e7d32; font-size: 2em; font-weight: 900; animation: bounceIn 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);">
-            🎉 מזל טוב לזוכה המאושר! 🎉
-          </div>
-        }
 
         <div style="margin-top: 50px; display: flex; justify-content: center; gap: 30px;">
-          <button (click)="startRaffle()" 
-                  [disabled]="isSpinning() || participants().length === 0 || currentGift()?.isDrawn"
-                  [style.opacity]="(isSpinning() || participants().length === 0 || currentGift()?.isDrawn) ? '0.5' : '1'"
-                  style="background: #6a1b9a; color: white; border: none; padding: 20px 50px; border-radius: 60px; font-size: 1.4em; font-weight: bold; cursor: pointer; box-shadow: 0 10px 25px rgba(106, 27, 154, 0.3); transition: all 0.2s; min-width: 220px;">
-            🚀 התחל הגרלה
-          </button>
-
-          <button (click)="stopRaffle()" 
-                  [disabled]="!isSpinning()"
-                  [style.opacity]="!isSpinning() ? '0.5' : '1'"
-                  style="background: #ff5252; color: white; border: none; padding: 20px 50px; border-radius: 60px; font-size: 1.4em; font-weight: bold; cursor: pointer; box-shadow: 0 10px 25px rgba(255, 82, 82, 0.3); transition: all 0.2s; min-width: 220px;">
-            🛑 עצור 
-          </button>
+          <button (click)="startRaffle()" [disabled]="isSpinning() || currentGift()?.isDrawn" style="background: #6a1b9a; color: white; border: none; padding: 20px 50px; border-radius: 60px; font-size: 1.4em; font-weight: bold; cursor: pointer;">🚀 התחל</button>
+          <button (click)="stopRaffle()" [disabled]="!isSpinning()" style="background: #ff5252; color: white; border: none; padding: 20px 50px; border-radius: 60px; font-size: 1.4em; font-weight: bold; cursor: pointer;">🛑 עצור</button>
         </div>
       } @else {
-        <div style="text-align: center; color: #999; animation: pulse 2s infinite;">
+        <div style="text-align: center; color: #999;">
           <div style="font-size: 5em; margin-bottom: 20px;">🎲</div>
-          <h2>אנא בחר מתנה מהרשימה מימין כדי להתחיל בהגרלה</h2>
+          <h2>אנא בחר מתנה מהרשימה כדי להתחיל</h2>
         </div>
       }
     </div>
 
-    <div style="background: #4a148c; border-radius: 35px; padding: 25px; color: white; box-shadow: 0 15px 40px rgba(74, 20, 140, 0.2); height: 85vh; display: flex; flex-direction: column;">
-      <h2 style="margin: 0 0 20px 0; font-size: 1.5em; border-bottom: 2px solid rgba(255,255,255,0.15); padding-bottom: 15px; display: flex; align-items: center; gap: 12px;">
+    <div style="background: #4a148c; border-radius: 35px; padding: 25px; color: white; display: flex; flex-direction: column; overflow: hidden; height: 100%;">
+      <h2 style="margin: 0 0 20px 0; font-size: 1.5em; border-bottom: 2px solid rgba(255,255,255,0.15); padding-bottom: 15px; flex-shrink: 0;">
         🏆 רשימת זוכים
       </h2>
-      
       <div style="overflow-y: auto; flex-grow: 1; padding-left: 10px;">
         @for (item of winnersList(); track item.winner + item.gift) {
-          <div style="background: rgba(255,255,255,0.12); padding: 18px; border-radius: 20px; border-right: 5px solid #ffd700; margin-bottom: 15px; animation: slideInLeft 0.5s ease-out;">
+          <div style="background: rgba(255,255,255,0.12); padding: 18px; border-radius: 20px; border-right: 5px solid #ffd700; margin-bottom: 15px;">
             <div style="font-size: 0.8em; color: #e1bee7; margin-bottom: 5px; font-weight: bold;">🎁 {{ item.gift }}</div>
-            <div style="font-weight: 800; font-size: 1.2em; color: white;">{{ item.winner }}</div>
-          </div>
-        } @empty {
-          <div style="text-align: center; opacity: 0.4; margin-top: 50px; font-style: italic;">
-            טרם הוגרלו זוכים בערב זה
+            <div style="font-weight: 800; font-size: 1.2em;">{{ item.winner }}</div>
           </div>
         }
       </div>
-        <button (click)="exportWinnersReport()"
-                style="width: 100%; margin-top: 20px; background: #ffd700; color: #4a148c; border: none; padding: 12px; border-radius: 15px; font-weight: 900; cursor: pointer; transition: 0.3s;"
-                onmouseover="this.style.background='#ffea00'" onmouseout="this.style.background='#ffd700'">
+      <button (click)="exportWinnersReport()" style="width: 100%; margin-top: 20px; background: #ffd700; color: #4a148c; border: none; padding: 12px; border-radius: 15px; font-weight: 900; cursor: pointer; flex-shrink: 0;">
         💾 ייצוא דו"ח סופי
-        </button>
+      </button>
     </div>
 
   </div>
 </div>
-
-<style>
-  @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
-  @keyframes slideInLeft { from { opacity: 0; transform: translateX(30px); } to { opacity: 1; transform: translateX(0); } }
-  @keyframes pulse { 0% { opacity: 0.5; } 50% { opacity: 1; } 100% { opacity: 0.5; } }
-  @keyframes bounceIn {
-    0% { transform: scale(0.3); opacity: 0; }
-    50% { transform: scale(1.05); opacity: 1; }
-    70% { transform: scale(0.9); }
-    100% { transform: scale(1); }
-  }
-  .scanner-effect {
-    position: absolute;
-    top: 0; left: 0; width: 100%; height: 100%;
-    background: linear-gradient(90deg, transparent, rgba(255,215,0,0.2), transparent);
-    animation: scanLine 1s linear infinite;
-  }
-  @keyframes scanLine {
-    0% { transform: translateX(-100%); }
-    100% { transform: translateX(100%); }
-  }
-</style>

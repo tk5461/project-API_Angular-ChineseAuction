@@ -1,36 +1,59 @@
+/* 1. נועל את גובה המסך */
 .app-container {
   display: flex;
   flex-direction: column;
-  height: 100vh; /* גובה מסך מלא */
-  overflow: hidden; /* מונע גלילה של כל הדף */
-}
-
-.main-layout {
-  display: flex;
-  flex: 1; /* תופס את כל השטח שמתחת ל-Header */
-  direction: ltr; /* מצמיד את הסרגל לשמאל */
+  height: 100vh;
   overflow: hidden;
 }
 
-.side-cart {
-  width: 300px;
-  min-width: 300px;
-  height: 100%; /* מה-Header עד למטה ממש */
-  overflow-y: auto; /* גלילה פנימית רק לעגלה */
-  border-right: 1px solid #ddd;
-  flex-shrink: 0;
+/* 2. סידור ה-Layout - הסל בשמאל והתוכן בימין */
+.main-layout {
+  display: flex;
+  flex: 1;
+  height: calc(100vh - 80px); 
+  overflow: hidden;
+  /* flex-direction מבטיח שהסל יהיה בשמאל גם ב-RTL */
+  flex-direction: row-reverse; 
+  direction: rtl; 
 }
 
+/* 3. העגלה - תהיה בצד שמאל הקיצוני של המסך */
+.side-cart {
+  width: 320px;
+  height: 100%;
+  overflow-y: auto;
+  /* ltr דוחף את הפס לקצה השמאלי של המסך */
+  direction: ltr; 
+  border-right: 1px solid #ddd;
+  flex-shrink: 0;
+  background: white;
+}
+
+/* מחזיר את תוכן העגלה לעברית */
+.side-cart > * {
+  direction: rtl;
+}
+
+/* 4. התוכן והפוטר - בצד ימין, גלילה בקצה הימני של המסך */
 .content-and-footer {
-  flex: 1; /* מצמצם את כל האזור הזה לימין */
+  flex: 1;
   display: flex;
   flex-direction: column;
   height: 100%;
-  overflow-y: auto; /* הגלילה של האתר קורית כאן */
-  direction: rtl; /* מחזיר לעברית */
+  overflow-y: auto;
+  /* rtl משאיר את הפס בקצה הימני של המסך */
+  direction: rtl; 
 }
 
 .main-content {
-  flex: 1; /* דוחף את הפוטר לתחתית האזור הימני */
-  padding: 20px;
+  flex: 1;
+}
+
+/* עיצוב פסי הגלילה בקצוות */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-thumb {
+  background: #ccc;
+  border-radius: 10px;
 }
