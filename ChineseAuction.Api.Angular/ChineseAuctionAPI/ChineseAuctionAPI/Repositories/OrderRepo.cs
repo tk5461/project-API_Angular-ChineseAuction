@@ -238,19 +238,18 @@ namespace ChineseAuctionAPI.Repositories
         }
         public async Task<IncomeReportDTO> GetIncomeReportAsync()
         {
-            // 1. חישוב סך ההכנסות מהזמנות שהושלמו
+            // סך הכנסות רק מהזמנות שהושלמו
             var totalRevenue = await _context.OrdersOrders
                 .Where(o => o.Status == OrderStatus.Completed)
                 .SumAsync(o => o.Price);
 
-            // 2. ספירת רוכשים ייחודיים שביצעו לפחות הזמנה אחת שהושלמה
+            // רוכשים רק אם יש להם לפחות הזמנה אחת מושלמת
             var totalBuyers = await _context.OrdersOrders
                 .Where(o => o.Status == OrderStatus.Completed)
                 .Select(o => o.IdUser)
                 .Distinct()
                 .CountAsync();
 
-            // 3. ספירת תורמים
             var totalDonors = await _context.Donors.CountAsync();
 
             return new IncomeReportDTO
@@ -260,5 +259,29 @@ namespace ChineseAuctionAPI.Repositories
                 TotalDonors = totalDonors
             };
         }
+        //public async Task<IncomeReportDTO> GetIncomeReportAsync()
+        //{
+        //    // 1. חישוב סך ההכנסות מהזמנות שהושלמו
+        //    var totalRevenue = await _context.OrdersOrders
+        //        .Where(o => o.Status == OrderStatus.Completed)
+        //        .SumAsync(o => o.Price);
+
+        //    // 2. ספירת רוכשים ייחודיים שביצעו לפחות הזמנה אחת שהושלמה
+        //    var totalBuyers = await _context.OrdersOrders
+        //        .Where(o => o.Status == OrderStatus.Completed)
+        //        .Select(o => o.IdUser)
+        //        .Distinct()
+        //        .CountAsync();
+
+        //    // 3. ספירת תורמים
+        //    var totalDonors = await _context.Donors.CountAsync();
+
+        //    return new IncomeReportDTO
+        //    {
+        //        TotalRevenue = totalRevenue,
+        //        TotalBuyers = totalBuyers,
+        //        TotalDonors = totalDonors
+        //    };
+        //}
     }
 }

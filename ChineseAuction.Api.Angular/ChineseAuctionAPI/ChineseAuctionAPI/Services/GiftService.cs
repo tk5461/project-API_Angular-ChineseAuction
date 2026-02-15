@@ -307,36 +307,7 @@ namespace ChineseAuctionAPI.Services
                 throw;
             }
         }
-        //public async Task<IEnumerable<string>> GetParticipantsNamesAsync(int giftId)
-        //{
-        //    try
-        //    {
-        //        var gift = await _repository.GetGiftWithOrdersAndUsersAsync(giftId);
-        //        if (gift == null) return Enumerable.Empty<string>();
-
-        //        // Build a list of participant names, repeating each buyer's name by the number of tickets they bought
-        //        var names = gift.OrdersGifts
-        //            .Where(og => og.Order != null && og.Order.User != null)
-        //            .SelectMany(og => Enumerable.Repeat(
-        //                $"{og.Order.User.FirstName} {og.Order.User.LastName}", og.Amount))
-        //            .ToList();
-
-        //        // For any OrdersGifts where user object is missing, fallback to UserId entries
-        //        var fallback = gift.OrdersGifts
-        //            .Where(og => og.Order == null || og.Order.User == null)
-        //            .SelectMany(og => Enumerable.Repeat($"Order {og.IdOrder}", og.Amount));
-
-        //        names.AddRange(fallback);
-
-        //        return names;
-        //    }
-        //    catch (Exception ex)
-        //    {
-        //        _logger.LogError(ex, "Error building participants list for gift {GiftId}", giftId);
-        //        throw;
-        //    }
-        //}
-
+       
         public async Task<IEnumerable<Winner>> GetAllWinnersAsync()
         {
             try
