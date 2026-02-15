@@ -1,5 +1,6 @@
 import { Component, Input, OnInit, inject, signal , computed } from '@angular/core'; 
 import { CommonModule } from '@angular/common';
+import { FormsModule } from '@angular/forms';
 import { GiftService } from '../../services/gift.service';
 import { OrderService } from '../../services/order.service';
 import { AuthService } from '../../services/auth.service';
@@ -10,9 +11,12 @@ import { EditGiftComponent } from './edit-gift/edit-gift.component';
 import { DropdownModule } from 'primeng/dropdown';
 import { AddGiftComponent } from './add-gift/add-gift.component';
 import { DetailsBuyersComponent } from '../manag-gifts/details-buyers/details-buyers.component';
+import { ManageCategoriesComponent } from './manage-categories/manage-categories.component';
+import { ManagePackagesComponent } from './manage-packages/manage-packages.component';
+import { TabViewModule } from 'primeng/tabview';
 @Component({
   selector: 'app-manag-gifts',
-  imports: [CommonModule, DropdownModule, EditGiftComponent , AddGiftComponent, DetailsBuyersComponent],
+  imports: [CommonModule, FormsModule, DropdownModule, EditGiftComponent , AddGiftComponent, DetailsBuyersComponent, ManageCategoriesComponent, ManagePackagesComponent, TabViewModule],
   templateUrl: './manag-gifts.component.html',
   styleUrl: './manag-gifts.component.scss'
 })

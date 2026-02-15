@@ -12,7 +12,7 @@ import { environment } from '../../../../environment';
 @Component({
   selector: 'app-cart',
   standalone: true,
-  imports: [CommonModule, TicketLimitModalComponent],
+  imports: [CommonModule],
   templateUrl: './cart.component.html',
   styleUrl: './cart.component.scss'
 })

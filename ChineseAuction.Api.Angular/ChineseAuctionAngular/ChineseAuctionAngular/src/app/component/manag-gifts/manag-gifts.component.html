@@ -1,5 +1,16 @@
 <div class="admin-container" style="max-width: 1200px; margin: 0 auto; padding: 20px; direction: rtl; font-family: sans-serif;">
   
+  <!-- טאבים לניהול קטגוריות וחבילות -->
+  <p-tabView styleClass="admin-tabs" styleClass="margin-bottom: 40px;">
+    <p-tabPanel header="📋 קטגוריות" leftIcon="pi pi-list">
+      <app-manage-categories></app-manage-categories>
+    </p-tabPanel>
+    <p-tabPanel header="📦 חבילות" leftIcon="pi pi-box">
+      <app-manage-packages></app-manage-packages>
+    </p-tabPanel>
+  </p-tabView>
+
+  <!-- מסננים וחיפוש -->
   <div style="display: flex; gap: 15px; align-items: flex-end; justify-content: flex-start; margin-bottom: 35px; background: #fdf7ff; padding: 15px 25px; border-radius: 25px; border: 1px solid #f3e5f5; box-shadow: 0 2px 10px rgba(106, 27, 154, 0.03); flex-wrap: wrap;">
     
     <div style="position: relative; width: 160px;">

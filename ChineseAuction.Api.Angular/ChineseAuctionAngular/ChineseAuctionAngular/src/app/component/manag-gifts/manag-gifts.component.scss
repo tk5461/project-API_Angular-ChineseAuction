@@ -81,3 +81,53 @@
   background-color: #ce93d8;
   border-radius: 10px;
 }
+
+/* עיצוב טאבים */
+.admin-tabs {
+  :deep(.p-tabview-nav) {
+    background: linear-gradient(90deg, #fdf7ff 0%, #f3f0fa 100%);
+    border-bottom: 2px solid #e1bee7;
+    padding: 0;
+    margin: 0;
+  }
+
+  :deep(.p-tabview-panels) {
+    background: transparent;
+    padding: 0;
+  }
+
+  :deep(.p-tabview-header) {
+    margin: 0;
+
+    .p-tabview-nav-link {
+      color: #6a1b9a;
+      border: none;
+      padding: 15px 25px;
+      font-weight: 600;
+      border-bottom: 3px solid transparent;
+      transition: all 0.3s;
+
+      &:hover {
+        background: rgba(106, 27, 154, 0.08);
+        color: #4a148c;
+      }
+
+      &.p-active {
+        background: white;
+        color: #4a148c;
+        border-bottom-color: #6a1b9a;
+        box-shadow: 0 -2px 8px rgba(106, 27, 154, 0.1);
+      }
+    }
+
+    .p-icon {
+      margin-left: 8px;
+      font-size: 1.2em;
+    }
+  }
+
+  :deep(.p-tabview-content) {
+    padding: 0;
+    background: transparent;
+  }
+}

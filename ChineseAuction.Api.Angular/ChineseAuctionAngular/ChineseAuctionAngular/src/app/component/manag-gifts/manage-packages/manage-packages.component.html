@@ -1,0 +1,115 @@
+<div dir="rtl" class="packages-container">
+  <div class="header">
+    <h3>ניהול חבילות</h3>
+    <small>הוסף, ערוך ומחק חבילות בקלות</small>
+  </div>
+
+  <!-- הודעות -->
+  <p-message 
+    *ngIf="message()" 
+    [severity]="messageType()" 
+    [text]="message()"
+    styleClass="w-full mb-3">
+  </p-message>
+
+  <!-- טפסת הוספה -->
+  <div class="add-package-form">
+    <div class="form-row">
+      <div class="form-group">
+        <label for="pkg-name">שם החבילה *</label>
+        <input 
+          pInputText 
+          type="text" 
+          id="pkg-name"
+          [(ngModel)]="newPackage().name"
+          placeholder="לדוגמה: חבילת זהב"
+          [disabled]="isLoading()">
+      </div>
+
+      <div class="form-group">
+        <label for="pkg-price">מחיר (₪) *</label>
+        <input 
+          pInputNumber 
+          inputId="pkg-price"
+          [(ngModel)]="newPackage().price"
+          [min]="0"
+          [disabled]="isLoading()">
+      </div>
+
+      <div class="form-group">
+        <label for="pkg-regular">כמות רגילה *</label>
+        <input 
+          pInputNumber 
+          inputId="pkg-regular"
+          [(ngModel)]="newPackage().amountRegular"
+          [min]="0"
+          [disabled]="isLoading()">
+      </div>
+
+      <div class="form-group">
+        <label for="pkg-premium">כמות פרימיום</label>
+        <input 
+          pInputNumber 
+          inputId="pkg-premium"
+          [(ngModel)]="newPackage().amountPremium"
+          [min]="0"
+          [disabled]="isLoading()">
+      </div>
+    </div>
+
+    <div class="form-row">
+      <div class="form-group full">
+        <label for="pkg-desc">תיאור</label>
+        <input 
+          pInputText 
+          type="text" 
+          id="pkg-desc"
+          [(ngModel)]="newPackage().description"
+          placeholder="תיאור כללי של החבילה (אופציונלי)"
+          [disabled]="isLoading()">
+      </div>
+    </div>
+
+    <button 
+      pButton 
+      type="button" 
+      label="הוסף חבילה"
+      icon="pi pi-plus"
+      (click)="addPackage()"
+      [loading]="isLoading()"
+      class="p-button-rounded p-button-success">
+    </button>
+  </div>
+
+  <!-- רשימת חבילות -->
+  <div class="packages-list" *ngIf="packages().length > 0; else noPackages">
+    <div class="packages-grid">
+      <div *ngFor="let pkg of packages()" class="package-item">
+        <div class="package-header">
+          <h4>{{ pkg.name }}</h4>
+          <div class="package-price">₪{{ pkg.price }}</div>
+        </div>
+        <div class="package-info">
+          <span class="badge regular">רגילה: {{ pkg.amountRegular }}</span>
+          <span class="badge premium" *ngIf="pkg.amountPremium">פרימיום: {{ pkg.amountPremium }}</span>
+          <p class="description" *ngIf="pkg.description">{{ pkg.description }}</p>
+        </div>
+        <button 
+          pButton 
+          type="button" 
+          icon="pi pi-trash"
+          [disabled]="isLoading()"
+          (click)="deletePackage(pkg.idPackage, pkg.name)"
+          class="p-button-rounded p-button-danger p-button-sm delete-btn">
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- אין חבילות -->
+  <ng-template #noPackages>
+    <div class="empty-state">
+      <p>📦 אין חבילות עדיין. התחל בהוספת חבילה חדשה!</p>
+    </div>
+  </ng-template>
+</div>

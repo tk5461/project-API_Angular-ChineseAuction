@@ -1,0 +1,306 @@
+// ============================================
+// Revenue Component - Elegant & Minimal
+// ============================================
+
+$primary: #6a1b9a;
+$success: #4caf50;
+$info: #2196f3;
+$warning: #ff9800;
+
+.revenue-dashboard {
+  height: 100vh;
+  overflow: hidden;
+  background: linear-gradient(135deg, #fafbfc 0%, #f5f0fa 100%);
+  display: flex;
+  flex-direction: column;
+  padding: 16px;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+}
+
+// ============================================
+// Header
+// ============================================
+
+.report-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 24px;
+  background: white;
+  border-radius: 12px;
+  border: 1px solid #e8e8e8;
+  margin-bottom: 16px;
+  animation: fadeIn 0.4s ease-out;
+
+  .header-left {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+  }
+
+  .title {
+    margin: 0;
+    font-size: 1.3em;
+    font-weight: 700;
+    color: $primary;
+    letter-spacing: -0.3px;
+  }
+
+  .date {
+    margin: 0;
+    font-size: 0.8em;
+    color: #888;
+    font-weight: 500;
+  }
+
+  .print-btn {
+    background: white;
+    border: 1px solid #ddd;
+    width: 40px;
+    height: 40px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1.2em;
+    transition: all 0.2s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+
+    &:hover {
+      background: #f9f9f9;
+      border-color: $primary;
+      transform: scale(1.05);
+    }
+  }
+}
+
+// ============================================
+// Stats Container
+// ============================================
+
+.stats-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  flex: 1;
+  animation: fadeIn 0.6s ease-out;
+}
+
+.stat-card {
+  background: white;
+  border: 1px solid #e8e8e8;
+  border-radius: 12px;
+  padding: 14px;
+  display: flex;
+  align-items: center;
+  gap: 17px;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  cursor: default;
+  position: relative;
+  overflow: hidden;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 4px;
+    height: 100%;
+    background: currentColor;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+
+  &:hover {
+    border-color: currentColor;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    transform: translateY(-2px);
+
+    &::before {
+      opacity: 0.3;
+    }
+
+    .stat-icon {
+      transform: scale(1.1);
+    }
+  }
+
+  &.revenue {
+    color: $success;
+  }
+
+  &.buyers {
+    color: $info;
+  }
+
+  &.donors {
+    color: $warning;
+  }
+
+  .stat-icon {
+    font-size: 1.6em;
+    transition: transform 0.3s ease;
+    line-height: 1;
+  }
+
+  .stat-content {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    flex: 1;
+  }
+
+  .stat-label {
+    font-size: 0.75em;
+    color: #888;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+
+  .stat-value {
+    font-size: 1.4em;
+    font-weight: 700;
+    color: #222;
+    line-height: 1.2;
+  }
+}
+
+// ============================================
+// Loading State
+// ============================================
+
+.loading-state {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  flex: 1;
+  animation: fadeIn 0.3s ease-out;
+
+  .spinner {
+    width: 40px;
+    height: 40px;
+    border: 2px solid #e0e0e0;
+    border-top-color: $primary;
+    border-radius: 50%;
+    animation: spin 1.2s linear infinite;
+  }
+
+  p {
+    font-size: 0.95em;
+    color: #666;
+    margin: 0;
+    font-weight: 500;
+  }
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+// ============================================
+// Footer
+// ============================================
+
+.report-footer {
+  text-align: center;
+  padding: 12px;
+  font-size: 0.8em;
+  color: #888;
+  font-weight: 500;
+  animation: fadeIn 0.5s ease-out 0.2s backwards;
+
+  span {
+    display: inline-block;
+  }
+}
+
+// ============================================
+// Animations
+// ============================================
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+// ============================================
+// Responsive
+// ============================================
+
+@media (max-width: 1200px) {
+  .stats-container {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .stat-card {
+    padding: 12px;
+
+    .stat-icon {
+      font-size: 1.4em;
+    }
+
+    .stat-value {
+      font-size: 1.3em;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .revenue-dashboard {
+    padding: 12px;
+  }
+
+  .report-header {
+    padding: 12px 16px;
+    margin-bottom: 12px;
+
+    .title {
+      font-size: 1.1em;
+    }
+
+    .date {
+      font-size: 0.75em;
+    }
+  }
+
+  .stats-container {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+
+  .stat-card {
+    padding: 14px;
+    gap: 12px;
+
+    .stat-icon {
+      font-size: 1.8em;
+    }
+
+    .stat-value {
+      font-size: 1.4em;
+    }
+  }
+}
+
+@print {
+  .print-btn {
+    display: none;
+  }
+
+  .revenue-dashboard {
+    background: white;
+    height: auto;
+  }
+
+  .stat-card {
+    page-break-inside: avoid;
+  }
+}

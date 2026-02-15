@@ -1,0 +1,60 @@
+<div dir="rtl" class="categories-container">
+  <div class="header">
+    <h3>ניהול קטגוריות</h3>
+    <small>הוסף, ערוך ומחק קטגוריות בקלות</small>
+  </div>
+
+  <!-- הודעות -->
+  <p-message 
+    *ngIf="message()" 
+    [severity]="messageType()" 
+    [text]="message()"
+    styleClass="w-full mb-3">
+  </p-message>
+
+  <!-- טפסת הוספה -->
+  <div class="add-category-form">
+    <div class="input-group">
+      <input 
+        pInputText 
+        type="text" 
+        [(ngModel)]="newCategoryName"
+        placeholder="הכנס שם קטגוריה חדשה"
+        (keyup.enter)="addCategory()"
+        [disabled]="isLoading()">
+      <button 
+        pButton 
+        type="button" 
+        label="הוסף"
+        icon="pi pi-plus"
+        (click)="addCategory()"
+        [loading]="isLoading()"
+        class="p-button-rounded p-button-success">
+      </button>
+    </div>
+  </div>
+
+  <!-- רשימת קטגוריות -->
+  <div class="categories-list" *ngIf="categories().length > 0; else noCategories">
+    <div class="categories-grid">
+      <div *ngFor="let category of categories()" class="category-item">
+        <div class="category-name">{{ category.name }}</div>
+        <button 
+          pButton 
+          type="button" 
+          icon="pi pi-trash"
+          [disabled]="isLoading()"
+          (click)="deleteCategory(category.id, category.name)"
+          class="p-button-rounded p-button-danger p-button-sm delete-btn">
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- אין קטגוריות -->
+  <ng-template #noCategories>
+    <div class="empty-state">
+      <p>📭 אין קטגוריות עדיין. התחל בהוספת קטגוריה חדשה!</p>
+    </div>
+  </ng-template>
+</div>
