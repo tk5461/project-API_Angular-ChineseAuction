@@ -1803,3 +1803,385 @@ System.InvalidOperationException: INSUFFICIENT_TICKETS
 2026-02-15 18:17:25.396 +02:00 [INF] HTTP GET /api/Gift/17/participants responded 200 in 11.5876 ms
 2026-02-15 18:17:27.792 +02:00 [INF] שולף פרטי משתתפים מלאים עבור מתנה: 10
 2026-02-15 18:17:27.796 +02:00 [INF] HTTP GET /api/Gift/10/participants responded 200 in 4.1840 ms
+2026-02-15 18:46:47.718 +02:00 [INF] Starting web host - Monitoring all requests
+2026-02-15 18:46:51.998 +02:00 [INF] HTTP GET /swagger/index.html responded 200 in 328.9226 ms
+2026-02-15 18:46:52.310 +02:00 [INF] HTTP GET /swagger/v1/swagger.json responded 200 in 98.5565 ms
+2026-02-15 18:48:39.276 +02:00 [INF] HTTP OPTIONS /api/Packages responded 204 in 13.8895 ms
+2026-02-15 18:48:40.371 +02:00 [INF] שולף את כל החבילות.
+2026-02-15 18:48:46.343 +02:00 [INF] HTTP GET /api/Packages responded 200 in 7049.0910 ms
+2026-02-15 18:48:46.379 +02:00 [INF] HTTP OPTIONS /api/Gift responded 204 in 1.6445 ms
+2026-02-15 18:48:46.429 +02:00 [INF] Attempting to retrieve all gifts.
+2026-02-15 18:48:46.436 +02:00 [INF] שולף את רשימת כל המתנות מהמאגר.
+2026-02-15 18:48:47.484 +02:00 [INF] נשלפו בהצלחה 9 מתנות.
+2026-02-15 18:48:47.552 +02:00 [INF] HTTP GET /api/Gift responded 200 in 1151.9870 ms
+2026-02-15 18:48:47.575 +02:00 [INF] HTTP OPTIONS /api/Orders/user/19 responded 204 in 0.3107 ms
+2026-02-15 18:48:47.704 +02:00 [INF] שולף את כל ההזמנות עבור משתמש 19.
+2026-02-15 18:48:47.982 +02:00 [WRN] Compiling a query which loads related collections for more than one collection navigation, either via 'Include' or through projection, but no 'QuerySplittingBehavior' has been configured. By default, Entity Framework will use 'QuerySplittingBehavior.SingleQuery', which can potentially result in slow query performance. See https://go.microsoft.com/fwlink/?linkid=2134277 for more information. To identify the query that's triggering this warning call 'ConfigureWarnings(w => w.Throw(RelationalEventId.MultipleCollectionIncludeWarning))'.
+2026-02-15 18:48:48.466 +02:00 [INF] HTTP GET /api/Orders/user/19 responded 200 in 871.7014 ms
+2026-02-15 18:48:53.335 +02:00 [INF] HTTP OPTIONS /api/Packages responded 204 in 1.7396 ms
+2026-02-15 18:48:53.335 +02:00 [INF] HTTP OPTIONS /api/Orders/user/19 responded 204 in 1.1840 ms
+2026-02-15 18:48:53.381 +02:00 [INF] שולף את כל החבילות.
+2026-02-15 18:48:53.400 +02:00 [INF] שולף את כל ההזמנות עבור משתמש 19.
+2026-02-15 18:48:53.406 +02:00 [INF] HTTP GET /api/Packages responded 200 in 37.6723 ms
+2026-02-15 18:48:53.532 +02:00 [INF] HTTP GET /api/Orders/user/19 responded 200 in 143.8894 ms
+2026-02-15 18:48:59.253 +02:00 [INF] HTTP OPTIONS /api/Orders/update-package responded 204 in 1.6205 ms
+2026-02-15 18:48:59.462 +02:00 [INF] Updating package 3 for user 19 with amount 2
+2026-02-15 18:48:59.581 +02:00 [WRN] Compiling a query which loads related collections for more than one collection navigation, either via 'Include' or through projection, but no 'QuerySplittingBehavior' has been configured. By default, Entity Framework will use 'QuerySplittingBehavior.SingleQuery', which can potentially result in slow query performance. See https://go.microsoft.com/fwlink/?linkid=2134277 for more information. To identify the query that's triggering this warning call 'ConfigureWarnings(w => w.Throw(RelationalEventId.MultipleCollectionIncludeWarning))'.
+2026-02-15 18:48:59.958 +02:00 [INF] Updating package 3 for user 19 with amount 1
+2026-02-15 18:49:00.598 +02:00 [INF] HTTP OPTIONS /api/Orders/draft/19 responded 204 in 0.3327 ms
+2026-02-15 18:49:00.746 +02:00 [INF] HTTP POST /api/Orders/update-package responded 200 in 816.3068 ms
+2026-02-15 18:49:00.746 +02:00 [INF] HTTP POST /api/Orders/update-package responded 200 in 1472.2408 ms
+2026-02-15 18:49:00.943 +02:00 [INF] HTTP DELETE /api/Orders/draft/19 responded 200 in 325.2513 ms
+2026-02-15 18:49:03.018 +02:00 [INF] Updating package 2 for user 19 with amount 1
+2026-02-15 18:49:03.218 +02:00 [INF] HTTP POST /api/Orders/update-package responded 200 in 202.7730 ms
+2026-02-15 18:49:04.709 +02:00 [INF] HTTP OPTIONS /api/Orders/update-package responded 204 in 0.8831 ms
+2026-02-15 18:49:04.736 +02:00 [INF] Updating package 1 for user 19 with amount 1
+2026-02-15 18:49:04.811 +02:00 [INF] HTTP POST /api/Orders/update-package responded 200 in 77.8415 ms
+2026-02-15 18:49:06.189 +02:00 [INF] HTTP OPTIONS /api/Gift responded 204 in 0.1608 ms
+2026-02-15 18:49:06.210 +02:00 [INF] Attempting to retrieve all gifts.
+2026-02-15 18:49:06.214 +02:00 [INF] שולף את רשימת כל המתנות מהמאגר.
+2026-02-15 18:49:06.246 +02:00 [INF] נשלפו בהצלחה 9 מתנות.
+2026-02-15 18:49:06.254 +02:00 [INF] HTTP GET /api/Gift responded 200 in 49.8238 ms
+2026-02-15 18:49:13.239 +02:00 [INF] HTTP OPTIONS /api/Packages responded 204 in 0.4500 ms
+2026-02-15 18:49:13.245 +02:00 [INF] HTTP OPTIONS /api/Orders/user/19 responded 204 in 0.4590 ms
+2026-02-15 18:49:13.303 +02:00 [INF] שולף את כל ההזמנות עבור משתמש 19.
+2026-02-15 18:49:13.310 +02:00 [INF] שולף את כל החבילות.
+2026-02-15 18:49:13.357 +02:00 [INF] HTTP GET /api/Packages responded 200 in 70.3386 ms
+2026-02-15 18:49:13.423 +02:00 [INF] HTTP GET /api/Orders/user/19 responded 200 in 124.8841 ms
+2026-02-15 18:49:14.422 +02:00 [INF] HTTP OPTIONS /api/Gift responded 204 in 0.3940 ms
+2026-02-15 18:49:14.457 +02:00 [INF] Attempting to retrieve all gifts.
+2026-02-15 18:49:14.461 +02:00 [INF] שולף את רשימת כל המתנות מהמאגר.
+2026-02-15 18:49:14.479 +02:00 [INF] נשלפו בהצלחה 9 מתנות.
+2026-02-15 18:49:14.483 +02:00 [INF] HTTP GET /api/Gift responded 200 in 42.6049 ms
+2026-02-15 18:49:19.868 +02:00 [INF] HTTP OPTIONS /api/Gift responded 204 in 0.3351 ms
+2026-02-15 18:49:19.890 +02:00 [INF] Attempting to retrieve all gifts.
+2026-02-15 18:49:19.898 +02:00 [INF] שולף את רשימת כל המתנות מהמאגר.
+2026-02-15 18:49:19.926 +02:00 [INF] נשלפו בהצלחה 9 מתנות.
+2026-02-15 18:49:19.936 +02:00 [INF] HTTP GET /api/Gift responded 200 in 48.8026 ms
+2026-02-15 18:49:26.795 +02:00 [INF] HTTP OPTIONS /api/Donors responded 204 in 0.3502 ms
+2026-02-15 18:49:26.857 +02:00 [INF] Fetching all donors
+2026-02-15 18:49:26.864 +02:00 [INF] מתחיל שליפת כל התורמים בשירות.
+2026-02-15 18:49:26.906 +02:00 [INF] נשלפו בהצלחה 5 תורמים מהמאגר.
+2026-02-15 18:49:26.924 +02:00 [INF] HTTP GET /api/Donors responded 200 in 115.0790 ms
+2026-02-15 18:49:28.172 +02:00 [INF] HTTP OPTIONS /api/Gift responded 204 in 1.2043 ms
+2026-02-15 18:49:28.184 +02:00 [INF] Fetching all donors
+2026-02-15 18:49:28.188 +02:00 [INF] מתחיל שליפת כל התורמים בשירות.
+2026-02-15 18:49:28.190 +02:00 [INF] Attempting to retrieve all gifts.
+2026-02-15 18:49:28.200 +02:00 [INF] שולף את רשימת כל המתנות מהמאגר.
+2026-02-15 18:49:28.208 +02:00 [INF] נשלפו בהצלחה 5 תורמים מהמאגר.
+2026-02-15 18:49:28.221 +02:00 [INF] HTTP GET /api/Donors responded 200 in 48.1441 ms
+2026-02-15 18:49:28.240 +02:00 [INF] נשלפו בהצלחה 9 מתנות.
+2026-02-15 18:49:28.253 +02:00 [INF] HTTP GET /api/Gift responded 200 in 64.8272 ms
+2026-02-15 18:49:28.270 +02:00 [INF] HTTP OPTIONS /api/Gift/2/participants responded 204 in 0.1804 ms
+2026-02-15 18:49:28.280 +02:00 [INF] HTTP OPTIONS /api/Gift/9/participants responded 204 in 0.1288 ms
+2026-02-15 18:49:28.306 +02:00 [INF] HTTP OPTIONS /api/Gift/13/participants responded 204 in 0.2211 ms
+2026-02-15 18:49:28.339 +02:00 [INF] HTTP GET /images/gift/string responded 404 in 3.4666 ms
+2026-02-15 18:49:28.280 +02:00 [INF] HTTP OPTIONS /api/Gift/6/participants responded 204 in 0.1884 ms
+2026-02-15 18:49:28.280 +02:00 [INF] HTTP OPTIONS /api/Gift/4/participants responded 204 in 0.2734 ms
+2026-02-15 18:49:28.280 +02:00 [INF] HTTP OPTIONS /api/Gift/10/participants responded 204 in 0.2243 ms
+2026-02-15 18:49:28.280 +02:00 [INF] HTTP OPTIONS /api/Gift/5/participants responded 204 in 0.1186 ms
+2026-02-15 18:49:28.376 +02:00 [INF] שולף פרטי משתתפים מלאים עבור מתנה: 4
+2026-02-15 18:49:28.280 +02:00 [INF] HTTP OPTIONS /api/Gift/3/participants responded 204 in 0.2623 ms
+2026-02-15 18:49:28.380 +02:00 [INF] שולף פרטי משתתפים מלאים עבור מתנה: 10
+2026-02-15 18:49:28.293 +02:00 [INF] HTTP OPTIONS /api/Gift/12/participants responded 204 in 0.2707 ms
+2026-02-15 18:49:28.384 +02:00 [INF] שולף פרטי משתתפים מלאים עבור מתנה: 5
+2026-02-15 18:49:28.365 +02:00 [INF] שולף פרטי משתתפים מלאים עבור מתנה: 9
+2026-02-15 18:49:28.375 +02:00 [INF] שולף פרטי משתתפים מלאים עבור מתנה: 6
+2026-02-15 18:49:28.365 +02:00 [INF] שולף פרטי משתתפים מלאים עבור מתנה: 2
+2026-02-15 18:49:28.368 +02:00 [INF] שולף פרטי משתתפים מלאים עבור מתנה: 13
+2026-02-15 18:49:28.390 +02:00 [INF] שולף פרטי משתתפים מלאים עבור מתנה: 3
+2026-02-15 18:49:28.395 +02:00 [INF] שולף פרטי משתתפים מלאים עבור מתנה: 12
+2026-02-15 18:49:28.430 +02:00 [INF] Attempting to retrieve all gift categories.
+2026-02-15 18:49:28.433 +02:00 [INF] מתחיל תהליך שליפת כל קטגוריות המתנות מהשירות.
+2026-02-15 18:49:28.576 +02:00 [WRN] לא נמצאו משתתפים למתנה 12
+2026-02-15 18:49:28.578 +02:00 [WRN] לא נמצאו משתתפים למתנה 13
+2026-02-15 18:49:28.606 +02:00 [INF] HTTP GET /api/Gift/12/participants responded 200 in 212.3670 ms
+2026-02-15 18:49:28.612 +02:00 [INF] HTTP GET /api/Gift/9/participants responded 200 in 273.8650 ms
+2026-02-15 18:49:28.612 +02:00 [INF] HTTP GET /api/Gift/3/participants responded 200 in 223.6119 ms
+2026-02-15 18:49:28.612 +02:00 [INF] HTTP GET /api/Gift/10/participants responded 200 in 232.7657 ms
+2026-02-15 18:49:28.612 +02:00 [INF] HTTP GET /api/Gift/6/participants responded 200 in 243.8253 ms
+2026-02-15 18:49:28.612 +02:00 [INF] HTTP GET /api/Gift/5/participants responded 200 in 229.2855 ms
+2026-02-15 18:49:28.608 +02:00 [INF] HTTP GET /api/Gift/13/participants responded 200 in 253.2019 ms
+2026-02-15 18:49:28.612 +02:00 [INF] HTTP GET /api/Gift/4/participants responded 200 in 240.4206 ms
+2026-02-15 18:49:28.627 +02:00 [INF] נשלפו בהצלחה 4 קטגוריות.
+2026-02-15 18:49:28.628 +02:00 [INF] HTTP GET /api/Gift/2/participants responded 200 in 292.5353 ms
+2026-02-15 18:49:28.689 +02:00 [INF] HTTP GET /api/GiftCategory responded 200 in 266.5193 ms
+2026-02-15 18:49:35.752 +02:00 [INF] HTTP OPTIONS /api/Packages responded 204 in 0.4327 ms
+2026-02-15 18:49:35.761 +02:00 [INF] HTTP OPTIONS /api/Orders/user/19 responded 204 in 0.3201 ms
+2026-02-15 18:49:35.787 +02:00 [INF] שולף את כל החבילות.
+2026-02-15 18:49:35.799 +02:00 [INF] שולף את כל ההזמנות עבור משתמש 19.
+2026-02-15 18:49:35.823 +02:00 [INF] HTTP GET /api/Packages responded 200 in 38.1392 ms
+2026-02-15 18:49:35.831 +02:00 [INF] HTTP GET /api/Orders/user/19 responded 200 in 35.1410 ms
+2026-02-15 18:49:35.848 +02:00 [INF] HTTP OPTIONS /api/Gift responded 204 in 0.4198 ms
+2026-02-15 18:49:35.855 +02:00 [INF] Attempting to retrieve all gifts.
+2026-02-15 18:49:35.856 +02:00 [INF] שולף את רשימת כל המתנות מהמאגר.
+2026-02-15 18:49:35.867 +02:00 [INF] נשלפו בהצלחה 9 מתנות.
+2026-02-15 18:49:35.871 +02:00 [INF] HTTP GET /api/Gift responded 200 in 16.2357 ms
+2026-02-15 18:49:35.881 +02:00 [INF] שולף את כל ההזמנות עבור משתמש 19.
+2026-02-15 18:49:35.904 +02:00 [INF] HTTP GET /api/Orders/user/19 responded 200 in 24.0912 ms
+2026-02-15 18:49:38.572 +02:00 [INF] שולף את כל החבילות.
+2026-02-15 18:49:38.573 +02:00 [INF] שולף את כל ההזמנות עבור משתמש 19.
+2026-02-15 18:49:38.591 +02:00 [INF] HTTP GET /api/Packages responded 200 in 20.2093 ms
+2026-02-15 18:49:38.622 +02:00 [INF] HTTP GET /api/Orders/user/19 responded 200 in 51.6442 ms
+2026-02-15 18:49:54.111 +02:00 [INF] HTTP OPTIONS /api/Orders/update-package responded 204 in 0.3819 ms
+2026-02-15 18:49:54.136 +02:00 [INF] Updating package 3 for user 19 with amount 1
+2026-02-15 18:49:54.179 +02:00 [INF] HTTP POST /api/Orders/update-package responded 200 in 46.3934 ms
+2026-02-15 18:49:55.608 +02:00 [INF] Updating package 3 for user 19 with amount 0
+2026-02-15 18:49:55.716 +02:00 [INF] HTTP POST /api/Orders/update-package responded 200 in 111.0870 ms
+2026-02-15 18:49:58.931 +02:00 [INF] Updating package 2 for user 19 with amount 2
+2026-02-15 18:49:59.066 +02:00 [INF] HTTP POST /api/Orders/update-package responded 200 in 136.4392 ms
+2026-02-15 18:50:00.526 +02:00 [INF] HTTP OPTIONS /api/Orders/update-package responded 204 in 0.7281 ms
+2026-02-15 18:50:00.546 +02:00 [INF] Updating package 2 for user 19 with amount 1
+2026-02-15 18:50:00.648 +02:00 [INF] HTTP POST /api/Orders/update-package responded 200 in 104.7383 ms
+2026-02-15 18:50:01.621 +02:00 [INF] Updating package 2 for user 19 with amount 2
+2026-02-15 18:50:01.658 +02:00 [INF] HTTP POST /api/Orders/update-package responded 200 in 38.0471 ms
+2026-02-15 18:50:04.568 +02:00 [INF] Updating package 1 for user 19 with amount 2
+2026-02-15 18:50:04.638 +02:00 [INF] HTTP POST /api/Orders/update-package responded 200 in 79.8513 ms
+2026-02-15 18:50:06.507 +02:00 [INF] HTTP OPTIONS /api/Orders/update-package responded 204 in 1.6040 ms
+2026-02-15 18:50:06.542 +02:00 [INF] Updating package 1 for user 19 with amount 1
+2026-02-15 18:50:06.610 +02:00 [INF] HTTP POST /api/Orders/update-package responded 200 in 72.1538 ms
+2026-02-15 18:50:07.009 +02:00 [INF] Updating package 1 for user 19 with amount 0
+2026-02-15 18:50:07.042 +02:00 [INF] HTTP POST /api/Orders/update-package responded 200 in 35.5848 ms
+2026-02-15 18:50:09.442 +02:00 [INF] Updating package 3 for user 19 with amount 1
+2026-02-15 18:50:09.474 +02:00 [INF] HTTP POST /api/Orders/update-package responded 200 in 34.5581 ms
+2026-02-15 18:50:09.711 +02:00 [INF] Updating package 3 for user 19 with amount 2
+2026-02-15 18:50:09.729 +02:00 [INF] HTTP POST /api/Orders/update-package responded 200 in 20.1168 ms
+2026-02-15 18:50:09.996 +02:00 [INF] Updating package 3 for user 19 with amount 3
+2026-02-15 18:50:10.032 +02:00 [INF] HTTP POST /api/Orders/update-package responded 200 in 37.5310 ms
+2026-02-15 18:50:10.156 +02:00 [INF] Updating package 3 for user 19 with amount 4
+2026-02-15 18:50:10.177 +02:00 [INF] HTTP POST /api/Orders/update-package responded 200 in 22.0793 ms
+2026-02-15 18:50:10.351 +02:00 [INF] Updating package 3 for user 19 with amount 5
+2026-02-15 18:50:10.369 +02:00 [INF] HTTP POST /api/Orders/update-package responded 200 in 19.3607 ms
+2026-02-15 18:50:14.089 +02:00 [INF] HTTP OPTIONS /api/Orders/update-package responded 204 in 0.2828 ms
+2026-02-15 18:50:14.097 +02:00 [INF] Updating package 3 for user 19 with amount 4
+2026-02-15 18:50:14.135 +02:00 [INF] HTTP POST /api/Orders/update-package responded 200 in 40.3000 ms
+2026-02-15 18:50:14.283 +02:00 [INF] Updating package 3 for user 19 with amount 3
+2026-02-15 18:50:14.300 +02:00 [INF] HTTP POST /api/Orders/update-package responded 200 in 17.8794 ms
+2026-02-15 18:50:14.508 +02:00 [INF] Updating package 3 for user 19 with amount 2
+2026-02-15 18:50:14.530 +02:00 [INF] HTTP POST /api/Orders/update-package responded 200 in 23.6941 ms
+2026-02-15 18:50:14.969 +02:00 [INF] Updating package 3 for user 19 with amount 1
+2026-02-15 18:50:15.005 +02:00 [INF] HTTP POST /api/Orders/update-package responded 200 in 36.7165 ms
+2026-02-15 18:50:15.434 +02:00 [INF] Updating package 3 for user 19 with amount 0
+2026-02-15 18:50:15.472 +02:00 [INF] HTTP POST /api/Orders/update-package responded 200 in 39.8869 ms
+2026-02-15 18:50:18.764 +02:00 [INF] Updating package 1 for user 19 with amount 1
+2026-02-15 18:50:18.804 +02:00 [INF] HTTP POST /api/Orders/update-package responded 200 in 42.5767 ms
+2026-02-15 18:50:20.779 +02:00 [INF] HTTP OPTIONS /api/Gift responded 204 in 0.2257 ms
+2026-02-15 18:50:20.786 +02:00 [INF] Attempting to retrieve all gifts.
+2026-02-15 18:50:20.787 +02:00 [INF] שולף את רשימת כל המתנות מהמאגר.
+2026-02-15 18:50:20.812 +02:00 [INF] נשלפו בהצלחה 9 מתנות.
+2026-02-15 18:50:20.816 +02:00 [INF] HTTP GET /api/Gift responded 200 in 31.0963 ms
+2026-02-15 18:50:27.676 +02:00 [INF] HTTP OPTIONS /api/Orders/add-gift responded 204 in 1.4585 ms
+2026-02-15 18:50:27.732 +02:00 [INF] מעדכן/מוסיף מתנה 12 למשתמש 19 בדלתא 1.
+2026-02-15 18:50:27.774 +02:00 [WRN] Compiling a query which loads related collections for more than one collection navigation, either via 'Include' or through projection, but no 'QuerySplittingBehavior' has been configured. By default, Entity Framework will use 'QuerySplittingBehavior.SingleQuery', which can potentially result in slow query performance. See https://go.microsoft.com/fwlink/?linkid=2134277 for more information. To identify the query that's triggering this warning call 'ConfigureWarnings(w => w.Throw(RelationalEventId.MultipleCollectionIncludeWarning))'.
+2026-02-15 18:50:28.019 +02:00 [INF] HTTP POST /api/Orders/add-gift responded 200 in 319.0567 ms
+2026-02-15 18:50:28.881 +02:00 [INF] מעדכן/מוסיף מתנה 12 למשתמש 19 בדלתא 1.
+2026-02-15 18:50:28.898 +02:00 [INF] HTTP POST /api/Orders/add-gift responded 200 in 18.2478 ms
+2026-02-15 18:50:29.167 +02:00 [INF] מעדכן/מוסיף מתנה 12 למשתמש 19 בדלתא 1.
+2026-02-15 18:50:29.202 +02:00 [INF] HTTP POST /api/Orders/add-gift responded 200 in 36.7751 ms
+2026-02-15 18:50:31.386 +02:00 [INF] מעדכן/מוסיף מתנה 9 למשתמש 19 בדלתא 1.
+2026-02-15 18:50:31.424 +02:00 [INF] HTTP POST /api/Orders/add-gift responded 200 in 39.0221 ms
+2026-02-15 18:50:32.220 +02:00 [INF] מעדכן/מוסיף מתנה 9 למשתמש 19 בדלתא 1.
+2026-02-15 18:50:32.307 +02:00 [INF] HTTP POST /api/Orders/add-gift responded 200 in 90.6679 ms
+2026-02-15 18:50:34.354 +02:00 [INF] HTTP OPTIONS /api/Orders/add-gift responded 204 in 0.1290 ms
+2026-02-15 18:50:34.377 +02:00 [INF] מעדכן/מוסיף מתנה 6 למשתמש 19 בדלתא 1.
+2026-02-15 18:50:34.418 +02:00 [INF] HTTP POST /api/Orders/add-gift responded 200 in 44.6837 ms
+2026-02-15 18:50:36.201 +02:00 [INF] מעדכן/מוסיף מתנה 12 למשתמש 19 בדלתא 2.
+2026-02-15 18:50:36.216 +02:00 [INF] HTTP POST /api/Orders/add-gift responded 200 in 16.0019 ms
+2026-02-15 18:50:55.898 +02:00 [INF] HTTP OPTIONS /api/Orders/update-package responded 204 in 1.2991 ms
+2026-02-15 18:50:55.923 +02:00 [INF] Updating package 1 for user 19 with amount 0
+2026-02-15 18:50:55.984 +02:00 [INF] HTTP POST /api/Orders/update-package responded 200 in 63.4028 ms
+2026-02-15 18:50:57.193 +02:00 [INF] HTTP OPTIONS /api/Orders/draft/19/gift/12 responded 204 in 0.1158 ms
+2026-02-15 18:50:57.195 +02:00 [INF] HTTP OPTIONS /api/Orders/draft/19/gift/9 responded 204 in 0.3093 ms
+2026-02-15 18:50:57.195 +02:00 [INF] HTTP OPTIONS /api/Orders/draft/19 responded 204 in 0.3339 ms
+2026-02-15 18:50:57.195 +02:00 [INF] HTTP OPTIONS /api/Orders/draft/19/gift/6 responded 204 in 0.2981 ms
+2026-02-15 18:50:57.351 +02:00 [INF] HTTP DELETE /api/Orders/draft/19 responded 200 in 122.6999 ms
+2026-02-15 18:50:57.775 +02:00 [ERR] שגיאה במחיקת מתנה 12 מטיוטת ההזמנה של המשתמש 19.
+System.Exception: Order not found
+   at ChineseAuctionAPI.Repositories.OrderRepo.DeleteGiftFromOrderAsync(Int32 orderId, Int32 giftId) in C:\Users\User\Documents\Handesaim\projb\ChineseAuction.Api.Angular\ChineseAuction.Api.Angular\ChineseAuctionAPI\ChineseAuctionAPI\Repositories\OrderRepo.cs:line 151
+   at ChineseAuctionAPI.Services.OrderService.DeleteGiftFromDraftByUserAsync(Int32 userId, Int32 giftId) in C:\Users\User\Documents\Handesaim\projb\ChineseAuction.Api.Angular\ChineseAuction.Api.Angular\ChineseAuctionAPI\ChineseAuctionAPI\Services\OrderService.cs:line 265
+2026-02-15 18:50:57.775 +02:00 [ERR] שגיאה במחיקת מתנה 9 מטיוטת ההזמנה של המשתמש 19.
+System.Exception: Order not found
+   at ChineseAuctionAPI.Repositories.OrderRepo.DeleteGiftFromOrderAsync(Int32 orderId, Int32 giftId) in C:\Users\User\Documents\Handesaim\projb\ChineseAuction.Api.Angular\ChineseAuction.Api.Angular\ChineseAuctionAPI\ChineseAuctionAPI\Repositories\OrderRepo.cs:line 151
+   at ChineseAuctionAPI.Services.OrderService.DeleteGiftFromDraftByUserAsync(Int32 userId, Int32 giftId) in C:\Users\User\Documents\Handesaim\projb\ChineseAuction.Api.Angular\ChineseAuction.Api.Angular\ChineseAuctionAPI\ChineseAuctionAPI\Services\OrderService.cs:line 265
+2026-02-15 18:50:57.775 +02:00 [ERR] שגיאה במחיקת מתנה 6 מטיוטת ההזמנה של המשתמש 19.
+System.Exception: Order not found
+   at ChineseAuctionAPI.Repositories.OrderRepo.DeleteGiftFromOrderAsync(Int32 orderId, Int32 giftId) in C:\Users\User\Documents\Handesaim\projb\ChineseAuction.Api.Angular\ChineseAuction.Api.Angular\ChineseAuctionAPI\ChineseAuctionAPI\Repositories\OrderRepo.cs:line 151
+   at ChineseAuctionAPI.Services.OrderService.DeleteGiftFromDraftByUserAsync(Int32 userId, Int32 giftId) in C:\Users\User\Documents\Handesaim\projb\ChineseAuction.Api.Angular\ChineseAuction.Api.Angular\ChineseAuctionAPI\ChineseAuctionAPI\Services\OrderService.cs:line 265
+2026-02-15 18:50:58.103 +02:00 [ERR] HTTP DELETE /api/Orders/draft/19/gift/12 responded 500 in 891.8695 ms
+2026-02-15 18:50:58.258 +02:00 [ERR] HTTP DELETE /api/Orders/draft/19/gift/9 responded 500 in 1041.4367 ms
+2026-02-15 18:50:58.397 +02:00 [ERR] HTTP DELETE /api/Orders/draft/19/gift/6 responded 500 in 1152.9547 ms
+2026-02-15 18:50:58.408 +02:00 [INF] HTTP OPTIONS /api/Orders/remove-gift responded 204 in 1.4555 ms
+2026-02-15 18:50:58.419 +02:00 [INF] HTTP OPTIONS /api/Orders/remove-gift responded 204 in 0.4455 ms
+2026-02-15 18:50:58.429 +02:00 [INF] HTTP OPTIONS /api/Orders/remove-gift responded 204 in 0.6477 ms
+2026-02-15 18:50:58.434 +02:00 [INF] HTTP POST /api/Orders/remove-gift responded 404 in 0.4044 ms
+2026-02-15 18:50:58.440 +02:00 [INF] HTTP POST /api/Orders/remove-gift responded 404 in 1.2512 ms
+2026-02-15 18:50:58.448 +02:00 [INF] HTTP POST /api/Orders/remove-gift responded 404 in 1.9470 ms
+2026-02-15 18:50:58.462 +02:00 [INF] HTTP OPTIONS /api/Orders/add-gift responded 204 in 0.1687 ms
+2026-02-15 18:50:58.472 +02:00 [INF] HTTP OPTIONS /api/Orders/add-gift responded 204 in 0.9328 ms
+2026-02-15 18:50:58.483 +02:00 [INF] HTTP OPTIONS /api/Orders/add-gift responded 204 in 0.6527 ms
+2026-02-15 18:50:58.490 +02:00 [INF] מעדכן/מוסיף מתנה 12 למשתמש 19 בדלתא -3.
+2026-02-15 18:50:58.495 +02:00 [INF] מעדכן/מוסיף מתנה 9 למשתמש 19 בדלתא -2.
+2026-02-15 18:50:58.506 +02:00 [INF] מעדכן/מוסיף מתנה 6 למשתמש 19 בדלתא -1.
+2026-02-15 18:50:58.680 +02:00 [ERR] שגיאה בעת עדכון מתנה 12 בהזמנה של משתמש 19.
+System.Exception: עליך לבחור חבילה לפני בחירת מתנות
+   at ChineseAuctionAPI.Repositories.OrderRepo.AddOrUpdateGiftInOrderAsync(Int32 userId, Int32 IdGift, Int32 deltaAmount) in C:\Users\User\Documents\Handesaim\projb\ChineseAuction.Api.Angular\ChineseAuction.Api.Angular\ChineseAuctionAPI\ChineseAuctionAPI\Repositories\OrderRepo.cs:line 26
+   at ChineseAuctionAPI.Services.OrderService.AddOrUpdateGiftInOrderAsync(Int32 userId, Int32 giftId, Int32 deltaAmount) in C:\Users\User\Documents\Handesaim\projb\ChineseAuction.Api.Angular\ChineseAuction.Api.Angular\ChineseAuctionAPI\ChineseAuctionAPI\Services\OrderService.cs:line 27
+2026-02-15 18:50:58.815 +02:00 [ERR] שגיאה בעת עדכון מתנה 9 בהזמנה של משתמש 19.
+System.Exception: עליך לבחור חבילה לפני בחירת מתנות
+   at ChineseAuctionAPI.Repositories.OrderRepo.AddOrUpdateGiftInOrderAsync(Int32 userId, Int32 IdGift, Int32 deltaAmount) in C:\Users\User\Documents\Handesaim\projb\ChineseAuction.Api.Angular\ChineseAuction.Api.Angular\ChineseAuctionAPI\ChineseAuctionAPI\Repositories\OrderRepo.cs:line 26
+   at ChineseAuctionAPI.Services.OrderService.AddOrUpdateGiftInOrderAsync(Int32 userId, Int32 giftId, Int32 deltaAmount) in C:\Users\User\Documents\Handesaim\projb\ChineseAuction.Api.Angular\ChineseAuction.Api.Angular\ChineseAuctionAPI\ChineseAuctionAPI\Services\OrderService.cs:line 27
+2026-02-15 18:50:58.976 +02:00 [ERR] שגיאה בעת עדכון מתנה 6 בהזמנה של משתמש 19.
+System.Exception: עליך לבחור חבילה לפני בחירת מתנות
+   at ChineseAuctionAPI.Repositories.OrderRepo.AddOrUpdateGiftInOrderAsync(Int32 userId, Int32 IdGift, Int32 deltaAmount) in C:\Users\User\Documents\Handesaim\projb\ChineseAuction.Api.Angular\ChineseAuction.Api.Angular\ChineseAuctionAPI\ChineseAuctionAPI\Repositories\OrderRepo.cs:line 26
+   at ChineseAuctionAPI.Services.OrderService.AddOrUpdateGiftInOrderAsync(Int32 userId, Int32 giftId, Int32 deltaAmount) in C:\Users\User\Documents\Handesaim\projb\ChineseAuction.Api.Angular\ChineseAuction.Api.Angular\ChineseAuctionAPI\ChineseAuctionAPI\Services\OrderService.cs:line 27
+2026-02-15 18:50:59.050 +02:00 [ERR] HTTP POST /api/Orders/add-gift responded 500 in 562.9945 ms
+2026-02-15 18:50:59.153 +02:00 [ERR] HTTP POST /api/Orders/add-gift responded 500 in 659.9926 ms
+2026-02-15 18:50:59.296 +02:00 [ERR] HTTP POST /api/Orders/add-gift responded 500 in 792.6062 ms
+2026-02-15 18:51:13.039 +02:00 [INF] HTTP OPTIONS /api/Packages responded 204 in 0.3610 ms
+2026-02-15 18:51:13.055 +02:00 [INF] HTTP OPTIONS /api/Orders/user/19 responded 204 in 0.3423 ms
+2026-02-15 18:51:13.090 +02:00 [INF] שולף את כל החבילות.
+2026-02-15 18:51:13.103 +02:00 [INF] שולף את כל ההזמנות עבור משתמש 19.
+2026-02-15 18:51:13.149 +02:00 [INF] HTTP GET /api/Packages responded 200 in 63.4801 ms
+2026-02-15 18:51:13.235 +02:00 [INF] HTTP GET /api/Orders/user/19 responded 200 in 134.1390 ms
+2026-02-15 18:51:14.904 +02:00 [INF] HTTP OPTIONS /api/Orders/update-package responded 204 in 0.4019 ms
+2026-02-15 18:51:14.918 +02:00 [INF] Updating package 3 for user 19 with amount 1
+2026-02-15 18:51:15.106 +02:00 [INF] HTTP POST /api/Orders/update-package responded 200 in 190.1340 ms
+2026-02-15 18:51:16.274 +02:00 [INF] HTTP OPTIONS /api/Gift responded 204 in 0.3983 ms
+2026-02-15 18:51:16.292 +02:00 [INF] Attempting to retrieve all gifts.
+2026-02-15 18:51:16.293 +02:00 [INF] שולף את רשימת כל המתנות מהמאגר.
+2026-02-15 18:51:16.312 +02:00 [INF] נשלפו בהצלחה 9 מתנות.
+2026-02-15 18:51:16.317 +02:00 [INF] HTTP GET /api/Gift responded 200 in 25.7773 ms
+2026-02-15 18:51:18.659 +02:00 [INF] HTTP OPTIONS /api/Orders/add-gift responded 204 in 1.0742 ms
+2026-02-15 18:51:18.672 +02:00 [INF] מעדכן/מוסיף מתנה 9 למשתמש 19 בדלתא 1.
+2026-02-15 18:51:18.739 +02:00 [INF] HTTP POST /api/Orders/add-gift responded 200 in 69.2282 ms
+2026-02-15 18:51:19.237 +02:00 [INF] מעדכן/מוסיף מתנה 9 למשתמש 19 בדלתא 1.
+2026-02-15 18:51:19.314 +02:00 [INF] HTTP POST /api/Orders/add-gift responded 200 in 80.2131 ms
+2026-02-15 18:51:19.505 +02:00 [INF] מעדכן/מוסיף מתנה 9 למשתמש 19 בדלתא 1.
+2026-02-15 18:51:19.543 +02:00 [INF] HTTP POST /api/Orders/add-gift responded 200 in 39.2858 ms
+2026-02-15 18:51:19.695 +02:00 [INF] מעדכן/מוסיף מתנה 9 למשתמש 19 בדלתא 1.
+2026-02-15 18:51:19.737 +02:00 [INF] HTTP POST /api/Orders/add-gift responded 200 in 43.6016 ms
+2026-02-15 18:51:19.935 +02:00 [INF] מעדכן/מוסיף מתנה 9 למשתמש 19 בדלתא 1.
+2026-02-15 18:51:20.001 +02:00 [INF] HTTP POST /api/Orders/add-gift responded 200 in 69.1170 ms
+2026-02-15 18:51:21.672 +02:00 [INF] מעדכן/מוסיף מתנה 6 למשתמש 19 בדלתא 1.
+2026-02-15 18:51:21.721 +02:00 [INF] HTTP POST /api/Orders/add-gift responded 200 in 50.7332 ms
+2026-02-15 18:51:21.938 +02:00 [INF] מעדכן/מוסיף מתנה 6 למשתמש 19 בדלתא 1.
+2026-02-15 18:51:21.987 +02:00 [INF] HTTP POST /api/Orders/add-gift responded 200 in 51.3292 ms
+2026-02-15 18:51:22.159 +02:00 [INF] מעדכן/מוסיף מתנה 6 למשתמש 19 בדלתא 1.
+2026-02-15 18:51:22.218 +02:00 [INF] HTTP POST /api/Orders/add-gift responded 200 in 62.6889 ms
+2026-02-15 18:51:22.391 +02:00 [INF] מעדכן/מוסיף מתנה 6 למשתמש 19 בדלתא 1.
+2026-02-15 18:51:22.430 +02:00 [INF] HTTP POST /api/Orders/add-gift responded 200 in 39.5372 ms
+2026-02-15 18:51:23.512 +02:00 [INF] מעדכן/מוסיף מתנה 12 למשתמש 19 בדלתא 1.
+2026-02-15 18:51:23.544 +02:00 [INF] HTTP POST /api/Orders/add-gift responded 200 in 34.5998 ms
+2026-02-15 18:51:23.756 +02:00 [INF] HTTP OPTIONS /api/Orders/add-gift responded 204 in 1.5388 ms
+2026-02-15 18:51:23.778 +02:00 [INF] מעדכן/מוסיף מתנה 12 למשתמש 19 בדלתא 1.
+2026-02-15 18:51:23.814 +02:00 [INF] HTTP POST /api/Orders/add-gift responded 200 in 37.9139 ms
+2026-02-15 18:51:35.568 +02:00 [INF] HTTP OPTIONS /api/Packages responded 204 in 0.0643 ms
+2026-02-15 18:51:35.569 +02:00 [INF] HTTP OPTIONS /api/Orders/user/19 responded 204 in 0.1880 ms
+2026-02-15 18:51:35.576 +02:00 [INF] שולף את כל החבילות.
+2026-02-15 18:51:35.584 +02:00 [INF] HTTP GET /api/Packages responded 200 in 9.0295 ms
+2026-02-15 18:51:35.585 +02:00 [INF] שולף את כל ההזמנות עבור משתמש 19.
+2026-02-15 18:51:35.602 +02:00 [INF] HTTP GET /api/Orders/user/19 responded 200 in 22.8758 ms
+2026-02-15 18:51:50.869 +02:00 [INF] HTTP OPTIONS /api/Orders/income-report responded 204 in 0.8193 ms
+2026-02-15 18:51:50.895 +02:00 [INF] ח הכנסות כללי למערכת.
+2026-02-15 18:51:51.083 +02:00 [INF] HTTP GET /api/Orders/income-report responded 200 in 204.9609 ms
+2026-02-15 18:51:52.078 +02:00 [INF] HTTP OPTIONS /api/Gift responded 204 in 0.6341 ms
+2026-02-15 18:51:52.081 +02:00 [INF] HTTP OPTIONS /api/Gift/winners responded 204 in 0.6502 ms
+2026-02-15 18:51:52.091 +02:00 [INF] Attempting to retrieve all gifts.
+2026-02-15 18:51:52.094 +02:00 [INF] שולף את רשימת כל המתנות מהמאגר.
+2026-02-15 18:51:52.108 +02:00 [INF] נשלפו בהצלחה 9 מתנות.
+2026-02-15 18:51:52.112 +02:00 [INF] HTTP GET /api/Gift responded 200 in 22.5626 ms
+2026-02-15 18:51:52.272 +02:00 [INF] HTTP GET /api/Gift/winners responded 200 in 176.1845 ms
+2026-02-15 18:51:52.862 +02:00 [INF] HTTP OPTIONS /api/Donors responded 204 in 0.1035 ms
+2026-02-15 18:51:52.864 +02:00 [INF] Attempting to retrieve all gifts.
+2026-02-15 18:51:52.875 +02:00 [INF] שולף את רשימת כל המתנות מהמאגר.
+2026-02-15 18:51:52.888 +02:00 [INF] Fetching all donors
+2026-02-15 18:51:52.891 +02:00 [INF] נשלפו בהצלחה 9 מתנות.
+2026-02-15 18:51:52.892 +02:00 [INF] מתחיל שליפת כל התורמים בשירות.
+2026-02-15 18:51:52.900 +02:00 [INF] HTTP GET /api/Gift responded 200 in 38.0516 ms
+2026-02-15 18:51:52.920 +02:00 [INF] נשלפו בהצלחה 5 תורמים מהמאגר.
+2026-02-15 18:51:52.927 +02:00 [INF] HTTP GET /api/Donors responded 200 in 50.3349 ms
+2026-02-15 18:51:52.932 +02:00 [INF] HTTP OPTIONS /api/Gift/5/participants responded 204 in 0.0753 ms
+2026-02-15 18:51:52.932 +02:00 [INF] HTTP OPTIONS /api/Gift/4/participants responded 204 in 0.1065 ms
+2026-02-15 18:51:52.999 +02:00 [INF] HTTP OPTIONS /api/Gift/10/participants responded 204 in 0.3628 ms
+2026-02-15 18:51:53.083 +02:00 [INF] HTTP GET /images/gift/string responded 404 in 1.7885 ms
+2026-02-15 18:51:52.927 +02:00 [INF] HTTP OPTIONS /api/Gift/2/participants responded 204 in 0.1031 ms
+2026-02-15 18:51:52.933 +02:00 [INF] HTTP OPTIONS /api/Gift/3/participants responded 204 in 0.1015 ms
+2026-02-15 18:51:53.098 +02:00 [INF] שולף פרטי משתתפים מלאים עבור מתנה: 10
+2026-02-15 18:51:53.123 +02:00 [INF] שולף פרטי משתתפים מלאים עבור מתנה: 2
+2026-02-15 18:51:53.133 +02:00 [INF] שולף פרטי משתתפים מלאים עבור מתנה: 3
+2026-02-15 18:51:53.000 +02:00 [INF] HTTP OPTIONS /api/Gift/12/participants responded 204 in 0.0642 ms
+2026-02-15 18:51:52.968 +02:00 [INF] HTTP OPTIONS /api/Gift/6/participants responded 204 in 0.1169 ms
+2026-02-15 18:51:53.000 +02:00 [INF] HTTP OPTIONS /api/Gift/9/participants responded 204 in 0.0438 ms
+2026-02-15 18:51:53.189 +02:00 [INF] שולף פרטי משתתפים מלאים עבור מתנה: 12
+2026-02-15 18:51:53.194 +02:00 [INF] שולף פרטי משתתפים מלאים עבור מתנה: 6
+2026-02-15 18:51:53.001 +02:00 [INF] HTTP OPTIONS /api/Gift/13/participants responded 204 in 0.2275 ms
+2026-02-15 18:51:53.204 +02:00 [INF] HTTP GET /api/Gift/2/participants responded 200 in 83.2924 ms
+2026-02-15 18:51:53.203 +02:00 [INF] HTTP GET /api/Gift/10/participants responded 200 in 109.1927 ms
+2026-02-15 18:51:53.210 +02:00 [INF] HTTP GET /api/Gift/6/participants responded 200 in 16.9424 ms
+2026-02-15 18:51:53.202 +02:00 [INF] שולף פרטי משתתפים מלאים עבור מתנה: 9
+2026-02-15 18:51:53.204 +02:00 [INF] HTTP GET /api/Gift/12/participants responded 200 in 16.2373 ms
+2026-02-15 18:51:53.216 +02:00 [INF] שולף פרטי משתתפים מלאים עבור מתנה: 13
+2026-02-15 18:51:53.210 +02:00 [INF] HTTP GET /api/Gift/3/participants responded 200 in 79.1594 ms
+2026-02-15 18:51:53.245 +02:00 [WRN] לא נמצאו משתתפים למתנה 13
+2026-02-15 18:51:53.238 +02:00 [INF] HTTP GET /api/Gift/9/participants responded 200 in 40.7115 ms
+2026-02-15 18:51:53.088 +02:00 [INF] שולף פרטי משתתפים מלאים עבור מתנה: 4
+2026-02-15 18:51:53.080 +02:00 [INF] שולף פרטי משתתפים מלאים עבור מתנה: 5
+2026-02-15 18:51:53.252 +02:00 [INF] HTTP GET /api/Gift/13/participants responded 200 in 37.6264 ms
+2026-02-15 18:51:53.194 +02:00 [INF] Attempting to retrieve all gift categories.
+2026-02-15 18:51:53.274 +02:00 [INF] HTTP GET /api/Gift/4/participants responded 200 in 187.3543 ms
+2026-02-15 18:51:53.278 +02:00 [INF] מתחיל תהליך שליפת כל קטגוריות המתנות מהשירות.
+2026-02-15 18:51:53.279 +02:00 [INF] HTTP GET /api/Gift/5/participants responded 200 in 235.4554 ms
+2026-02-15 18:51:53.290 +02:00 [INF] נשלפו בהצלחה 4 קטגוריות.
+2026-02-15 18:51:53.296 +02:00 [INF] HTTP GET /api/GiftCategory responded 200 in 103.6144 ms
+2026-02-15 18:51:54.054 +02:00 [INF] Fetching all donors
+2026-02-15 18:51:54.065 +02:00 [INF] מתחיל שליפת כל התורמים בשירות.
+2026-02-15 18:51:54.079 +02:00 [INF] נשלפו בהצלחה 5 תורמים מהמאגר.
+2026-02-15 18:51:54.083 +02:00 [INF] HTTP GET /api/Donors responded 200 in 31.6038 ms
+2026-02-15 18:51:54.884 +02:00 [INF] Attempting to retrieve all gifts.
+2026-02-15 18:51:54.914 +02:00 [INF] שולף את רשימת כל המתנות מהמאגר.
+2026-02-15 18:51:54.917 +02:00 [INF] HTTP GET /api/Gift/winners responded 200 in 32.8349 ms
+2026-02-15 18:51:54.942 +02:00 [INF] נשלפו בהצלחה 9 מתנות.
+2026-02-15 18:51:54.953 +02:00 [INF] HTTP GET /api/Gift responded 200 in 69.9055 ms
+2026-02-15 18:51:59.205 +02:00 [INF] HTTP OPTIONS /api/Packages responded 204 in 1.7632 ms
+2026-02-15 18:51:59.211 +02:00 [INF] HTTP OPTIONS /api/Orders/user/19 responded 204 in 0.1029 ms
+2026-02-15 18:51:59.226 +02:00 [INF] שולף את כל החבילות.
+2026-02-15 18:51:59.237 +02:00 [INF] שולף את כל ההזמנות עבור משתמש 19.
+2026-02-15 18:51:59.253 +02:00 [INF] HTTP GET /api/Packages responded 200 in 28.7390 ms
+2026-02-15 18:51:59.288 +02:00 [INF] HTTP GET /api/Orders/user/19 responded 200 in 53.8983 ms
+2026-02-15 18:51:59.305 +02:00 [INF] HTTP OPTIONS /api/Gift responded 204 in 0.1109 ms
+2026-02-15 18:51:59.324 +02:00 [INF] Attempting to retrieve all gifts.
+2026-02-15 18:51:59.327 +02:00 [INF] שולף את רשימת כל המתנות מהמאגר.
+2026-02-15 18:51:59.347 +02:00 [INF] נשלפו בהצלחה 9 מתנות.
+2026-02-15 18:51:59.352 +02:00 [INF] HTTP GET /api/Gift responded 200 in 29.6120 ms
+2026-02-15 18:51:59.363 +02:00 [INF] שולף את כל ההזמנות עבור משתמש 19.
+2026-02-15 18:51:59.381 +02:00 [INF] HTTP GET /api/Orders/user/19 responded 200 in 18.9016 ms
+2026-02-15 19:01:43.760 +02:00 [INF] HTTP OPTIONS /api/Gift responded 204 in 0.4360 ms
+2026-02-15 19:01:43.761 +02:00 [INF] HTTP OPTIONS /api/Gift/winners responded 204 in 0.1560 ms
+2026-02-15 19:01:43.784 +02:00 [INF] Attempting to retrieve all gifts.
+2026-02-15 19:01:43.790 +02:00 [INF] שולף את רשימת כל המתנות מהמאגר.
+2026-02-15 19:01:44.132 +02:00 [INF] HTTP GET /api/Gift/winners responded 200 in 340.3703 ms
+2026-02-15 19:01:44.134 +02:00 [INF] נשלפו בהצלחה 9 מתנות.
+2026-02-15 19:01:44.142 +02:00 [INF] HTTP GET /api/Gift responded 200 in 359.0285 ms
+2026-02-15 19:12:07.028 +02:00 [INF] HTTP OPTIONS /api/Packages responded 204 in 0.0488 ms
+2026-02-15 19:12:07.029 +02:00 [INF] HTTP OPTIONS /api/Orders/user/19 responded 204 in 0.0422 ms
+2026-02-15 19:12:07.028 +02:00 [INF] HTTP OPTIONS /api/Packages responded 204 in 0.1284 ms
+2026-02-15 19:12:07.044 +02:00 [INF] שולף את כל החבילות.
+2026-02-15 19:12:07.048 +02:00 [INF] שולף את כל ההזמנות עבור משתמש 19.
+2026-02-15 19:12:07.308 +02:00 [INF] HTTP GET /api/Packages responded 200 in 264.6106 ms
+2026-02-15 19:12:07.314 +02:00 [INF] שולף את כל החבילות.
+2026-02-15 19:12:07.357 +02:00 [INF] HTTP GET /api/Packages responded 200 in 44.6724 ms
+2026-02-15 19:12:07.372 +02:00 [INF] HTTP OPTIONS /api/Gift responded 204 in 0.0921 ms
+2026-02-15 19:12:07.381 +02:00 [INF] Attempting to retrieve all gifts.
+2026-02-15 19:12:07.383 +02:00 [INF] שולף את רשימת כל המתנות מהמאגר.
+2026-02-15 19:12:07.405 +02:00 [INF] נשלפו בהצלחה 9 מתנות.
+2026-02-15 19:12:07.407 +02:00 [INF] HTTP GET /api/Gift responded 200 in 26.6417 ms
+2026-02-15 19:12:07.417 +02:00 [INF] HTTP GET /api/Orders/user/19 responded 200 in 369.0919 ms
+2026-02-15 19:12:07.419 +02:00 [INF] שולף את כל ההזמנות עבור משתמש 19.
+2026-02-15 19:12:07.430 +02:00 [INF] HTTP GET /api/Orders/user/19 responded 200 in 11.6332 ms
+2026-02-15 19:12:16.723 +02:00 [INF] HTTP OPTIONS /api/Gift/winners responded 204 in 0.4461 ms
+2026-02-15 19:12:16.724 +02:00 [INF] HTTP OPTIONS /api/Gift responded 204 in 0.0709 ms
+2026-02-15 19:12:16.750 +02:00 [INF] Attempting to retrieve all gifts.
+2026-02-15 19:12:16.757 +02:00 [INF] שולף את רשימת כל המתנות מהמאגר.
+2026-02-15 19:12:16.764 +02:00 [INF] HTTP GET /api/Gift/winners responded 200 in 28.1974 ms
+2026-02-15 19:12:16.777 +02:00 [INF] נשלפו בהצלחה 9 מתנות.
+2026-02-15 19:12:16.794 +02:00 [INF] HTTP GET /api/Gift responded 200 in 44.7388 ms
