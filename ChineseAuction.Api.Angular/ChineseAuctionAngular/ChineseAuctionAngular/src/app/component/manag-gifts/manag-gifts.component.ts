@@ -54,23 +54,16 @@ ngOnChanges() {
       const initializedGifts = data.map(g => new Gift(g));
       this.gifts.set(initializedGifts);
 
-        // טעינת כמות הרוכשים לכל מתנה: קודם מנסים לקבל מהרכיב Orders, אחרת נופל חזרה ל-Gift
-        initializedGifts.forEach(gift => {
-          this.orderService.getPurchasersByGiftId(gift.idGift).subscribe({
-            next: (res) => {
-              gift.totalPurchases = Array.isArray(res) ? res.length : (res ? 1 : 0);
-            },
-            error: () => {
-              // fallback to GiftService count endpoint
-              this.giftService.getParticipantsCount(gift.idGift).subscribe(cnt => {
-                gift.totalPurchases = (cnt == null) ? undefined : cnt;
-              });
-            }
-          });
+      // טעינת כמות הרוכשים לכל מתנה בנפרד
+      initializedGifts.forEach(gift => {
+        this.giftService.getParticipantsCount(gift.idGift).subscribe(count => {
+          gift.totalPurchases = count; 
         });
+      });
     }
   });
 }
+
 filteredGifts = computed(() => {
   const giftText = this.giftSearchText().toLowerCase();
   const donorText = this.donorSearchText().toLowerCase();
@@ -159,7 +152,7 @@ onSortChange(event: Event) {
 private refreshPurchaseCounts() {
   this.gifts().forEach(gift => {
     this.giftService.getParticipantsCount(gift.idGift).subscribe(count => {
-      gift.totalPurchases = (count == null) ? undefined : count;
+      gift.totalPurchases = count;
     });
   });
 }

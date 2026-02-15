@@ -22,7 +22,7 @@ export class Gift {
 
   constructor(init?: Partial<Gift>) {
     Object.assign(this, init);
-
+    // מוודא שהערך מאותחל ל-0 בבנייה
     this.customerQuantity = this.customerQuantity || 0;
   }
 }

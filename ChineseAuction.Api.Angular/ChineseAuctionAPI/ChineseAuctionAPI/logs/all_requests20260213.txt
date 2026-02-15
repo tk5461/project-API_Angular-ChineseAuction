@@ -41,3 +41,543 @@
 2026-02-13 00:30:01.902 +02:00 [INF] HTTP POST /api/Orders/add-gift responded 200 in 10.9654 ms
 2026-02-13 00:30:02.068 +02:00 [INF] מעדכן/מוסיף מתנה 10 למשתמש 1 בדלתא 1.
 2026-02-13 00:30:02.075 +02:00 [INF] HTTP POST /api/Orders/add-gift responded 200 in 8.2135 ms
+2026-02-13 00:30:02.327 +02:00 [INF] מעדכן/מוסיף מתנה 10 למשתמש 1 בדלתא 1.
+2026-02-13 00:30:02.337 +02:00 [INF] HTTP POST /api/Orders/add-gift responded 200 in 10.7515 ms
+2026-02-13 00:30:02.620 +02:00 [INF] מעדכן/מוסיף מתנה 10 למשתמש 1 בדלתא 1.
+2026-02-13 00:30:02.629 +02:00 [INF] HTTP POST /api/Orders/add-gift responded 200 in 9.9092 ms
+2026-02-13 00:30:02.936 +02:00 [INF] מעדכן/מוסיף מתנה 10 למשתמש 1 בדלתא 1.
+2026-02-13 00:30:02.944 +02:00 [INF] HTTP POST /api/Orders/add-gift responded 200 in 7.9251 ms
+2026-02-13 00:30:03.090 +02:00 [INF] מעדכן/מוסיף מתנה 10 למשתמש 1 בדלתא 1.
+2026-02-13 00:30:03.097 +02:00 [INF] HTTP POST /api/Orders/add-gift responded 200 in 7.4628 ms
+2026-02-13 00:30:03.237 +02:00 [INF] מעדכן/מוסיף מתנה 10 למשתמש 1 בדלתא 1.
+2026-02-13 00:30:03.244 +02:00 [INF] HTTP POST /api/Orders/add-gift responded 200 in 7.8451 ms
+2026-02-13 00:30:03.391 +02:00 [INF] מעדכן/מוסיף מתנה 10 למשתמש 1 בדלתא 1.
+2026-02-13 00:30:03.399 +02:00 [INF] HTTP POST /api/Orders/add-gift responded 200 in 8.7395 ms
+2026-02-13 00:30:03.547 +02:00 [INF] מעדכן/מוסיף מתנה 10 למשתמש 1 בדלתא 1.
+2026-02-13 00:30:03.555 +02:00 [INF] HTTP POST /api/Orders/add-gift responded 200 in 8.7389 ms
+2026-02-13 00:30:03.699 +02:00 [INF] מעדכן/מוסיף מתנה 10 למשתמש 1 בדלתא 1.
+2026-02-13 00:30:03.703 +02:00 [INF] HTTP POST /api/Orders/add-gift responded 200 in 5.3600 ms
+2026-02-13 00:30:03.841 +02:00 [INF] מעדכן/מוסיף מתנה 10 למשתמש 1 בדלתא 1.
+2026-02-13 00:30:03.847 +02:00 [INF] HTTP POST /api/Orders/add-gift responded 200 in 7.0700 ms
+2026-02-13 00:30:03.994 +02:00 [INF] מעדכן/מוסיף מתנה 10 למשתמש 1 בדלתא 1.
+2026-02-13 00:30:04.002 +02:00 [INF] HTTP POST /api/Orders/add-gift responded 200 in 8.6258 ms
+2026-02-13 00:30:04.171 +02:00 [INF] מעדכן/מוסיף מתנה 10 למשתמש 1 בדלתא 1.
+2026-02-13 00:30:04.177 +02:00 [INF] HTTP POST /api/Orders/add-gift responded 200 in 6.5783 ms
+2026-02-13 00:30:04.332 +02:00 [INF] מעדכן/מוסיף מתנה 10 למשתמש 1 בדלתא 1.
+2026-02-13 00:30:04.338 +02:00 [INF] HTTP POST /api/Orders/add-gift responded 200 in 6.4655 ms
+2026-02-13 00:30:04.457 +02:00 [INF] מעדכן/מוסיף מתנה 10 למשתמש 1 בדלתא 1.
+2026-02-13 00:30:04.463 +02:00 [INF] HTTP POST /api/Orders/add-gift responded 200 in 6.4533 ms
+2026-02-13 00:30:04.626 +02:00 [INF] מעדכן/מוסיף מתנה 10 למשתמש 1 בדלתא 1.
+2026-02-13 00:30:04.634 +02:00 [INF] HTTP POST /api/Orders/add-gift responded 200 in 8.2514 ms
+2026-02-13 00:30:04.772 +02:00 [INF] מעדכן/מוסיף מתנה 10 למשתמש 1 בדלתא 1.
+2026-02-13 00:30:04.779 +02:00 [INF] HTTP POST /api/Orders/add-gift responded 200 in 7.5906 ms
+2026-02-13 00:30:04.949 +02:00 [INF] מעדכן/מוסיף מתנה 10 למשתמש 1 בדלתא 1.
+2026-02-13 00:30:04.957 +02:00 [INF] HTTP POST /api/Orders/add-gift responded 200 in 8.8140 ms
+2026-02-13 00:30:05.134 +02:00 [INF] מעדכן/מוסיף מתנה 10 למשתמש 1 בדלתא 1.
+2026-02-13 00:30:05.142 +02:00 [INF] HTTP POST /api/Orders/add-gift responded 200 in 8.9444 ms
+2026-02-13 00:30:05.560 +02:00 [INF] HTTP OPTIONS /api/Orders/add-gift responded 204 in 0.0299 ms
+2026-02-13 00:30:05.564 +02:00 [INF] מעדכן/מוסיף מתנה 10 למשתמש 1 בדלתא 1.
+2026-02-13 00:30:05.570 +02:00 [INF] HTTP POST /api/Orders/add-gift responded 200 in 6.7071 ms
+2026-02-13 00:30:06.104 +02:00 [INF] מעדכן/מוסיף מתנה 10 למשתמש 1 בדלתא 1.
+2026-02-13 00:30:06.113 +02:00 [INF] HTTP POST /api/Orders/add-gift responded 200 in 9.9613 ms
+2026-02-13 00:30:07.467 +02:00 [INF] HTTP OPTIONS /api/Orders/update-package responded 204 in 0.2215 ms
+2026-02-13 00:30:07.472 +02:00 [INF] Updating package 1 for user 1 with amount 1
+2026-02-13 00:30:07.479 +02:00 [INF] HTTP POST /api/Orders/update-package responded 200 in 7.8424 ms
+2026-02-13 00:30:08.318 +02:00 [INF] Updating package 1 for user 1 with amount 0
+2026-02-13 00:30:08.325 +02:00 [INF] HTTP POST /api/Orders/update-package responded 200 in 7.3882 ms
+2026-02-13 00:30:09.752 +02:00 [INF] HTTP OPTIONS /api/Orders/draft/1 responded 204 in 0.0387 ms
+2026-02-13 00:30:09.765 +02:00 [INF] HTTP DELETE /api/Orders/draft/1 responded 200 in 8.1654 ms
+2026-02-13 00:30:18.378 +02:00 [INF] HTTP OPTIONS /api/Packages responded 204 in 0.0554 ms
+2026-02-13 00:30:18.379 +02:00 [INF] HTTP OPTIONS /api/Orders/user/1 responded 204 in 0.3550 ms
+2026-02-13 00:30:18.384 +02:00 [INF] שולף את כל החבילות.
+2026-02-13 00:30:18.385 +02:00 [INF] שולף את כל ההזמנות עבור משתמש 1.
+2026-02-13 00:30:18.387 +02:00 [INF] HTTP GET /api/Packages responded 200 in 4.0854 ms
+2026-02-13 00:30:18.390 +02:00 [INF] HTTP GET /api/Orders/user/1 responded 200 in 5.1130 ms
+2026-02-13 00:30:19.381 +02:00 [INF] HTTP OPTIONS /api/Orders/update-package responded 204 in 0.0495 ms
+2026-02-13 00:30:19.387 +02:00 [INF] Updating package 3 for user 1 with amount 1
+2026-02-13 00:30:19.395 +02:00 [INF] HTTP POST /api/Orders/update-package responded 200 in 9.7041 ms
+2026-02-13 00:30:23.229 +02:00 [INF] Updating package 3 for user 1 with amount 2
+2026-02-13 00:30:23.239 +02:00 [INF] HTTP POST /api/Orders/update-package responded 200 in 10.7630 ms
+2026-02-13 00:30:23.434 +02:00 [INF] Updating package 3 for user 1 with amount 3
+2026-02-13 00:30:23.440 +02:00 [INF] HTTP POST /api/Orders/update-package responded 200 in 7.1118 ms
+2026-02-13 00:30:23.793 +02:00 [INF] Updating package 3 for user 1 with amount 4
+2026-02-13 00:30:23.804 +02:00 [INF] HTTP POST /api/Orders/update-package responded 200 in 11.0713 ms
+2026-02-13 01:02:33.670 +02:00 [INF] HTTP OPTIONS /api/Packages responded 204 in 0.3676 ms
+2026-02-13 01:02:33.683 +02:00 [INF] שולף את כל החבילות.
+2026-02-13 01:02:33.704 +02:00 [INF] HTTP GET /api/Packages responded 200 in 21.6827 ms
+2026-02-13 01:02:33.710 +02:00 [INF] HTTP GET /images/main/logo.webp responded 304 in 3.3486 ms
+2026-02-13 01:02:33.710 +02:00 [INF] HTTP GET /images/main/footer.jpg responded 304 in 6.0493 ms
+2026-02-13 01:02:33.721 +02:00 [INF] HTTP OPTIONS /api/Gift responded 204 in 0.0887 ms
+2026-02-13 01:02:33.727 +02:00 [INF] Attempting to retrieve all gifts.
+2026-02-13 01:02:33.728 +02:00 [INF] שולף את רשימת כל המתנות מהמאגר.
+2026-02-13 01:02:33.734 +02:00 [INF] נשלפו בהצלחה 9 מתנות.
+2026-02-13 01:02:33.735 +02:00 [INF] HTTP GET /api/Gift responded 200 in 9.3604 ms
+2026-02-13 01:02:33.743 +02:00 [INF] HTTP OPTIONS /api/Orders/user/1 responded 204 in 0.0383 ms
+2026-02-13 01:02:33.746 +02:00 [INF] שולף את כל ההזמנות עבור משתמש 1.
+2026-02-13 01:02:33.767 +02:00 [INF] HTTP GET /api/Orders/user/1 responded 200 in 21.4531 ms
+2026-02-13 01:03:17.077 +02:00 [INF] HTTP OPTIONS /api/Packages responded 204 in 0.0469 ms
+2026-02-13 01:03:17.087 +02:00 [INF] שולף את כל החבילות.
+2026-02-13 01:03:17.090 +02:00 [INF] HTTP GET /api/Packages responded 200 in 4.0279 ms
+2026-02-13 01:03:17.107 +02:00 [INF] HTTP OPTIONS /api/Gift responded 204 in 0.2086 ms
+2026-02-13 01:03:17.112 +02:00 [INF] Attempting to retrieve all gifts.
+2026-02-13 01:03:17.112 +02:00 [INF] שולף את רשימת כל המתנות מהמאגר.
+2026-02-13 01:03:17.119 +02:00 [INF] נשלפו בהצלחה 9 מתנות.
+2026-02-13 01:03:17.121 +02:00 [INF] HTTP GET /api/Gift responded 200 in 9.5585 ms
+2026-02-13 01:03:17.126 +02:00 [INF] HTTP OPTIONS /api/Orders/user/1 responded 204 in 0.0557 ms
+2026-02-13 01:03:17.130 +02:00 [INF] שולף את כל ההזמנות עבור משתמש 1.
+2026-02-13 01:03:17.145 +02:00 [INF] HTTP GET /api/Orders/user/1 responded 200 in 16.1012 ms
+2026-02-13 01:03:29.121 +02:00 [INF] HTTP OPTIONS /api/Packages responded 204 in 0.1665 ms
+2026-02-13 01:03:29.124 +02:00 [INF] שולף את כל החבילות.
+2026-02-13 01:03:29.127 +02:00 [INF] HTTP GET /api/Packages responded 200 in 3.9192 ms
+2026-02-13 01:03:29.156 +02:00 [INF] שולף את כל החבילות.
+2026-02-13 01:03:29.157 +02:00 [INF] HTTP OPTIONS /api/Orders/user/1 responded 204 in 0.0578 ms
+2026-02-13 01:03:29.160 +02:00 [INF] HTTP GET /api/Packages responded 200 in 4.6228 ms
+2026-02-13 01:03:29.166 +02:00 [INF] שולף את כל ההזמנות עבור משתמש 1.
+2026-02-13 01:03:29.170 +02:00 [INF] HTTP OPTIONS /api/Gift responded 204 in 0.1194 ms
+2026-02-13 01:03:29.170 +02:00 [INF] HTTP GET /api/Orders/user/1 responded 200 in 4.6864 ms
+2026-02-13 01:03:29.175 +02:00 [INF] Attempting to retrieve all gifts.
+2026-02-13 01:03:29.175 +02:00 [INF] שולף את רשימת כל המתנות מהמאגר.
+2026-02-13 01:03:29.178 +02:00 [INF] נשלפו בהצלחה 9 מתנות.
+2026-02-13 01:03:29.179 +02:00 [INF] HTTP GET /api/Gift responded 200 in 5.4264 ms
+2026-02-13 01:03:29.193 +02:00 [INF] שולף את כל ההזמנות עבור משתמש 1.
+2026-02-13 01:03:29.196 +02:00 [INF] HTTP GET /api/Orders/user/1 responded 200 in 4.4471 ms
+2026-02-13 01:03:29.207 +02:00 [INF] HTTP GET /images/main/logo.webp responded 304 in 0.2328 ms
+2026-02-13 01:03:29.207 +02:00 [INF] HTTP GET /images/main/footer.jpg responded 304 in 0.2170 ms
+2026-02-13 01:09:59.841 +02:00 [INF] HTTP OPTIONS /api/Packages responded 204 in 0.1994 ms
+2026-02-13 01:09:59.847 +02:00 [INF] שולף את כל החבילות.
+2026-02-13 01:09:59.858 +02:00 [INF] HTTP GET /api/Packages responded 200 in 11.7735 ms
+2026-02-13 01:09:59.861 +02:00 [INF] HTTP OPTIONS /api/Gift responded 204 in 0.0286 ms
+2026-02-13 01:09:59.864 +02:00 [INF] Attempting to retrieve all gifts.
+2026-02-13 01:09:59.864 +02:00 [INF] שולף את רשימת כל המתנות מהמאגר.
+2026-02-13 01:09:59.869 +02:00 [INF] נשלפו בהצלחה 9 מתנות.
+2026-02-13 01:09:59.869 +02:00 [INF] HTTP GET /api/Gift responded 200 in 6.5816 ms
+2026-02-13 01:09:59.873 +02:00 [INF] HTTP OPTIONS /api/Orders/user/1 responded 204 in 0.0455 ms
+2026-02-13 01:09:59.876 +02:00 [INF] שולף את כל ההזמנות עבור משתמש 1.
+2026-02-13 01:09:59.887 +02:00 [INF] HTTP GET /api/Orders/user/1 responded 200 in 11.6466 ms
+2026-02-13 01:12:17.489 +02:00 [INF] HTTP OPTIONS /api/Packages responded 204 in 0.0572 ms
+2026-02-13 01:12:17.497 +02:00 [INF] שולף את כל החבילות.
+2026-02-13 01:12:17.501 +02:00 [INF] HTTP GET /api/Packages responded 200 in 4.3271 ms
+2026-02-13 01:12:17.518 +02:00 [INF] HTTP OPTIONS /api/Orders/user/1 responded 204 in 0.1649 ms
+2026-02-13 01:12:17.531 +02:00 [INF] HTTP OPTIONS /api/Gift responded 204 in 0.0721 ms
+2026-02-13 01:12:17.531 +02:00 [INF] שולף את כל החבילות.
+2026-02-13 01:12:17.535 +02:00 [INF] שולף את כל ההזמנות עבור משתמש 1.
+2026-02-13 01:12:17.538 +02:00 [INF] HTTP GET /api/Packages responded 200 in 11.5368 ms
+2026-02-13 01:12:17.541 +02:00 [INF] Attempting to retrieve all gifts.
+2026-02-13 01:12:17.544 +02:00 [INF] שולף את רשימת כל המתנות מהמאגר.
+2026-02-13 01:12:17.557 +02:00 [INF] HTTP GET /api/Orders/user/1 responded 200 in 23.3419 ms
+2026-02-13 01:12:17.557 +02:00 [INF] נשלפו בהצלחה 9 מתנות.
+2026-02-13 01:12:17.559 +02:00 [INF] HTTP GET /api/Gift responded 200 in 24.3883 ms
+2026-02-13 01:12:17.567 +02:00 [INF] שולף את כל ההזמנות עבור משתמש 1.
+2026-02-13 01:12:17.570 +02:00 [INF] HTTP GET /api/Orders/user/1 responded 200 in 3.5052 ms
+2026-02-13 01:12:54.496 +02:00 [INF] HTTP OPTIONS /api/Gift responded 204 in 0.1535 ms
+2026-02-13 01:12:54.499 +02:00 [INF] Attempting to retrieve all gifts.
+2026-02-13 01:12:54.500 +02:00 [INF] שולף את רשימת כל המתנות מהמאגר.
+2026-02-13 01:12:54.505 +02:00 [INF] נשלפו בהצלחה 9 מתנות.
+2026-02-13 01:12:54.506 +02:00 [INF] HTTP GET /api/Gift responded 200 in 7.1546 ms
+2026-02-13 01:12:54.519 +02:00 [INF] HTTP GET /images/gift/d.JPG responded 304 in 1.2530 ms
+2026-02-13 01:12:54.519 +02:00 [INF] HTTP GET /images/gift/a.jpg responded 304 in 0.9069 ms
+2026-02-13 01:12:54.519 +02:00 [INF] HTTP GET /images/gift/c.jpg responded 304 in 1.2619 ms
+2026-02-13 01:12:54.519 +02:00 [INF] HTTP GET /images/gift/e.jpg responded 304 in 0.9355 ms
+2026-02-13 01:12:54.524 +02:00 [INF] HTTP GET /images/gift/d.jpg responded 304 in 0.2456 ms
+2026-02-13 01:12:55.712 +02:00 [INF] HTTP OPTIONS /api/Orders/add-gift responded 204 in 0.0298 ms
+2026-02-13 01:12:55.717 +02:00 [INF] מעדכן/מוסיף מתנה 10 למשתמש 1 בדלתא 1.
+2026-02-13 01:12:55.736 +02:00 [INF] HTTP POST /api/Orders/add-gift responded 200 in 19.9154 ms
+2026-02-13 01:12:56.068 +02:00 [INF] מעדכן/מוסיף מתנה 10 למשתמש 1 בדלתא 1.
+2026-02-13 01:12:56.088 +02:00 [INF] HTTP POST /api/Orders/add-gift responded 200 in 20.0077 ms
+2026-02-13 01:12:56.253 +02:00 [INF] מעדכן/מוסיף מתנה 10 למשתמש 1 בדלתא 1.
+2026-02-13 01:12:56.262 +02:00 [INF] HTTP POST /api/Orders/add-gift responded 200 in 10.3534 ms
+2026-02-13 01:12:56.438 +02:00 [INF] מעדכן/מוסיף מתנה 10 למשתמש 1 בדלתא 1.
+2026-02-13 01:12:56.451 +02:00 [INF] HTTP POST /api/Orders/add-gift responded 200 in 13.8951 ms
+2026-02-13 01:12:56.604 +02:00 [INF] מעדכן/מוסיף מתנה 10 למשתמש 1 בדלתא 1.
+2026-02-13 01:12:56.616 +02:00 [INF] HTTP POST /api/Orders/add-gift responded 200 in 12.3669 ms
+2026-02-13 01:12:56.792 +02:00 [INF] מעדכן/מוסיף מתנה 10 למשתמש 1 בדלתא 1.
+2026-02-13 01:12:56.800 +02:00 [INF] HTTP POST /api/Orders/add-gift responded 200 in 8.8623 ms
+2026-02-13 01:12:56.927 +02:00 [INF] מעדכן/מוסיף מתנה 10 למשתמש 1 בדלתא 1.
+2026-02-13 01:12:56.937 +02:00 [INF] HTTP POST /api/Orders/add-gift responded 200 in 9.9293 ms
+2026-02-13 01:12:57.094 +02:00 [INF] מעדכן/מוסיף מתנה 10 למשתמש 1 בדלתא 1.
+2026-02-13 01:12:57.106 +02:00 [INF] HTTP POST /api/Orders/add-gift responded 200 in 13.0920 ms
+2026-02-13 01:12:58.748 +02:00 [INF] מעדכן/מוסיף מתנה 10 למשתמש 1 בדלתא 1.
+2026-02-13 01:12:58.766 +02:00 [INF] HTTP POST /api/Orders/add-gift responded 200 in 19.3638 ms
+2026-02-13 01:34:24.541 +02:00 [INF] HTTP OPTIONS /api/Packages responded 204 in 0.0652 ms
+2026-02-13 01:34:24.550 +02:00 [INF] שולף את כל החבילות.
+2026-02-13 01:34:24.565 +02:00 [INF] HTTP GET /api/Packages responded 200 in 15.0954 ms
+2026-02-13 01:34:24.581 +02:00 [INF] HTTP OPTIONS /api/Gift responded 204 in 0.1450 ms
+2026-02-13 01:34:24.586 +02:00 [INF] Attempting to retrieve all gifts.
+2026-02-13 01:34:24.586 +02:00 [INF] שולף את רשימת כל המתנות מהמאגר.
+2026-02-13 01:34:24.601 +02:00 [INF] נשלפו בהצלחה 9 מתנות.
+2026-02-13 01:34:24.602 +02:00 [INF] HTTP GET /api/Gift responded 200 in 17.3708 ms
+2026-02-13 01:34:24.608 +02:00 [INF] HTTP OPTIONS /api/Orders/user/1 responded 204 in 0.0320 ms
+2026-02-13 01:34:24.612 +02:00 [INF] שולף את כל ההזמנות עבור משתמש 1.
+2026-02-13 01:34:24.631 +02:00 [INF] HTTP GET /api/Orders/user/1 responded 200 in 19.0374 ms
+2026-02-13 01:34:41.672 +02:00 [INF] HTTP OPTIONS /api/Packages responded 204 in 0.1006 ms
+2026-02-13 01:34:41.673 +02:00 [INF] HTTP OPTIONS /api/Orders/user/1 responded 204 in 0.0408 ms
+2026-02-13 01:34:41.683 +02:00 [INF] שולף את כל החבילות.
+2026-02-13 01:34:41.684 +02:00 [INF] שולף את כל ההזמנות עבור משתמש 1.
+2026-02-13 01:34:41.687 +02:00 [INF] HTTP GET /api/Packages responded 200 in 3.5839 ms
+2026-02-13 01:34:41.702 +02:00 [INF] HTTP GET /api/Orders/user/1 responded 200 in 17.8461 ms
+2026-02-13 01:34:42.190 +02:00 [INF] HTTP OPTIONS /api/Gift responded 204 in 0.0323 ms
+2026-02-13 01:34:42.195 +02:00 [INF] Attempting to retrieve all gifts.
+2026-02-13 01:34:42.195 +02:00 [INF] שולף את רשימת כל המתנות מהמאגר.
+2026-02-13 01:34:42.200 +02:00 [INF] נשלפו בהצלחה 9 מתנות.
+2026-02-13 01:34:42.201 +02:00 [INF] HTTP GET /api/Gift responded 200 in 6.5353 ms
+2026-02-13 01:34:46.050 +02:00 [INF] שולף את כל החבילות.
+2026-02-13 01:34:46.053 +02:00 [INF] HTTP GET /api/Packages responded 200 in 3.3880 ms
+2026-02-13 01:34:46.065 +02:00 [INF] Attempting to retrieve all gifts.
+2026-02-13 01:34:46.065 +02:00 [INF] שולף את רשימת כל המתנות מהמאגר.
+2026-02-13 01:34:46.072 +02:00 [INF] נשלפו בהצלחה 9 מתנות.
+2026-02-13 01:34:46.073 +02:00 [INF] HTTP GET /api/Gift responded 200 in 8.8679 ms
+2026-02-13 01:34:46.075 +02:00 [INF] Attempting to retrieve all gifts.
+2026-02-13 01:34:46.076 +02:00 [INF] שולף את רשימת כל המתנות מהמאגר.
+2026-02-13 01:34:46.079 +02:00 [INF] נשלפו בהצלחה 9 מתנות.
+2026-02-13 01:34:46.080 +02:00 [INF] HTTP GET /api/Gift responded 200 in 5.5479 ms
+2026-02-13 01:34:46.119 +02:00 [INF] שולף את כל ההזמנות עבור משתמש 1.
+2026-02-13 01:34:46.134 +02:00 [INF] HTTP GET /api/Orders/user/1 responded 200 in 15.3681 ms
+2026-02-13 01:40:17.884 +02:00 [INF] HTTP OPTIONS /api/Orders/update-package responded 204 in 0.1754 ms
+2026-02-13 01:40:17.894 +02:00 [INF] Updating package 3 for user 1 with amount 9
+2026-02-13 01:40:17.926 +02:00 [INF] HTTP POST /api/Orders/update-package responded 200 in 32.9325 ms
+2026-02-13 01:40:18.388 +02:00 [INF] Updating package 3 for user 1 with amount 8
+2026-02-13 01:40:18.405 +02:00 [INF] HTTP POST /api/Orders/update-package responded 200 in 17.2230 ms
+2026-02-13 01:40:18.640 +02:00 [INF] Updating package 3 for user 1 with amount 7
+2026-02-13 01:40:18.657 +02:00 [INF] HTTP POST /api/Orders/update-package responded 200 in 17.5327 ms
+2026-02-13 01:40:18.903 +02:00 [INF] Updating package 3 for user 1 with amount 6
+2026-02-13 01:40:18.912 +02:00 [INF] HTTP POST /api/Orders/update-package responded 200 in 9.1584 ms
+2026-02-13 01:41:36.856 +02:00 [INF] HTTP OPTIONS /api/Packages responded 204 in 0.0504 ms
+2026-02-13 01:41:36.864 +02:00 [INF] שולף את כל החבילות.
+2026-02-13 01:41:36.867 +02:00 [INF] HTTP GET /api/Packages responded 200 in 3.3141 ms
+2026-02-13 01:41:36.894 +02:00 [INF] HTTP OPTIONS /api/Gift responded 204 in 0.0364 ms
+2026-02-13 01:41:36.897 +02:00 [INF] Attempting to retrieve all gifts.
+2026-02-13 01:41:36.898 +02:00 [INF] שולף את רשימת כל המתנות מהמאגר.
+2026-02-13 01:41:36.904 +02:00 [INF] נשלפו בהצלחה 9 מתנות.
+2026-02-13 01:41:36.905 +02:00 [INF] HTTP GET /api/Gift responded 200 in 8.2194 ms
+2026-02-13 01:41:36.912 +02:00 [INF] Attempting to retrieve all gifts.
+2026-02-13 01:41:36.912 +02:00 [INF] שולף את רשימת כל המתנות מהמאגר.
+2026-02-13 01:41:36.915 +02:00 [INF] נשלפו בהצלחה 9 מתנות.
+2026-02-13 01:41:36.915 +02:00 [INF] HTTP GET /api/Gift responded 200 in 8.4547 ms
+2026-02-13 01:41:36.920 +02:00 [INF] HTTP OPTIONS /api/Orders/user/1 responded 204 in 0.1121 ms
+2026-02-13 01:41:36.924 +02:00 [INF] שולף את כל ההזמנות עבור משתמש 1.
+2026-02-13 01:41:36.938 +02:00 [INF] HTTP GET /api/Orders/user/1 responded 200 in 14.6848 ms
+2026-02-13 01:41:42.308 +02:00 [INF] HTTP OPTIONS /api/Packages responded 204 in 0.0325 ms
+2026-02-13 01:41:42.311 +02:00 [INF] שולף את כל החבילות.
+2026-02-13 01:41:42.313 +02:00 [INF] HTTP GET /api/Packages responded 200 in 3.2964 ms
+2026-02-13 01:41:42.324 +02:00 [INF] HTTP OPTIONS /api/Gift responded 204 in 0.0413 ms
+2026-02-13 01:41:42.327 +02:00 [INF] Attempting to retrieve all gifts.
+2026-02-13 01:41:42.328 +02:00 [INF] שולף את רשימת כל המתנות מהמאגר.
+2026-02-13 01:41:42.333 +02:00 [INF] נשלפו בהצלחה 9 מתנות.
+2026-02-13 01:41:42.335 +02:00 [INF] HTTP GET /api/Gift responded 200 in 7.8071 ms
+2026-02-13 01:41:42.337 +02:00 [INF] Attempting to retrieve all gifts.
+2026-02-13 01:41:42.339 +02:00 [INF] שולף את רשימת כל המתנות מהמאגר.
+2026-02-13 01:41:42.343 +02:00 [INF] נשלפו בהצלחה 9 מתנות.
+2026-02-13 01:41:42.344 +02:00 [INF] HTTP GET /api/Gift responded 200 in 7.3925 ms
+2026-02-13 01:41:42.350 +02:00 [INF] HTTP OPTIONS /api/Orders/user/1 responded 204 in 0.0423 ms
+2026-02-13 01:41:42.353 +02:00 [INF] שולף את כל ההזמנות עבור משתמש 1.
+2026-02-13 01:41:42.367 +02:00 [INF] HTTP GET /api/Orders/user/1 responded 200 in 14.3724 ms
+2026-02-13 01:41:58.431 +02:00 [INF] HTTP OPTIONS /api/Packages responded 204 in 0.2659 ms
+2026-02-13 01:41:58.435 +02:00 [INF] שולף את כל החבילות.
+2026-02-13 01:41:58.437 +02:00 [INF] HTTP GET /api/Packages responded 200 in 2.6584 ms
+2026-02-13 01:41:58.443 +02:00 [INF] HTTP OPTIONS /api/Gift responded 204 in 0.0540 ms
+2026-02-13 01:41:58.446 +02:00 [INF] Attempting to retrieve all gifts.
+2026-02-13 01:41:58.447 +02:00 [INF] שולף את רשימת כל המתנות מהמאגר.
+2026-02-13 01:41:58.449 +02:00 [INF] נשלפו בהצלחה 9 מתנות.
+2026-02-13 01:41:58.450 +02:00 [INF] HTTP GET /api/Gift responded 200 in 4.3029 ms
+2026-02-13 01:41:58.456 +02:00 [INF] Attempting to retrieve all gifts.
+2026-02-13 01:41:58.457 +02:00 [INF] שולף את רשימת כל המתנות מהמאגר.
+2026-02-13 01:41:58.460 +02:00 [INF] נשלפו בהצלחה 9 מתנות.
+2026-02-13 01:41:58.461 +02:00 [INF] HTTP GET /api/Gift responded 200 in 5.3828 ms
+2026-02-13 01:41:58.467 +02:00 [INF] HTTP OPTIONS /api/Orders/user/1 responded 204 in 0.0825 ms
+2026-02-13 01:41:58.474 +02:00 [INF] שולף את כל ההזמנות עבור משתמש 1.
+2026-02-13 01:41:58.478 +02:00 [INF] HTTP GET /api/Orders/user/1 responded 200 in 5.1841 ms
+2026-02-13 01:42:06.528 +02:00 [INF] HTTP OPTIONS /api/Orders/update-package responded 204 in 0.0391 ms
+2026-02-13 01:42:06.532 +02:00 [INF] Updating package 3 for user 1 with amount 41
+2026-02-13 01:42:06.546 +02:00 [INF] HTTP POST /api/Orders/update-package responded 200 in 13.8897 ms
+2026-02-13 01:42:06.924 +02:00 [INF] Updating package 3 for user 1 with amount 42
+2026-02-13 01:42:06.942 +02:00 [INF] HTTP POST /api/Orders/update-package responded 200 in 17.8559 ms
+2026-02-13 01:42:07.593 +02:00 [INF] Updating package 3 for user 1 with amount 41
+2026-02-13 01:42:07.610 +02:00 [INF] HTTP POST /api/Orders/update-package responded 200 in 17.3852 ms
+2026-02-13 01:42:07.762 +02:00 [INF] Updating package 3 for user 1 with amount 40
+2026-02-13 01:42:07.771 +02:00 [INF] HTTP POST /api/Orders/update-package responded 200 in 8.8743 ms
+2026-02-13 01:42:08.417 +02:00 [INF] Updating package 3 for user 1 with amount 39
+2026-02-13 01:42:08.434 +02:00 [INF] HTTP POST /api/Orders/update-package responded 200 in 17.9814 ms
+2026-02-13 01:42:08.587 +02:00 [INF] Updating package 3 for user 1 with amount 38
+2026-02-13 01:42:08.598 +02:00 [INF] HTTP POST /api/Orders/update-package responded 200 in 11.0437 ms
+2026-02-13 01:42:08.755 +02:00 [INF] Updating package 3 for user 1 with amount 37
+2026-02-13 01:42:08.764 +02:00 [INF] HTTP POST /api/Orders/update-package responded 200 in 10.2569 ms
+2026-02-13 01:42:08.880 +02:00 [INF] Updating package 3 for user 1 with amount 36
+2026-02-13 01:42:08.889 +02:00 [INF] HTTP POST /api/Orders/update-package responded 200 in 9.4785 ms
+2026-02-13 01:42:09.020 +02:00 [INF] Updating package 3 for user 1 with amount 35
+2026-02-13 01:42:09.030 +02:00 [INF] HTTP POST /api/Orders/update-package responded 200 in 10.9877 ms
+2026-02-13 01:42:09.118 +02:00 [INF] Updating package 3 for user 1 with amount 34
+2026-02-13 01:42:09.128 +02:00 [INF] HTTP POST /api/Orders/update-package responded 200 in 10.2204 ms
+2026-02-13 01:42:09.243 +02:00 [INF] Updating package 3 for user 1 with amount 33
+2026-02-13 01:42:09.251 +02:00 [INF] HTTP POST /api/Orders/update-package responded 200 in 7.8807 ms
+2026-02-13 01:42:09.368 +02:00 [INF] Updating package 3 for user 1 with amount 32
+2026-02-13 01:42:09.377 +02:00 [INF] HTTP POST /api/Orders/update-package responded 200 in 9.6548 ms
+2026-02-13 01:42:09.508 +02:00 [INF] Updating package 3 for user 1 with amount 31
+2026-02-13 01:42:09.517 +02:00 [INF] HTTP POST /api/Orders/update-package responded 200 in 9.4849 ms
+2026-02-13 01:42:09.640 +02:00 [INF] Updating package 3 for user 1 with amount 30
+2026-02-13 01:42:09.649 +02:00 [INF] HTTP POST /api/Orders/update-package responded 200 in 9.3558 ms
+2026-02-13 01:42:09.744 +02:00 [INF] Updating package 3 for user 1 with amount 29
+2026-02-13 01:42:09.753 +02:00 [INF] HTTP POST /api/Orders/update-package responded 200 in 9.4314 ms
+2026-02-13 01:42:09.912 +02:00 [INF] Updating package 3 for user 1 with amount 28
+2026-02-13 01:42:09.922 +02:00 [INF] HTTP POST /api/Orders/update-package responded 200 in 10.5502 ms
+2026-02-13 01:42:10.147 +02:00 [INF] Updating package 3 for user 1 with amount 27
+2026-02-13 01:42:10.164 +02:00 [INF] HTTP POST /api/Orders/update-package responded 200 in 17.0343 ms
+2026-02-13 01:42:10.477 +02:00 [INF] Updating package 3 for user 1 with amount 26
+2026-02-13 01:42:10.494 +02:00 [INF] HTTP POST /api/Orders/update-package responded 200 in 18.1187 ms
+2026-02-13 01:42:10.777 +02:00 [INF] Updating package 3 for user 1 with amount 25
+2026-02-13 01:42:10.783 +02:00 [INF] HTTP POST /api/Orders/update-package responded 200 in 5.9010 ms
+2026-02-13 01:42:10.996 +02:00 [INF] Updating package 3 for user 1 with amount 24
+2026-02-13 01:42:11.002 +02:00 [INF] HTTP POST /api/Orders/update-package responded 200 in 6.0753 ms
+2026-02-13 01:42:11.166 +02:00 [INF] Updating package 3 for user 1 with amount 23
+2026-02-13 01:42:11.177 +02:00 [INF] HTTP POST /api/Orders/update-package responded 200 in 12.3026 ms
+2026-02-13 01:42:11.284 +02:00 [INF] Updating package 3 for user 1 with amount 22
+2026-02-13 01:42:11.295 +02:00 [INF] HTTP POST /api/Orders/update-package responded 200 in 11.3136 ms
+2026-02-13 01:42:11.452 +02:00 [INF] Updating package 3 for user 1 with amount 21
+2026-02-13 01:42:11.462 +02:00 [INF] HTTP POST /api/Orders/update-package responded 200 in 10.8232 ms
+2026-02-13 01:42:11.585 +02:00 [INF] HTTP OPTIONS /api/Orders/update-package responded 204 in 0.0316 ms
+2026-02-13 01:42:11.590 +02:00 [INF] Updating package 3 for user 1 with amount 20
+2026-02-13 01:42:11.596 +02:00 [INF] HTTP POST /api/Orders/update-package responded 200 in 7.3230 ms
+2026-02-13 01:42:11.725 +02:00 [INF] Updating package 3 for user 1 with amount 19
+2026-02-13 01:42:11.732 +02:00 [INF] HTTP POST /api/Orders/update-package responded 200 in 8.0348 ms
+2026-02-13 01:42:11.856 +02:00 [INF] Updating package 3 for user 1 with amount 18
+2026-02-13 01:42:11.863 +02:00 [INF] HTTP POST /api/Orders/update-package responded 200 in 8.4655 ms
+2026-02-13 01:42:11.988 +02:00 [INF] Updating package 3 for user 1 with amount 17
+2026-02-13 01:42:11.995 +02:00 [INF] HTTP POST /api/Orders/update-package responded 200 in 7.3491 ms
+2026-02-13 01:42:12.094 +02:00 [INF] Updating package 3 for user 1 with amount 16
+2026-02-13 01:42:12.102 +02:00 [INF] HTTP POST /api/Orders/update-package responded 200 in 8.5993 ms
+2026-02-13 01:42:12.228 +02:00 [INF] Updating package 3 for user 1 with amount 15
+2026-02-13 01:42:12.235 +02:00 [INF] HTTP POST /api/Orders/update-package responded 200 in 7.3679 ms
+2026-02-13 01:42:12.351 +02:00 [INF] Updating package 3 for user 1 with amount 14
+2026-02-13 01:42:12.357 +02:00 [INF] HTTP POST /api/Orders/update-package responded 200 in 6.6154 ms
+2026-02-13 01:42:12.507 +02:00 [INF] Updating package 3 for user 1 with amount 13
+2026-02-13 01:42:12.516 +02:00 [INF] HTTP POST /api/Orders/update-package responded 200 in 10.0051 ms
+2026-02-13 01:42:12.639 +02:00 [INF] Updating package 3 for user 1 with amount 12
+2026-02-13 01:42:12.649 +02:00 [INF] HTTP POST /api/Orders/update-package responded 200 in 10.9753 ms
+2026-02-13 01:42:12.801 +02:00 [INF] Updating package 3 for user 1 with amount 11
+2026-02-13 01:42:12.810 +02:00 [INF] HTTP POST /api/Orders/update-package responded 200 in 9.8243 ms
+2026-02-13 01:42:12.956 +02:00 [INF] Updating package 3 for user 1 with amount 10
+2026-02-13 01:42:12.965 +02:00 [INF] HTTP POST /api/Orders/update-package responded 200 in 9.1268 ms
+2026-02-13 01:42:13.104 +02:00 [INF] Updating package 3 for user 1 with amount 9
+2026-02-13 01:42:13.113 +02:00 [INF] HTTP POST /api/Orders/update-package responded 200 in 9.2115 ms
+2026-02-13 01:42:13.272 +02:00 [INF] Updating package 3 for user 1 with amount 8
+2026-02-13 01:42:13.282 +02:00 [INF] HTTP POST /api/Orders/update-package responded 200 in 10.3809 ms
+2026-02-13 01:42:13.447 +02:00 [INF] Updating package 3 for user 1 with amount 7
+2026-02-13 01:42:13.456 +02:00 [INF] HTTP POST /api/Orders/update-package responded 200 in 9.4841 ms
+2026-02-13 01:42:13.630 +02:00 [INF] Updating package 3 for user 1 with amount 6
+2026-02-13 01:42:13.638 +02:00 [INF] HTTP POST /api/Orders/update-package responded 200 in 7.8155 ms
+2026-02-13 01:42:13.800 +02:00 [INF] Updating package 3 for user 1 with amount 5
+2026-02-13 01:42:13.812 +02:00 [INF] HTTP POST /api/Orders/update-package responded 200 in 11.9707 ms
+2026-02-13 01:42:13.985 +02:00 [INF] Updating package 3 for user 1 with amount 4
+2026-02-13 01:42:13.994 +02:00 [INF] HTTP POST /api/Orders/update-package responded 200 in 10.1178 ms
+2026-02-13 01:42:14.264 +02:00 [INF] Updating package 3 for user 1 with amount 3
+2026-02-13 01:42:14.281 +02:00 [INF] HTTP POST /api/Orders/update-package responded 200 in 17.6446 ms
+2026-02-13 01:42:14.500 +02:00 [INF] Updating package 3 for user 1 with amount 2
+2026-02-13 01:42:14.516 +02:00 [INF] HTTP POST /api/Orders/update-package responded 200 in 16.7475 ms
+2026-02-13 01:42:14.748 +02:00 [INF] Updating package 3 for user 1 with amount 1
+2026-02-13 01:42:14.753 +02:00 [INF] HTTP POST /api/Orders/update-package responded 200 in 5.8936 ms
+2026-02-13 01:42:14.970 +02:00 [INF] Updating package 3 for user 1 with amount 0
+2026-02-13 01:42:14.981 +02:00 [INF] HTTP POST /api/Orders/update-package responded 200 in 12.0117 ms
+2026-02-13 01:42:16.384 +02:00 [INF] HTTP OPTIONS /api/Orders/draft/1 responded 204 in 0.0933 ms
+2026-02-13 01:42:16.406 +02:00 [INF] HTTP DELETE /api/Orders/draft/1 responded 200 in 18.1753 ms
+2026-02-13 01:42:20.706 +02:00 [INF] HTTP OPTIONS /api/Packages responded 204 in 0.0861 ms
+2026-02-13 01:42:20.706 +02:00 [INF] HTTP OPTIONS /api/Orders/user/1 responded 204 in 0.0860 ms
+2026-02-13 01:42:20.711 +02:00 [INF] שולף את כל החבילות.
+2026-02-13 01:42:20.712 +02:00 [INF] שולף את כל ההזמנות עבור משתמש 1.
+2026-02-13 01:42:20.714 +02:00 [INF] HTTP GET /api/Packages responded 200 in 3.8569 ms
+2026-02-13 01:42:20.720 +02:00 [INF] HTTP GET /api/Orders/user/1 responded 200 in 9.1244 ms
+2026-02-13 01:42:21.989 +02:00 [INF] HTTP OPTIONS /api/Orders/update-package responded 204 in 0.0979 ms
+2026-02-13 01:42:21.993 +02:00 [INF] Updating package 2 for user 1 with amount 1
+2026-02-13 01:42:22.015 +02:00 [INF] HTTP POST /api/Orders/update-package responded 200 in 22.4016 ms
+2026-02-13 01:42:24.405 +02:00 [INF] HTTP OPTIONS /api/Gift responded 204 in 0.0339 ms
+2026-02-13 01:42:24.414 +02:00 [INF] Attempting to retrieve all gifts.
+2026-02-13 01:42:24.414 +02:00 [INF] שולף את רשימת כל המתנות מהמאגר.
+2026-02-13 01:42:24.420 +02:00 [INF] נשלפו בהצלחה 9 מתנות.
+2026-02-13 01:42:24.420 +02:00 [INF] HTTP GET /api/Gift responded 200 in 7.4278 ms
+2026-02-13 01:42:25.433 +02:00 [INF] HTTP OPTIONS /api/Orders/add-gift responded 204 in 0.0374 ms
+2026-02-13 01:42:25.437 +02:00 [INF] מעדכן/מוסיף מתנה 10 למשתמש 1 בדלתא 1.
+2026-02-13 01:42:25.456 +02:00 [INF] HTTP POST /api/Orders/add-gift responded 200 in 19.8506 ms
+2026-02-13 01:42:26.757 +02:00 [INF] מעדכן/מוסיף מתנה 11 למשתמש 1 בדלתא 1.
+2026-02-13 01:42:26.778 +02:00 [INF] HTTP POST /api/Orders/add-gift responded 200 in 21.3255 ms
+2026-02-13 01:42:27.018 +02:00 [INF] מעדכן/מוסיף מתנה 11 למשתמש 1 בדלתא 1.
+2026-02-13 01:42:27.025 +02:00 [INF] HTTP POST /api/Orders/add-gift responded 200 in 7.1882 ms
+2026-02-13 01:42:27.726 +02:00 [INF] מעדכן/מוסיף מתנה 11 למשתמש 1 בדלתא 1.
+2026-02-13 01:42:27.742 +02:00 [INF] HTTP POST /api/Orders/add-gift responded 200 in 16.3716 ms
+2026-02-13 01:42:27.917 +02:00 [INF] מעדכן/מוסיף מתנה 11 למשתמש 1 בדלתא 1.
+2026-02-13 01:42:27.927 +02:00 [INF] HTTP POST /api/Orders/add-gift responded 200 in 10.5111 ms
+2026-02-13 01:42:28.772 +02:00 [INF] מעדכן/מוסיף מתנה 11 למשתמש 1 בדלתא 1.
+2026-02-13 01:42:28.790 +02:00 [INF] HTTP POST /api/Orders/add-gift responded 200 in 18.4891 ms
+2026-02-13 01:42:28.919 +02:00 [INF] מעדכן/מוסיף מתנה 11 למשתמש 1 בדלתא 1.
+2026-02-13 01:42:28.925 +02:00 [INF] HTTP POST /api/Orders/add-gift responded 200 in 5.5679 ms
+2026-02-13 01:42:29.058 +02:00 [INF] מעדכן/מוסיף מתנה 11 למשתמש 1 בדלתא 1.
+2026-02-13 01:42:29.067 +02:00 [INF] HTTP POST /api/Orders/add-gift responded 200 in 9.9192 ms
+2026-02-13 01:42:29.207 +02:00 [INF] מעדכן/מוסיף מתנה 11 למשתמש 1 בדלתא 1.
+2026-02-13 01:42:29.216 +02:00 [INF] HTTP POST /api/Orders/add-gift responded 200 in 10.0026 ms
+2026-02-13 01:42:29.353 +02:00 [INF] מעדכן/מוסיף מתנה 11 למשתמש 1 בדלתא 1.
+2026-02-13 01:42:29.363 +02:00 [INF] HTTP POST /api/Orders/add-gift responded 200 in 10.7892 ms
+2026-02-13 01:42:29.507 +02:00 [INF] מעדכן/מוסיף מתנה 11 למשתמש 1 בדלתא 1.
+2026-02-13 01:42:29.516 +02:00 [INF] HTTP POST /api/Orders/add-gift responded 200 in 9.3989 ms
+2026-02-13 01:42:29.728 +02:00 [INF] מעדכן/מוסיף מתנה 11 למשתמש 1 בדלתא 1.
+2026-02-13 01:42:29.734 +02:00 [INF] HTTP POST /api/Orders/add-gift responded 200 in 6.8346 ms
+2026-02-13 01:42:30.103 +02:00 [INF] מעדכן/מוסיף מתנה 11 למשתמש 1 בדלתא 1.
+2026-02-13 01:42:30.120 +02:00 [INF] HTTP POST /api/Orders/add-gift responded 200 in 17.2160 ms
+2026-02-13 01:42:30.257 +02:00 [INF] מעדכן/מוסיף מתנה 11 למשתמש 1 בדלתא 1.
+2026-02-13 01:42:30.265 +02:00 [INF] HTTP POST /api/Orders/add-gift responded 200 in 8.5286 ms
+2026-02-13 01:42:30.609 +02:00 [INF] HTTP OPTIONS /api/Orders/add-gift responded 204 in 0.0306 ms
+2026-02-13 01:42:30.614 +02:00 [INF] מעדכן/מוסיף מתנה 11 למשתמש 1 בדלתא 1.
+2026-02-13 01:42:30.628 +02:00 [INF] HTTP POST /api/Orders/add-gift responded 200 in 13.5739 ms
+2026-02-13 01:42:30.749 +02:00 [INF] מעדכן/מוסיף מתנה 11 למשתמש 1 בדלתא 1.
+2026-02-13 01:42:30.756 +02:00 [INF] HTTP POST /api/Orders/add-gift responded 200 in 7.3950 ms
+2026-02-13 01:42:30.882 +02:00 [INF] מעדכן/מוסיף מתנה 11 למשתמש 1 בדלתא 1.
+2026-02-13 01:42:30.892 +02:00 [INF] HTTP POST /api/Orders/add-gift responded 200 in 10.7642 ms
+2026-02-13 01:42:31.021 +02:00 [INF] מעדכן/מוסיף מתנה 11 למשתמש 1 בדלתא 1.
+2026-02-13 01:42:31.030 +02:00 [INF] HTTP POST /api/Orders/add-gift responded 200 in 8.8849 ms
+2026-02-13 01:42:31.133 +02:00 [INF] מעדכן/מוסיף מתנה 11 למשתמש 1 בדלתא 1.
+2026-02-13 01:42:31.142 +02:00 [INF] HTTP POST /api/Orders/add-gift responded 200 in 9.5852 ms
+2026-02-13 01:42:31.266 +02:00 [INF] מעדכן/מוסיף מתנה 11 למשתמש 1 בדלתא 1.
+2026-02-13 01:42:31.275 +02:00 [INF] HTTP POST /api/Orders/add-gift responded 200 in 9.2543 ms
+2026-02-13 01:42:31.396 +02:00 [INF] מעדכן/מוסיף מתנה 11 למשתמש 1 בדלתא 1.
+2026-02-13 01:42:31.436 +02:00 [ERR] שגיאה בעת עדכון מתנה 11 בהזמנה של משתמש 1.
+System.InvalidOperationException: INSUFFICIENT_TICKETS
+   at ChineseAuctionAPI.Repositories.OrderRepo.AddOrUpdateGiftInOrderAsync(Int32 userId, Int32 IdGift, Int32 deltaAmount) in C:\Users\1\OneDrive\Desktop\ChineseAuction.Api.Angular\ChineseAuction.Api.Angular\ChineseAuctionAPI\ChineseAuctionAPI\Repositories\OrderRepo.cs:line 42
+   at ChineseAuctionAPI.Services.OrderService.AddOrUpdateGiftInOrderAsync(Int32 userId, Int32 giftId, Int32 deltaAmount) in C:\Users\1\OneDrive\Desktop\ChineseAuction.Api.Angular\ChineseAuction.Api.Angular\ChineseAuctionAPI\ChineseAuctionAPI\Services\OrderService.cs:line 27
+2026-02-13 01:42:31.476 +02:00 [INF] HTTP POST /api/Orders/add-gift responded 400 in 80.0825 ms
+2026-02-13 01:42:31.543 +02:00 [INF] מעדכן/מוסיף מתנה 11 למשתמש 1 בדלתא 1.
+2026-02-13 01:42:31.569 +02:00 [ERR] שגיאה בעת עדכון מתנה 11 בהזמנה של משתמש 1.
+System.InvalidOperationException: INSUFFICIENT_TICKETS
+   at ChineseAuctionAPI.Repositories.OrderRepo.AddOrUpdateGiftInOrderAsync(Int32 userId, Int32 IdGift, Int32 deltaAmount) in C:\Users\1\OneDrive\Desktop\ChineseAuction.Api.Angular\ChineseAuction.Api.Angular\ChineseAuctionAPI\ChineseAuctionAPI\Repositories\OrderRepo.cs:line 42
+   at ChineseAuctionAPI.Services.OrderService.AddOrUpdateGiftInOrderAsync(Int32 userId, Int32 giftId, Int32 deltaAmount) in C:\Users\1\OneDrive\Desktop\ChineseAuction.Api.Angular\ChineseAuction.Api.Angular\ChineseAuctionAPI\ChineseAuctionAPI\Services\OrderService.cs:line 27
+2026-02-13 01:42:31.593 +02:00 [INF] HTTP POST /api/Orders/add-gift responded 400 in 49.8427 ms
+2026-02-13 01:42:31.675 +02:00 [INF] מעדכן/מוסיף מתנה 11 למשתמש 1 בדלתא 1.
+2026-02-13 01:42:31.700 +02:00 [ERR] שגיאה בעת עדכון מתנה 11 בהזמנה של משתמש 1.
+System.InvalidOperationException: INSUFFICIENT_TICKETS
+   at ChineseAuctionAPI.Repositories.OrderRepo.AddOrUpdateGiftInOrderAsync(Int32 userId, Int32 IdGift, Int32 deltaAmount) in C:\Users\1\OneDrive\Desktop\ChineseAuction.Api.Angular\ChineseAuction.Api.Angular\ChineseAuctionAPI\ChineseAuctionAPI\Repositories\OrderRepo.cs:line 42
+   at ChineseAuctionAPI.Services.OrderService.AddOrUpdateGiftInOrderAsync(Int32 userId, Int32 giftId, Int32 deltaAmount) in C:\Users\1\OneDrive\Desktop\ChineseAuction.Api.Angular\ChineseAuction.Api.Angular\ChineseAuctionAPI\ChineseAuctionAPI\Services\OrderService.cs:line 27
+2026-02-13 01:42:31.724 +02:00 [INF] HTTP POST /api/Orders/add-gift responded 400 in 49.3440 ms
+2026-02-13 01:42:31.823 +02:00 [INF] מעדכן/מוסיף מתנה 11 למשתמש 1 בדלתא 1.
+2026-02-13 01:42:31.850 +02:00 [ERR] שגיאה בעת עדכון מתנה 11 בהזמנה של משתמש 1.
+System.InvalidOperationException: INSUFFICIENT_TICKETS
+   at ChineseAuctionAPI.Repositories.OrderRepo.AddOrUpdateGiftInOrderAsync(Int32 userId, Int32 IdGift, Int32 deltaAmount) in C:\Users\1\OneDrive\Desktop\ChineseAuction.Api.Angular\ChineseAuction.Api.Angular\ChineseAuctionAPI\ChineseAuctionAPI\Repositories\OrderRepo.cs:line 42
+   at ChineseAuctionAPI.Services.OrderService.AddOrUpdateGiftInOrderAsync(Int32 userId, Int32 giftId, Int32 deltaAmount) in C:\Users\1\OneDrive\Desktop\ChineseAuction.Api.Angular\ChineseAuction.Api.Angular\ChineseAuctionAPI\ChineseAuctionAPI\Services\OrderService.cs:line 27
+2026-02-13 01:42:31.874 +02:00 [INF] HTTP POST /api/Orders/add-gift responded 400 in 50.9977 ms
+2026-02-13 01:42:32.007 +02:00 [INF] מעדכן/מוסיף מתנה 11 למשתמש 1 בדלתא 1.
+2026-02-13 01:42:32.034 +02:00 [ERR] שגיאה בעת עדכון מתנה 11 בהזמנה של משתמש 1.
+System.InvalidOperationException: INSUFFICIENT_TICKETS
+   at ChineseAuctionAPI.Repositories.OrderRepo.AddOrUpdateGiftInOrderAsync(Int32 userId, Int32 IdGift, Int32 deltaAmount) in C:\Users\1\OneDrive\Desktop\ChineseAuction.Api.Angular\ChineseAuction.Api.Angular\ChineseAuctionAPI\ChineseAuctionAPI\Repositories\OrderRepo.cs:line 42
+   at ChineseAuctionAPI.Services.OrderService.AddOrUpdateGiftInOrderAsync(Int32 userId, Int32 giftId, Int32 deltaAmount) in C:\Users\1\OneDrive\Desktop\ChineseAuction.Api.Angular\ChineseAuction.Api.Angular\ChineseAuctionAPI\ChineseAuctionAPI\Services\OrderService.cs:line 27
+2026-02-13 01:42:32.058 +02:00 [INF] HTTP POST /api/Orders/add-gift responded 400 in 52.5386 ms
+2026-02-13 01:42:32.906 +02:00 [INF] מעדכן/מוסיף מתנה 11 למשתמש 1 בדלתא 1.
+2026-02-13 01:42:32.929 +02:00 [ERR] שגיאה בעת עדכון מתנה 11 בהזמנה של משתמש 1.
+System.InvalidOperationException: INSUFFICIENT_TICKETS
+   at ChineseAuctionAPI.Repositories.OrderRepo.AddOrUpdateGiftInOrderAsync(Int32 userId, Int32 IdGift, Int32 deltaAmount) in C:\Users\1\OneDrive\Desktop\ChineseAuction.Api.Angular\ChineseAuction.Api.Angular\ChineseAuctionAPI\ChineseAuctionAPI\Repositories\OrderRepo.cs:line 42
+   at ChineseAuctionAPI.Services.OrderService.AddOrUpdateGiftInOrderAsync(Int32 userId, Int32 giftId, Int32 deltaAmount) in C:\Users\1\OneDrive\Desktop\ChineseAuction.Api.Angular\ChineseAuction.Api.Angular\ChineseAuctionAPI\ChineseAuctionAPI\Services\OrderService.cs:line 27
+2026-02-13 01:42:32.952 +02:00 [INF] HTTP POST /api/Orders/add-gift responded 400 in 46.8186 ms
+2026-02-13 01:42:33.121 +02:00 [INF] מעדכן/מוסיף מתנה 11 למשתמש 1 בדלתא 1.
+2026-02-13 01:42:33.145 +02:00 [ERR] שגיאה בעת עדכון מתנה 11 בהזמנה של משתמש 1.
+System.InvalidOperationException: INSUFFICIENT_TICKETS
+   at ChineseAuctionAPI.Repositories.OrderRepo.AddOrUpdateGiftInOrderAsync(Int32 userId, Int32 IdGift, Int32 deltaAmount) in C:\Users\1\OneDrive\Desktop\ChineseAuction.Api.Angular\ChineseAuction.Api.Angular\ChineseAuctionAPI\ChineseAuctionAPI\Repositories\OrderRepo.cs:line 42
+   at ChineseAuctionAPI.Services.OrderService.AddOrUpdateGiftInOrderAsync(Int32 userId, Int32 giftId, Int32 deltaAmount) in C:\Users\1\OneDrive\Desktop\ChineseAuction.Api.Angular\ChineseAuction.Api.Angular\ChineseAuctionAPI\ChineseAuctionAPI\Services\OrderService.cs:line 27
+2026-02-13 01:42:33.169 +02:00 [INF] HTTP POST /api/Orders/add-gift responded 400 in 48.8272 ms
+2026-02-13 01:42:33.297 +02:00 [INF] מעדכן/מוסיף מתנה 11 למשתמש 1 בדלתא 1.
+2026-02-13 01:42:33.324 +02:00 [ERR] שגיאה בעת עדכון מתנה 11 בהזמנה של משתמש 1.
+System.InvalidOperationException: INSUFFICIENT_TICKETS
+   at ChineseAuctionAPI.Repositories.OrderRepo.AddOrUpdateGiftInOrderAsync(Int32 userId, Int32 IdGift, Int32 deltaAmount) in C:\Users\1\OneDrive\Desktop\ChineseAuction.Api.Angular\ChineseAuction.Api.Angular\ChineseAuctionAPI\ChineseAuctionAPI\Repositories\OrderRepo.cs:line 42
+   at ChineseAuctionAPI.Services.OrderService.AddOrUpdateGiftInOrderAsync(Int32 userId, Int32 giftId, Int32 deltaAmount) in C:\Users\1\OneDrive\Desktop\ChineseAuction.Api.Angular\ChineseAuction.Api.Angular\ChineseAuctionAPI\ChineseAuctionAPI\Services\OrderService.cs:line 27
+2026-02-13 01:42:33.348 +02:00 [INF] HTTP POST /api/Orders/add-gift responded 400 in 51.7410 ms
+2026-02-13 01:42:34.157 +02:00 [INF] מעדכן/מוסיף מתנה 10 למשתמש 1 בדלתא 1.
+2026-02-13 01:42:34.183 +02:00 [ERR] שגיאה בעת עדכון מתנה 10 בהזמנה של משתמש 1.
+System.InvalidOperationException: INSUFFICIENT_TICKETS
+   at ChineseAuctionAPI.Repositories.OrderRepo.AddOrUpdateGiftInOrderAsync(Int32 userId, Int32 IdGift, Int32 deltaAmount) in C:\Users\1\OneDrive\Desktop\ChineseAuction.Api.Angular\ChineseAuction.Api.Angular\ChineseAuctionAPI\ChineseAuctionAPI\Repositories\OrderRepo.cs:line 42
+   at ChineseAuctionAPI.Services.OrderService.AddOrUpdateGiftInOrderAsync(Int32 userId, Int32 giftId, Int32 deltaAmount) in C:\Users\1\OneDrive\Desktop\ChineseAuction.Api.Angular\ChineseAuction.Api.Angular\ChineseAuctionAPI\ChineseAuctionAPI\Services\OrderService.cs:line 27
+2026-02-13 01:42:34.206 +02:00 [INF] HTTP POST /api/Orders/add-gift responded 400 in 49.8025 ms
+2026-02-13 01:42:34.370 +02:00 [INF] מעדכן/מוסיף מתנה 10 למשתמש 1 בדלתא 1.
+2026-02-13 01:42:34.396 +02:00 [ERR] שגיאה בעת עדכון מתנה 10 בהזמנה של משתמש 1.
+System.InvalidOperationException: INSUFFICIENT_TICKETS
+   at ChineseAuctionAPI.Repositories.OrderRepo.AddOrUpdateGiftInOrderAsync(Int32 userId, Int32 IdGift, Int32 deltaAmount) in C:\Users\1\OneDrive\Desktop\ChineseAuction.Api.Angular\ChineseAuction.Api.Angular\ChineseAuctionAPI\ChineseAuctionAPI\Repositories\OrderRepo.cs:line 42
+   at ChineseAuctionAPI.Services.OrderService.AddOrUpdateGiftInOrderAsync(Int32 userId, Int32 giftId, Int32 deltaAmount) in C:\Users\1\OneDrive\Desktop\ChineseAuction.Api.Angular\ChineseAuction.Api.Angular\ChineseAuctionAPI\ChineseAuctionAPI\Services\OrderService.cs:line 27
+2026-02-13 01:42:34.420 +02:00 [INF] HTTP POST /api/Orders/add-gift responded 400 in 50.5914 ms
+2026-02-13 01:42:34.553 +02:00 [INF] מעדכן/מוסיף מתנה 10 למשתמש 1 בדלתא 1.
+2026-02-13 01:42:34.579 +02:00 [ERR] שגיאה בעת עדכון מתנה 10 בהזמנה של משתמש 1.
+System.InvalidOperationException: INSUFFICIENT_TICKETS
+   at ChineseAuctionAPI.Repositories.OrderRepo.AddOrUpdateGiftInOrderAsync(Int32 userId, Int32 IdGift, Int32 deltaAmount) in C:\Users\1\OneDrive\Desktop\ChineseAuction.Api.Angular\ChineseAuction.Api.Angular\ChineseAuctionAPI\ChineseAuctionAPI\Repositories\OrderRepo.cs:line 42
+   at ChineseAuctionAPI.Services.OrderService.AddOrUpdateGiftInOrderAsync(Int32 userId, Int32 giftId, Int32 deltaAmount) in C:\Users\1\OneDrive\Desktop\ChineseAuction.Api.Angular\ChineseAuction.Api.Angular\ChineseAuctionAPI\ChineseAuctionAPI\Services\OrderService.cs:line 27
+2026-02-13 01:42:34.604 +02:00 [INF] HTTP POST /api/Orders/add-gift responded 400 in 50.9904 ms
+2026-02-13 01:42:42.828 +02:00 [INF] HTTP OPTIONS /api/Orders/update-package responded 204 in 0.0480 ms
+2026-02-13 01:42:42.831 +02:00 [INF] Updating package 2 for user 1 with amount 0
+2026-02-13 01:42:42.851 +02:00 [INF] HTTP POST /api/Orders/update-package responded 200 in 21.3359 ms
+2026-02-13 01:42:43.874 +02:00 [INF] HTTP OPTIONS /api/Orders/draft/1 responded 204 in 0.0999 ms
+2026-02-13 01:42:43.900 +02:00 [INF] HTTP DELETE /api/Orders/draft/1 responded 200 in 20.0680 ms
+2026-02-13 01:42:44.827 +02:00 [INF] HTTP OPTIONS /api/Packages responded 204 in 0.0549 ms
+2026-02-13 01:42:44.827 +02:00 [INF] HTTP OPTIONS /api/Orders/user/1 responded 204 in 0.0430 ms
+2026-02-13 01:42:44.833 +02:00 [INF] שולף את כל החבילות.
+2026-02-13 01:42:44.833 +02:00 [INF] שולף את כל ההזמנות עבור משתמש 1.
+2026-02-13 01:42:44.838 +02:00 [INF] HTTP GET /api/Packages responded 200 in 5.7587 ms
+2026-02-13 01:42:44.860 +02:00 [INF] HTTP GET /api/Orders/user/1 responded 200 in 27.7995 ms
+2026-02-13 01:42:47.049 +02:00 [INF] Updating package 1 for user 1 with amount 1
+2026-02-13 01:42:47.073 +02:00 [INF] HTTP POST /api/Orders/update-package responded 200 in 24.7096 ms
+2026-02-13 01:42:47.225 +02:00 [INF] Updating package 1 for user 1 with amount 2
+2026-02-13 01:42:47.235 +02:00 [INF] HTTP POST /api/Orders/update-package responded 200 in 11.4765 ms
+2026-02-13 01:42:48.693 +02:00 [INF] HTTP OPTIONS /api/Gift responded 204 in 0.2170 ms
+2026-02-13 01:42:48.698 +02:00 [INF] Attempting to retrieve all gifts.
+2026-02-13 01:42:48.700 +02:00 [INF] שולף את רשימת כל המתנות מהמאגר.
+2026-02-13 01:42:48.708 +02:00 [INF] נשלפו בהצלחה 9 מתנות.
+2026-02-13 01:42:48.710 +02:00 [INF] HTTP GET /api/Gift responded 200 in 12.6656 ms
+2026-02-13 01:42:49.650 +02:00 [INF] HTTP OPTIONS /api/Orders/add-gift responded 204 in 0.1150 ms
+2026-02-13 01:42:49.656 +02:00 [INF] מעדכן/מוסיף מתנה 4 למשתמש 1 בדלתא 1.
+2026-02-13 01:42:49.674 +02:00 [INF] HTTP POST /api/Orders/add-gift responded 200 in 18.9727 ms
+2026-02-13 01:42:49.805 +02:00 [INF] מעדכן/מוסיף מתנה 4 למשתמש 1 בדלתא 1.
+2026-02-13 01:42:49.816 +02:00 [INF] HTTP POST /api/Orders/add-gift responded 200 in 11.5201 ms
+2026-02-13 01:42:49.950 +02:00 [INF] מעדכן/מוסיף מתנה 4 למשתמש 1 בדלתא 1.
+2026-02-13 01:42:49.959 +02:00 [INF] HTTP POST /api/Orders/add-gift responded 200 in 9.3724 ms
+2026-02-13 01:42:50.083 +02:00 [INF] מעדכן/מוסיף מתנה 4 למשתמש 1 בדלתא 1.
+2026-02-13 01:42:50.093 +02:00 [INF] HTTP POST /api/Orders/add-gift responded 200 in 10.3290 ms
+2026-02-13 01:42:50.215 +02:00 [INF] מעדכן/מוסיף מתנה 4 למשתמש 1 בדלתא 1.
+2026-02-13 01:42:50.225 +02:00 [INF] HTTP POST /api/Orders/add-gift responded 200 in 10.9797 ms
+2026-02-13 01:42:50.348 +02:00 [INF] מעדכן/מוסיף מתנה 4 למשתמש 1 בדלתא 1.
+2026-02-13 01:42:50.356 +02:00 [INF] HTTP POST /api/Orders/add-gift responded 200 in 8.5276 ms
+2026-02-13 01:42:50.466 +02:00 [INF] מעדכן/מוסיף מתנה 4 למשתמש 1 בדלתא 1.
+2026-02-13 01:42:50.475 +02:00 [INF] HTTP POST /api/Orders/add-gift responded 200 in 10.1015 ms
+2026-02-13 01:42:50.612 +02:00 [INF] מעדכן/מוסיף מתנה 4 למשתמש 1 בדלתא 1.
+2026-02-13 01:42:50.621 +02:00 [INF] HTTP POST /api/Orders/add-gift responded 200 in 9.1071 ms
+2026-02-13 01:42:50.752 +02:00 [INF] מעדכן/מוסיף מתנה 4 למשתמש 1 בדלתא 1.
+2026-02-13 01:42:50.758 +02:00 [INF] HTTP POST /api/Orders/add-gift responded 200 in 6.7799 ms
+2026-02-13 01:42:50.885 +02:00 [INF] מעדכן/מוסיף מתנה 4 למשתמש 1 בדלתא 1.
+2026-02-13 01:42:50.895 +02:00 [INF] HTTP POST /api/Orders/add-gift responded 200 in 10.4784 ms
+2026-02-13 01:42:51.010 +02:00 [INF] מעדכן/מוסיף מתנה 4 למשתמש 1 בדלתא 1.
+2026-02-13 01:42:51.019 +02:00 [INF] HTTP POST /api/Orders/add-gift responded 200 in 8.8387 ms
+2026-02-13 01:42:51.146 +02:00 [INF] מעדכן/מוסיף מתנה 4 למשתמש 1 בדלתא 1.
+2026-02-13 01:42:51.155 +02:00 [INF] HTTP POST /api/Orders/add-gift responded 200 in 9.7843 ms
+2026-02-13 01:42:51.276 +02:00 [INF] מעדכן/מוסיף מתנה 4 למשתמש 1 בדלתא 1.
+2026-02-13 01:42:51.284 +02:00 [INF] HTTP POST /api/Orders/add-gift responded 200 in 8.2237 ms
+2026-02-13 01:42:51.417 +02:00 [INF] מעדכן/מוסיף מתנה 4 למשתמש 1 בדלתא 1.
+2026-02-13 01:42:51.425 +02:00 [INF] HTTP POST /api/Orders/add-gift responded 200 in 9.0107 ms
+2026-02-13 01:42:51.571 +02:00 [INF] מעדכן/מוסיף מתנה 4 למשתמש 1 בדלתא 1.
+2026-02-13 01:42:51.580 +02:00 [INF] HTTP POST /api/Orders/add-gift responded 200 in 9.4649 ms
+2026-02-13 01:42:51.689 +02:00 [INF] מעדכן/מוסיף מתנה 4 למשתמש 1 בדלתא 1.
+2026-02-13 01:42:51.696 +02:00 [INF] HTTP POST /api/Orders/add-gift responded 200 in 7.4131 ms
+2026-02-13 01:42:51.844 +02:00 [INF] מעדכן/מוסיף מתנה 4 למשתמש 1 בדלתא 1.
+2026-02-13 01:42:51.852 +02:00 [INF] HTTP POST /api/Orders/add-gift responded 200 in 8.8630 ms
+2026-02-13 01:42:51.990 +02:00 [INF] מעדכן/מוסיף מתנה 4 למשתמש 1 בדלתא 1.
+2026-02-13 01:42:52.000 +02:00 [INF] HTTP POST /api/Orders/add-gift responded 200 in 10.3426 ms
+2026-02-13 01:42:52.145 +02:00 [INF] מעדכן/מוסיף מתנה 4 למשתמש 1 בדלתא 1.
+2026-02-13 01:42:52.152 +02:00 [INF] HTTP POST /api/Orders/add-gift responded 200 in 7.2668 ms
+2026-02-13 01:42:52.292 +02:00 [INF] מעדכן/מוסיף מתנה 4 למשתמש 1 בדלתא 1.
+2026-02-13 01:42:52.298 +02:00 [INF] HTTP POST /api/Orders/add-gift responded 200 in 6.6208 ms
+2026-02-13 01:42:52.417 +02:00 [INF] מעדכן/מוסיף מתנה 4 למשתמש 1 בדלתא 1.
+2026-02-13 01:42:52.423 +02:00 [INF] HTTP POST /api/Orders/add-gift responded 200 in 6.3910 ms
+2026-02-13 01:42:52.571 +02:00 [INF] מעדכן/מוסיף מתנה 4 למשתמש 1 בדלתא 1.
+2026-02-13 01:42:52.582 +02:00 [INF] HTTP POST /api/Orders/add-gift responded 200 in 11.1533 ms
+2026-02-13 01:42:52.739 +02:00 [INF] מעדכן/מוסיף מתנה 4 למשתמש 1 בדלתא 1.
+2026-02-13 01:42:52.748 +02:00 [INF] HTTP POST /api/Orders/add-gift responded 200 in 9.7354 ms
+2026-02-13 01:42:52.887 +02:00 [INF] מעדכן/מוסיף מתנה 4 למשתמש 1 בדלתא 1.
+2026-02-13 01:42:52.894 +02:00 [INF] HTTP POST /api/Orders/add-gift responded 200 in 7.5527 ms
+2026-02-13 01:42:53.041 +02:00 [INF] מעדכן/מוסיף מתנה 4 למשתמש 1 בדלתא 1.
+2026-02-13 01:42:53.049 +02:00 [INF] HTTP POST /api/Orders/add-gift responded 200 in 9.0935 ms
+2026-02-13 01:42:53.210 +02:00 [INF] מעדכן/מוסיף מתנה 4 למשתמש 1 בדלתא 1.
+2026-02-13 01:42:53.218 +02:00 [INF] HTTP POST /api/Orders/add-gift responded 200 in 8.9367 ms
+2026-02-13 01:42:53.363 +02:00 [INF] מעדכן/מוסיף מתנה 4 למשתמש 1 בדלתא 1.
+2026-02-13 01:42:53.373 +02:00 [INF] HTTP POST /api/Orders/add-gift responded 200 in 10.0664 ms
+2026-02-13 01:42:53.490 +02:00 [INF] מעדכן/מוסיף מתנה 4 למשתמש 1 בדלתא 1.
+2026-02-13 01:42:53.499 +02:00 [INF] HTTP POST /api/Orders/add-gift responded 200 in 10.0224 ms
+2026-02-13 01:42:53.658 +02:00 [INF] מעדכן/מוסיף מתנה 4 למשתמש 1 בדלתא 1.
+2026-02-13 01:42:53.667 +02:00 [INF] HTTP POST /api/Orders/add-gift responded 200 in 8.9747 ms
+2026-02-13 01:42:53.845 +02:00 [INF] מעדכן/מוסיף מתנה 4 למשתמש 1 בדלתא 1.
+2026-02-13 01:42:53.854 +02:00 [INF] HTTP POST /api/Orders/add-gift responded 200 in 9.9391 ms

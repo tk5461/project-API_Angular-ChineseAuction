@@ -1,152 +1,102 @@
 <div class="cart-container" dir="rtl">
-
+  
   <div class="cart-header">
-    <h2>סל הקניות שלי</h2>
-    <div class="ticket-badge">
-      <div class="ticket-label">כרטיסים בשימוש</div>
-      <div class="badge">
-        <span>{{ cartService.totalGiftCount() }}</span>
-        <span class="slash">/</span>
-        <span>{{ cartService.totalTickets() }}</span>
-      </div>
-    </div>
+    <h2 class="step-title">שלב 1: בחירת חבילות כרטיסים</h2>
   </div>
 
-  @if (cartPackages().length > 0 || cartGifts().length > 0) {
-    
-    @if (cartPackages().length > 0) {
-      <h3 style="color: #442604; font-size: 1.1em; margin-bottom: 12px; font-weight: 700;">חבילות</h3>
-      <div class="cart-items" style="display: flex; flex-direction: column; gap: 12px; margin-bottom: 25px;">
-        @for (pkg of cartPackages(); track pkg.idPackage) {
-          @if ((packageQuantities()[pkg.idPackage] || 0) > 0) {
-            
-            <div class="cart-item design-v2">
-              <div class="trash-col">
-                <button class="trash-btn" title="הסר" (click)="decrement(pkg.idPackage)">
-                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M3 6h18" stroke="#7b5238" stroke-width="1.4" stroke-linecap="round"/>
-                    <path d="M8 6v12a2 2 0 0 0 2 2h4a2 2 0 0 0 2-2V6" stroke="#7b5238" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
-                    <path d="M10 11v4" stroke="#7b5238" stroke-width="1.4" stroke-linecap="round"/>
-                    <path d="M14 11v4" stroke="#7b5238" stroke-width="1.4" stroke-linecap="round"/>
-                  </svg>
-                </button>
-              </div>
-
-              <div class="price-col">
-                <div class="price">₪{{ (pkg.price || 0) * (packageQuantities()[pkg.idPackage] || 0) }}</div>
-                <div class="price-label">₪{{ pkg.price }} ליחידה</div>
-              </div>
-
-              <div class="center-col">
-                <div class="qty-box small">
-                  <button (click)="increment(pkg.idPackage)" class="control-btn">+</button>
-                  <span class="qty-display">{{ packageQuantities()[pkg.idPackage] }}</span>
-                  <button (click)="decrement(pkg.idPackage)" class="control-btn">-</button>
+  <div class="cart-content">
+    @if (cartPackages().length > 0 || cartGifts().length > 0) {
+      
+      @if (cartPackages().length > 0) {
+        <h3 class="section-title">חבילות</h3>
+        <div class="items-list">
+          @for (pkg of cartPackages(); track pkg.idPackage) {
+            @if ((packageQuantities()[pkg.idPackage] || 0) > 0) {
+              <div class="cart-item">
+                <!-- <button class="delete-btn" (click)="removePackage(pkg.idPackage)">
+                  <span class="icon-trash">🗑️</span>
+                </button> -->
+                
+                <div class="price-info">
+                  <div class="price">₪{{ (pkg.price || 0) * (packageQuantities()[pkg.idPackage] || 0) }}</div>
+                  <div class="unit-price">₪{{ pkg.price }} ליחידה</div>
                 </div>
-                <div class="pkg-name">{{ pkg.name }}</div>
-              </div>
 
-              <div class="badge-col">
-                <div class="big-badge" [class.badge-orange]="(packageQuantities()[pkg.idPackage] || 0) <= 1" [class.badge-green]="(packageQuantities()[pkg.idPackage] || 0) > 1">
-                  <div class="big-num">{{ packageQuantities()[pkg.idPackage] }}</div>
-                  <div class="small-label">כרטיסים</div>
+                <div class="item-details">
+                  <div class="item-name">{{ pkg.name }}</div>
+                  <div class="quantity-selector">
+                    <button class="qty-btn" (click)="increment(pkg.idPackage)">+</button>
+                    <span class="qty-val">{{ packageQuantities()[pkg.idPackage] }}</span>
+                    <button class="qty-btn" (click)="decrement(pkg.idPackage)">-</button>
+                  </div>
+                </div>
+
+                <div class="item-thumb package-thumb">
+                    @if (pkg.image && pkg.image !== 'string') {
+                      <img [src]="imageUrl + pkg.image">
+                    } @else {
+                      <img [src]="imageUrl + getPackageImage(pkg.idPackage)">
+                    }
                 </div>
               </div>
-            </div>
+            }
           }
-        }
-      </div>
-    }
+        </div>
+      }
 
-    <!-- Gifts Section -->
-    @if (cartGifts().length > 0) {
-      <h3 style="color: #442604; font-size: 1.1em; margin-bottom: 12px; font-weight: 700;">פרטים בהגרלות</h3>
-      <div class="cart-gifts" style="display: flex; flex-direction: column; gap: 12px;">
-        @for (gift of cartGifts(); track gift.idGift) {
-          @if ((giftQuantities()[gift.idGift] || gift.amount || 0) > 0) {
-            
-            <div class="cart-item design-v2 gift-row">
-              <div class="trash-col">
-                <button class="trash-btn" title="הסר" (click)="decrementGift(gift.idGift)">
-                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M3 6h18" stroke="#7b5238" stroke-width="1.4" stroke-linecap="round"/>
-                    <path d="M8 6v12a2 2 0 0 0 2 2h4a2 2 0 0 0 2-2V6" stroke="#7b5238" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
-                    <path d="M10 11v4" stroke="#7b5238" stroke-width="1.4" stroke-linecap="round"/>
-                    <path d="M14 11v4" stroke="#7b5238" stroke-width="1.4" stroke-linecap="round"/>
-                  </svg>
-                </button>
-              </div>
-
-              <div class="center-col">
-                <div class="qty-box small">
-                  <button (click)="incrementGift(gift.idGift)" class="control-btn">+</button>
-                  <span class="qty-display">{{ giftQuantities()[gift.idGift] || gift.amount || 0 }}</span>
-                  <button (click)="decrementGift(gift.idGift)" class="control-btn">-</button>
-                </div>
-                <div class="pkg-name">{{ gift.name }}</div>
+      @if (cartGifts().length > 0) {
+        <h3 class="section-title">פרסים בהגרלות</h3>
+        <div class="items-list">
+          @for (gift of cartGifts(); track gift.idGift) {
+            <div class="cart-item gift-item">
+              <button class="delete-btn">🗑️</button>
+              
+              <div class="item-details gift-details">
+                 <div class="quantity-selector">
+                    <button class="qty-btn" (click)="incrementGift(gift.idGift)">+</button>
+                    <span class="qty-val">{{ giftQuantities()[gift.idGift] || gift.amount }}</span>
+                    <button class="qty-btn" (click)="decrementGift(gift.idGift)">-</button>
+                  </div>
+                  <div class="item-name">{{ gift.name }}</div>
               </div>
 
               <div class="item-thumb">
-                @if (gift.image && gift.image.trim() && gift.image !== 'string') {
+                @if (gift.image) {
                   <img [src]="giftImageUrl + gift.image">
                 } @else {
-                  <div class="placeholder-gift">🎁</div>
+                  <span class="placeholder">🎁</span>
                 }
               </div>
             </div>
           }
-        }
+        </div>
+      }
+
+    } @else {
+      <div class="empty-state">
+        <div class="empty-emoji">🛒</div>
+        <p>הסל שלך עדיין ריק</p>
       </div>
     }
+  </div>
 
-    <div class="ticket-progress">
-      <div class="tp-row">
-        <div class="tp-counter">{{ cartService.totalGiftCount() }} / {{ cartService.totalTickets() }}</div>
-        <div class="tp-label">נותרו לך למימוש</div>
-        <div class="tp-icons">
-          <div class="gift-icon">
-            <img src="/assets/icons/gift-small.png" alt="gift">
-            <span class="gift-badge">{{ cartService.totalGiftCount() }}</span>
-          </div>
-        </div>
+  <div class="footer-sticky">
+    <div class="progress-section">
+      <div class="progress-text">
+        <span class="count">{{ cartService.totalGiftCount() }} / {{ cartService.totalTickets() }}</span>
+        <span class="label">נותרו לך למימוש</span>
       </div>
-
-      <div class="progress-track">
-        <div class="progress-fill" [style.width.%]="cartService.totalTickets() ? (cartService.totalGiftCount() / cartService.totalTickets()) * 100 : 0"></div>
-      </div>
-
-      <div class="tp-actions">
-        <button class="big-next" (click)="goToPackages()">לשלב הבא</button>
+      <div class="progress-bar">
+        <div class="fill" [style.width.%]="(cartService.totalGiftCount() / cartService.totalTickets()) * 100"></div>
       </div>
     </div>
-
-  } @else {
-    <div class="empty-state">
-      <div class="empty-emoji">🛒</div>
-      <p>הסל שלך עדיין ריק</p>
+    
+    <div class="action-section">
+      <button class="btn-next" (click)="goToPackages()">לשלב הבא</button>
+      <div class="cart-summary-icon">
+        <span class="cart-count-badge">{{ cartService.totalGiftCount() }}</span>
+        <!-- <span class="icon">🛒</span> -->
+      </div>
     </div>
-  }
-  
+  </div>
 </div>
-
-  @if (cartService.ticketModal()) {
-    <div class="ticket-modal">
-      <div class="ticket-backdrop" (click)="cartService.closeTicketLimitModal()"></div>
-      <div class="ticket-dialog">
-        <div class="ticket-title">אין מספיק כרטיסים בעגלה</div>
-        <div class="ticket-body">{{ cartService.ticketMessage() }}</div>
-        <div class="ticket-actions">
-          <button (click)="cartService.closeTicketLimitModal()" class="btn-alt">המשך</button>
-          <button (click)="goToPackages()" class="btn-primary">רכוש עוד כרטיסים</button>
-        </div>
-      </div>
-    </div>
-  }
-    @if (cartService.ticketModal()) {
-      <app-ticket-limit-modal></app-ticket-limit-modal>
-    }
-
-
-
-
-

@@ -62,11 +62,12 @@ export class OrderService {
       })
     );
   }
-
   getPurchasersByGiftId(giftId: number): Observable<string[]> {
     return this.http.get<string[]>(`${this.BASE_URL}/purchasers/${giftId}`);
   }
-getIncomeReport(): Observable<IncomeReport> {
+
+  getIncomeReport(): Observable<IncomeReport> {
   return this.http.get<IncomeReport>(`${this.BASE_URL}/income-report`);
 }
 }
+

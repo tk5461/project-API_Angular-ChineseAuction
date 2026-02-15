@@ -8,7 +8,6 @@ import { PackageComponent } from './component/package/package.component';
 import { DonorComponent } from './component/donor/donor.component';
 import { ManagerComponent } from './component/admin/manager/manager.component';
 import { ManagGiftsComponent } from './component/manag-gifts/manag-gifts.component';
-import { EditGiftComponent } from './component/manag-gifts/edit-gift/edit-gift.component';
 import { RaffleComponent } from './component/raffle/raffle.component';
 import { BuyingComponent } from './component/buying/buying.component';
 import { RevenueComponent } from './component/revenue/revenue.component';
