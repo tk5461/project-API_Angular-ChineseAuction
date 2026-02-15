@@ -5,6 +5,8 @@ import { AuthService } from '../../services/auth.service';
 import { DtoLogin } from '../../models/UserDTO';
 import { ButtonModule } from 'primeng/button';
 import { InputTextModule } from 'primeng/inputtext';
+import { MessageModule } from 'primeng/message';
+import { PasswordModule } from 'primeng/password';
 import { CartService } from '../../services/cart.service';
 import { Router } from '@angular/router';
 import { trigger, transition, style, animate } from '@angular/animations';
@@ -12,7 +14,7 @@ import { RouterLink } from '@angular/router';
 @Component({
   selector: 'app-login',
   standalone: true, 
-  imports: [CommonModule, FormsModule, ButtonModule, InputTextModule, RouterLink],
+  imports: [CommonModule, FormsModule, ButtonModule, InputTextModule, MessageModule, PasswordModule, RouterLink],
   templateUrl: './login.component.html',
   styleUrls: ['./login.component.scss'],
   animations: [

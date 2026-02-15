@@ -10,20 +10,22 @@
         <div class="switch-link">אין לך חשבון? <a routerLink="/register">הרשם כאן</a></div>
       </div>
 
-      <form (ngSubmit)="onLogin()" class="login-form">
+      <form (ngSubmit)="onLogin()" class="login-form" #loginForm="ngForm" novalidate>
         <div class="form-grid">
           <div class="full">
             <label for="email">אימייל</label>
-            <input pInputText type="email" id="email" name="email" [(ngModel)]="userToLogin.email" required>
+            <input pInputText type="email" id="email" name="email" [(ngModel)]="userToLogin.email" #emailRef="ngModel" required [class.p-invalid]="emailRef.invalid && (emailRef.dirty || emailRef.touched)">
+            <p-message *ngIf="emailRef.invalid && (emailRef.dirty || emailRef.touched)" severity="error" text="יש להזין אימייל תקין"></p-message>
           </div>
 
           <div class="full">
             <label for="password">סיסמה</label>
-            <input pInputText type="password" id="password" name="password" autocomplete="new-password" [(ngModel)]="userToLogin.password" required>
+            <input pInputText type="password" id="password" name="password" autocomplete="new-password" [(ngModel)]="userToLogin.password" #passRef="ngModel" required minlength="6" [class.p-invalid]="passRef.invalid && (passRef.dirty || passRef.touched)">
+            <p-message *ngIf="passRef.invalid && (passRef.dirty || passRef.touched)" severity="error" text="הסיסמה חייבת להכיל לפחות 6 תווים"></p-message>
           </div>
 
           <div class="full">
-            <button pButton type="submit" label="התחבר" class="p-button-rounded p-button-primary"></button>
+            <button pButton type="submit" [disabled]="loginForm.invalid" class="p-button-rounded p-button-primary">התחבר</button>
           </div>
         </div>
       </form>

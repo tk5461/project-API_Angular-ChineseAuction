@@ -6,13 +6,15 @@ import { DtoLogin } from '../../models/UserDTO';
 import { ButtonModule } from 'primeng/button'; 
 import { InputTextModule } from 'primeng/inputtext';
 import { CartService } from '../../services/cart.service'; 
+import { MessageModule } from 'primeng/message';
+import { PasswordModule } from 'primeng/password';
 import { Router, RouterLink } from '@angular/router'; 
 import { trigger, transition, style, animate } from '@angular/animations';
 
 @Component({
   selector: 'app-register',
   standalone: true,
-  imports: [CommonModule, FormsModule, ButtonModule, InputTextModule,RouterLink],
+  imports: [CommonModule, FormsModule, ButtonModule, InputTextModule, MessageModule, PasswordModule, RouterLink],
   templateUrl: './register.component.html',
   styleUrls: ['./register.component.scss'],
   animations: [
