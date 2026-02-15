@@ -1,1 +1,41 @@
-<p>home works!</p>
+<section class="home-hero">
+	<div class="hero-inner">
+		<div class="visual">
+			<div class="floating-gift" aria-hidden="true">
+				<!-- simple gift illustration as CSS shapes -->
+				<div class="gift-box"></div>
+				<div class="gift-ribbon"></div>
+			</div>
+			<img src="/assets/hero-gift.png" alt="gift of life" class="hero-img" />
+		</div>
+
+		<div class="content">
+			<h1 class="title">מתנה של חיים</h1>
+			<p class="subtitle">התחבר למה שבאמת חשוב — לתרום, להשתתף ולזכות. הכל בממשק אחד פשוט וצבעוני.</p>
+
+			<div class="links">
+				<a *ngFor="let l of links" [routerLink]="l.url" class="link-btn" [ngClass]="l.color">
+					<span class="label">{{ l.title }}</span>
+					<span class="arrow">→</span>
+				</a>
+			</div>
+
+			<div class="stats">
+				<div class="stat">
+					<div class="number">350+</div>
+					<div class="meta">מתנות נתרמו</div>
+				</div>
+				<div class="stat">
+					<div class="number">12k</div>
+					<div class="meta">כרטיסים נמכרו</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="decor">
+		<div class="blob a"></div>
+		<div class="blob b"></div>
+		<div class="spark"></div>
+	</div>
+</section>

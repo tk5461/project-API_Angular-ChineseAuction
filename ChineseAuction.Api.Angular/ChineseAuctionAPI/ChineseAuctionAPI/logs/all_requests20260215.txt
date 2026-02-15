@@ -1746,3 +1746,60 @@ System.InvalidOperationException: INSUFFICIENT_TICKETS
 2026-02-15 18:13:07.040 +02:00 [INF] HTTP GET /api/Gift/11/participants responded 200 in 194.6115 ms
 2026-02-15 18:13:07.042 +02:00 [INF] HTTP GET /api/Gift/17/participants responded 200 in 146.7747 ms
 2026-02-15 18:13:07.042 +02:00 [INF] HTTP GET /api/Gift/15/participants responded 200 in 147.3118 ms
+2026-02-15 18:17:19.800 +02:00 [INF] HTTP OPTIONS /api/Packages responded 204 in 0.0723 ms
+2026-02-15 18:17:19.808 +02:00 [INF] שולף את כל החבילות.
+2026-02-15 18:17:19.811 +02:00 [INF] HTTP GET /api/Packages responded 200 in 3.8111 ms
+2026-02-15 18:17:19.864 +02:00 [INF] HTTP OPTIONS /api/Gift responded 204 in 0.0454 ms
+2026-02-15 18:17:19.869 +02:00 [INF] Attempting to retrieve all gifts.
+2026-02-15 18:17:19.869 +02:00 [INF] שולף את רשימת כל המתנות מהמאגר.
+2026-02-15 18:17:19.877 +02:00 [INF] נשלפו בהצלחה 9 מתנות.
+2026-02-15 18:17:19.879 +02:00 [INF] HTTP GET /api/Gift responded 200 in 10.9521 ms
+2026-02-15 18:17:19.886 +02:00 [INF] HTTP OPTIONS /api/Orders/user/1 responded 204 in 0.1086 ms
+2026-02-15 18:17:19.889 +02:00 [INF] שולף את כל ההזמנות עבור משתמש 1.
+2026-02-15 18:17:19.906 +02:00 [INF] HTTP GET /api/Orders/user/1 responded 200 in 17.6893 ms
+2026-02-15 18:17:25.293 +02:00 [INF] HTTP OPTIONS /api/Gift responded 204 in 0.0682 ms
+2026-02-15 18:17:25.293 +02:00 [INF] HTTP OPTIONS /api/Donors responded 204 in 0.0146 ms
+2026-02-15 18:17:25.303 +02:00 [INF] Attempting to retrieve all gifts.
+2026-02-15 18:17:25.304 +02:00 [INF] שולף את רשימת כל המתנות מהמאגר.
+2026-02-15 18:17:25.305 +02:00 [INF] Fetching all donors
+2026-02-15 18:17:25.308 +02:00 [INF] מתחיל שליפת כל התורמים בשירות.
+2026-02-15 18:17:25.309 +02:00 [INF] נשלפו בהצלחה 9 מתנות.
+2026-02-15 18:17:25.317 +02:00 [INF] HTTP GET /api/Gift responded 200 in 14.7347 ms
+2026-02-15 18:17:25.318 +02:00 [INF] נשלפו בהצלחה 2 תורמים מהמאגר.
+2026-02-15 18:17:25.322 +02:00 [INF] HTTP GET /api/Donors responded 200 in 17.3311 ms
+2026-02-15 18:17:25.323 +02:00 [INF] Attempting to retrieve all gift categories.
+2026-02-15 18:17:25.325 +02:00 [INF] מתחיל תהליך שליפת כל קטגוריות המתנות מהשירות.
+2026-02-15 18:17:25.329 +02:00 [INF] נשלפו בהצלחה 2 קטגוריות.
+2026-02-15 18:17:25.330 +02:00 [INF] HTTP GET /api/GiftCategory responded 200 in 7.5469 ms
+2026-02-15 18:17:25.339 +02:00 [INF] HTTP OPTIONS /api/Gift/3/participants responded 204 in 0.0442 ms
+2026-02-15 18:17:25.340 +02:00 [INF] HTTP OPTIONS /api/Gift/11/participants responded 204 in 0.0322 ms
+2026-02-15 18:17:25.340 +02:00 [INF] HTTP OPTIONS /api/Gift/4/participants responded 204 in 0.0322 ms
+2026-02-15 18:17:25.340 +02:00 [INF] HTTP OPTIONS /api/Gift/10/participants responded 204 in 0.0322 ms
+2026-02-15 18:17:25.354 +02:00 [INF] שולף פרטי משתתפים מלאים עבור מתנה: 3
+2026-02-15 18:17:25.356 +02:00 [INF] שולף פרטי משתתפים מלאים עבור מתנה: 11
+2026-02-15 18:17:25.357 +02:00 [INF] שולף פרטי משתתפים מלאים עבור מתנה: 4
+2026-02-15 18:17:25.341 +02:00 [INF] HTTP OPTIONS /api/Gift/14/participants responded 204 in 0.0188 ms
+2026-02-15 18:17:25.360 +02:00 [INF] שולף פרטי משתתפים מלאים עבור מתנה: 10
+2026-02-15 18:17:25.340 +02:00 [INF] HTTP OPTIONS /api/Gift/12/participants responded 204 in 0.0385 ms
+2026-02-15 18:17:25.347 +02:00 [INF] HTTP OPTIONS /api/Gift/16/participants responded 204 in 0.0318 ms
+2026-02-15 18:17:25.346 +02:00 [INF] HTTP OPTIONS /api/Gift/15/participants responded 204 in 0.0420 ms
+2026-02-15 18:17:25.369 +02:00 [INF] שולף פרטי משתתפים מלאים עבור מתנה: 12
+2026-02-15 18:17:25.367 +02:00 [INF] שולף פרטי משתתפים מלאים עבור מתנה: 14
+2026-02-15 18:17:25.369 +02:00 [INF] שולף פרטי משתתפים מלאים עבור מתנה: 16
+2026-02-15 18:17:25.353 +02:00 [INF] HTTP OPTIONS /api/Gift/17/participants responded 204 in 0.0464 ms
+2026-02-15 18:17:25.373 +02:00 [INF] HTTP GET /api/Gift/11/participants responded 200 in 17.3867 ms
+2026-02-15 18:17:25.382 +02:00 [INF] HTTP GET /api/Gift/3/participants responded 200 in 28.2202 ms
+2026-02-15 18:17:25.383 +02:00 [INF] HTTP GET /api/Gift/14/participants responded 200 in 17.1740 ms
+2026-02-15 18:17:25.383 +02:00 [WRN] לא נמצאו משתתפים למתנה 16
+2026-02-15 18:17:25.373 +02:00 [INF] HTTP GET /api/Gift/12/participants responded 200 in 4.4141 ms
+2026-02-15 18:17:25.371 +02:00 [INF] שולף פרטי משתתפים מלאים עבור מתנה: 15
+2026-02-15 18:17:25.383 +02:00 [INF] HTTP GET /api/Gift/4/participants responded 200 in 25.8761 ms
+2026-02-15 18:17:25.385 +02:00 [INF] שולף פרטי משתתפים מלאים עבור מתנה: 17
+2026-02-15 18:17:25.387 +02:00 [INF] HTTP GET /api/Gift/16/participants responded 200 in 18.2018 ms
+2026-02-15 18:17:25.391 +02:00 [WRN] לא נמצאו משתתפים למתנה 15
+2026-02-15 18:17:25.382 +02:00 [INF] HTTP GET /api/Gift/10/participants responded 200 in 22.7175 ms
+2026-02-15 18:17:25.393 +02:00 [WRN] לא נמצאו משתתפים למתנה 17
+2026-02-15 18:17:25.394 +02:00 [INF] HTTP GET /api/Gift/15/participants responded 200 in 23.3801 ms
+2026-02-15 18:17:25.396 +02:00 [INF] HTTP GET /api/Gift/17/participants responded 200 in 11.5876 ms
+2026-02-15 18:17:27.792 +02:00 [INF] שולף פרטי משתתפים מלאים עבור מתנה: 10
+2026-02-15 18:17:27.796 +02:00 [INF] HTTP GET /api/Gift/10/participants responded 200 in 4.1840 ms
