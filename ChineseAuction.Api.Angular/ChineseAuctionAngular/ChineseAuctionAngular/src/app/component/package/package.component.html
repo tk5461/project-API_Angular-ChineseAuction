@@ -1,51 +1,50 @@
-<div class="packages-container" dir="rtl" style="max-width: 1200px; margin: 0 auto; padding: 40px 20px; font-family: 'Segoe UI', Tahoma, sans-serif;">
-  <h2 style="text-align: right; color: #442604; font-weight: bold; margin-bottom: 30px; font-size: 1.8em;">שלב 1: בחירת חבילות כרטיסים</h2>
+<div class="packages-container" dir="rtl">
+  <h2 class="section-title">שלב 1: בחירת חבילות כרטיסים</h2>
 
-  <div class="packages-grid" style="display: flex; flex-wrap: wrap; gap: 20px; justify-content: flex-start;">
-    
+  <div class="packages-grid">
     @for (packageItem of packages(); track packageItem.idPackage) {
-      <div class="package-card" 
-           [style.background]="getPackageGradient(packageItem.idPackage)"
-           style="position: relative; width: 280px; height: 280px; border-radius: 40px; overflow: hidden; display: flex; flex-direction: column; padding: 25px; box-sizing: border-box; color: white; transition: transform 0.2s ease; box-shadow: 0 10px 20px rgba(0,0,0,0.1);">
+      <div class="package-card" [style.background]="getPackageGradient(packageItem.idPackage)">
         
-        <div style="text-align: right; position: relative; z-index: 3;">
-           <span style="font-size: 0.9em; opacity: 0.9; display: block; margin-bottom: 2px;">חבילה</span>
-           <h3 style="margin: 0; font-size: 2.3em; font-weight: 900; line-height: 1;">
-             {{ packageItem.amountRegular + (packageItem.amountPremium || 0) }} כרטיסים
-           </h3>
-           <div style="font-size: 1.2em; margin-top: 5px; font-weight: 600; opacity: 0.95;">₪ {{ packageItem.price }}</div>
-        </div>
-
-        <div style="position: absolute; bottom: 20px; right: 10px; width: 150px; height: 150px; z-index: 1; overflow: hidden; display: flex; align-items: flex-end; justify-content: flex-end;">
-          @if ($any(packageItem).image && $any(packageItem).image !== 'string' && $any(packageItem).image !== '') {
-            <img [src]="imageUrl + $any(packageItem).image" 
-                 style="width: 100%; height: auto; object-fit: contain; mix-blend-mode: multiply; filter: contrast(1.1);">
-          } @else {
-            <img [src]="imageUrl + getPackageImage(packageItem.idPackage)" 
-                 style="width: 100%; height: auto; object-fit: contain; mix-blend-mode: multiply; filter: contrast(1.1);">
-          }
-        </div>
-
-        <div style="position: absolute; bottom: 30px; left: 25px; z-index: 3; display: flex; align-items: center; gap: 10px;">
-          <div style="background: white; border-radius: 18px; display: flex; align-items: center; padding: 6px 14px; box-shadow: 0 5px 15px rgba(0,0,0,0.12); color: #442604;">
-            <button (click)="handlePackageUpdate(packageItem.idPackage, 'increment')" 
-                    style="border: none; background: none; font-size: 20px; cursor: pointer; font-weight: bold; color: #442604; padding: 0 5px;">+</button>
-            
-            <span style="font-size: 1.3em; font-weight: 800; min-width: 35px; text-align: center;">
-              {{ packageQuantities()[packageItem.idPackage] || 0 }}
-            </span>
-            
-            <button (click)="handlePackageUpdate(packageItem.idPackage, 'decrement')" 
-                    style="border: none; background: none; font-size: 24px; cursor: pointer; font-weight: bold; color: #442604; padding: 0 5px;">-</button>
-          </div>
-          <span style="font-size: 0.95em; font-weight: bold; color: white; text-shadow: 1px 1px 3px rgba(0,0,0,0.3);">להוספה</span>
-        </div>
-
-        @if((packageItem.amountPremium ?? 0) > 0) {
-          <div style="position: absolute; top: 25px; left: 25px; background: rgba(255,255,255,0.25); padding: 5px 12px; border-radius: 12px; font-size: 0.7em; font-weight: 900; backdrop-filter: blur(8px); letter-spacing: 1px; border: 1px solid rgba(255,255,255,0.3);">
-            PREMIUM
+        @if($any(packageItem).amountPremium > 0) {
+          <div class="premium-badge-glass">
+            <i class="pi pi-star-fill"></i>
+            <span>PREMIUM</span>
           </div>
         }
+
+        <div class="card-content">
+          <span class="label-mini">חבילת</span>
+          <h3 class="main-title">{{ packageItem.amountRegular }} כרטיסים</h3>
+          <div class="price-bubble">
+            <span class="currency">₪</span>
+            <span class="amount">{{ packageItem.price }}</span>
+          </div>
+
+          <div class="bonus-highlight" [class.hidden]="$any(packageItem).amountPremium <= 0">
+            @if($any(packageItem).amountPremium > 0) {
+              <div class="bonus-inner">
+                <span class="gift-icon">🎁</span>
+                <div class="bonus-text">
+                  ועוד <strong>{{ $any(packageItem).amountPremium }}</strong> כרטיסי פרימיום מתנה!
+                </div>
+              </div>
+            }
+          </div>
+        </div>
+
+        <div class="image-wrapper">
+          <img [src]="imageUrl + ($any(packageItem).image || getPackageImage(packageItem.idPackage))" 
+               class="package-img" alt="gift">
+        </div>
+
+        <div class="action-footer">
+          <div class="quantity-pill">
+            <button class="qty-btn" (click)="handlePackageUpdate(packageItem.idPackage, 'increment')">+</button>
+            <span class="qty-val">{{ packageQuantities()[packageItem.idPackage] || 0 }}</span>
+            <button class="qty-btn" (click)="handlePackageUpdate(packageItem.idPackage, 'decrement')">-</button>
+          </div>
+          <span class="add-text">להוספה</span>
+        </div>
       </div>
     }
   </div>

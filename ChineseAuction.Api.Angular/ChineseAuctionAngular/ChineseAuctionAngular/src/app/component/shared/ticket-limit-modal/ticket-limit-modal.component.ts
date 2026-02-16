@@ -15,11 +15,13 @@ export class TicketLimitModalComponent {
   private router = inject(Router);
 
   close() {
-    this.cartService.closeTicketLimitModal();
+    this.cartService.closeTicketLimitModal(true);
   }
 
   goToPackages() {
-    this.cartService.closeTicketLimitModal();
+    this.cartService.closeTicketLimitModal(true);
     this.router.navigate(['/package']);
   }
 }
+
+

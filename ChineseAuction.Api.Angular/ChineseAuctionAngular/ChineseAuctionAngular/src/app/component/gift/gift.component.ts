@@ -118,12 +118,14 @@ private initializeGifts(data: any[]): void {
   }
 
   increaseQuantity(gift: Gift): void {
+    // Block when limit reached - modal already auto-triggered by CartService effect
     if (!this.cartService.canAddGift(1)) {
-      const tickets = this.cartService.totalTickets();
-      const used = this.cartService.totalGiftCount();
-      const missing = Math.max(0, (used + 1) - tickets);
-      const msg = tickets === 0 ? 'אין לך כרטיסים בסל — יש לרכוש חבילות כרטיסים.' : `אין מספיק כרטיסים. חסרים ${missing} כרטיסים.`;
-      this.cartService.openTicketLimitModal(msg);
+      // If modal not showing yet, trigger it immediately
+      if (this.cartService.remainingTickets() === 0 && !this.cartService.ticketModal()) {
+        const tickets = this.cartService.totalTickets();
+        const msg = tickets === 0 ? 'אין לך כרטיסים בסל — יש לרכוש חבילות כרטיסים.' : 'כל הכרטיסים שלך כבר בשימוש. יש לרכוש חבילות נוספות.';
+        this.cartService.openTicketLimitModal(msg);
+      }
       return;
     }
 
@@ -158,11 +160,12 @@ private initializeGifts(data: any[]): void {
           const status = err?.status;
           const code = err?.error?.code || err?.error;
           if (status === 400 && (code === 'INSUFFICIENT_TICKETS' || (typeof code === 'string' && code.includes('INSUFFICIENT_TICKETS')))) {
-            const tickets = this.cartService.totalTickets();
-            const used = this.cartService.totalGiftCount();
-            const missing = Math.max(0, (used + 1) - tickets);
-            const msg = tickets === 0 ? 'אין לך כרטיסים בסל — יש לרכוש חבילות כרטיסים.' : `אין מספיק כרטיסים. חסרים ${missing} כרטיסים.`;
-            this.cartService.openTicketLimitModal(msg);
+            // Trigger modal immediately on backend rejection if not already showing
+            if (this.cartService.remainingTickets() === 0 && !this.cartService.ticketModal()) {
+              const tickets = this.cartService.totalTickets();
+              const msg = tickets === 0 ? 'אין לך כרטיסים בסל — יש לרכוש חבילות כרטיסים.' : 'כל הכרטיסים שלך כבר בשימוש. יש לרכוש חבילות נוספות.';
+              this.cartService.openTicketLimitModal(msg);
+            }
             return;
           }
         } catch (e) {

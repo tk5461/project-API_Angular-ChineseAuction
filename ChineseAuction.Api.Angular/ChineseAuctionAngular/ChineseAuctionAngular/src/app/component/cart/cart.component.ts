@@ -12,7 +12,7 @@ import { environment } from '../../../../environment';
 @Component({
   selector: 'app-cart',
   standalone: true,
-  imports: [CommonModule, TicketLimitModalComponent],
+  imports: [CommonModule],
   templateUrl: './cart.component.html',
   styleUrl: './cart.component.scss'
 })
@@ -211,32 +211,37 @@ ngOnInit() {
   }
 
   incrementGift(idGift: number) {
-    const totalTickets = this.cartService.totalTickets();
-    const totalGifts = this.cartService.totalGiftCount();
-    // Enforce ticket limits before increasing, show modal when limit reached
+    // Block when limit reached - modal already auto-triggered by CartService effect
     if (!this.cartService.canAddGift(1)) {
-      const tickets = this.cartService.totalTickets();
-      const used = this.cartService.totalGiftCount();
-      const missing = Math.max(0, (used + 1) - tickets);
-      const msg = tickets === 0
-        ? 'אין לך כרטיסים בסל — יש לרכוש חבילות כרטיסים.'
-        : `אין מספיק כרטיסים. חסרים ${missing} כרטיסים.`;
-      this.cartService.openTicketLimitModal(msg);
+      // If modal not showing yet, trigger it immediately
+      if (this.cartService.remainingTickets() === 0 && !this.cartService.ticketModal()) {
+        const tickets = this.cartService.totalTickets();
+        const msg = tickets === 0
+          ? 'אין לך כרטיסים בסל — יש לרכוש חבילות כרטיסים.'
+          : 'כל הכרטיסים שלך כבר בשימוש. יש לרכוש חבילות נוספות.';
+        this.cartService.openTicketLimitModal(msg);
+      }
       return;
     }
-    this.updateGiftQty(idGift, (this.giftQuantities()[idGift] || 0) + 1);
+    // Send delta (+1) to API, not absolute value
+    this.updateGiftQty(idGift, 1);
   }
       
 decrementGift(idGift: number) {
   const current = this.giftQuantities()[idGift] || 0;
   if (current > 0) {
-    this.updateGiftQty(idGift, current - 1);
+    // Send delta (-1) to API, not absolute value
+    this.updateGiftQty(idGift, -1);
   }
 }
 
-  private updateGiftQty(idGift: number, newQty: number) {
+  private updateGiftQty(idGift: number, delta: number) {
     const userId = this.authService.getUserId();
-    this.orderService.addOrUpdateGiftInOrder(userId, idGift, newQty).subscribe({
+    const currentQty = this.giftQuantities()[idGift] || 0;
+    const newQty = currentQty + delta;
+    
+    // API expects delta (relative change), not absolute quantity
+    this.orderService.addOrUpdateGiftInOrder(userId, idGift, delta).subscribe({
       next: () => {
         this.cartService.setGiftQuantity(idGift, newQty);
         if (newQty === 0) {
@@ -249,13 +254,14 @@ decrementGift(idGift: number) {
           const status = err?.status;
           const code = err?.error?.code || err?.error;
           if (status === 400 && (code === 'INSUFFICIENT_TICKETS' || (typeof code === 'string' && code.includes('INSUFFICIENT_TICKETS')))) {
-            const tickets = this.cartService.totalTickets();
-            const used = this.cartService.totalGiftCount();
-            const missing = Math.max(0, (used + 1) - tickets);
-            const msg = tickets === 0
-              ? 'אין לך כרטיסים בסל — יש לרכוש חבילות כרטיסים.'
-              : `אין מספיק כרטיסים. חסרים ${missing} כרטיסים.`;
-            this.cartService.openTicketLimitModal(msg);
+            // Trigger modal immediately on backend rejection if not already showing
+            if (this.cartService.remainingTickets() === 0 && !this.cartService.ticketModal()) {
+              const tickets = this.cartService.totalTickets();
+              const msg = tickets === 0
+                ? 'אין לך כרטיסים בסל — יש לרכוש חבילות כרטיסים.'
+                : 'כל הכרטיסים שלך כבר בשימוש. יש לרכוש חבילות נוספות.';
+              this.cartService.openTicketLimitModal(msg);
+            }
             return;
           }
         } catch (e) {

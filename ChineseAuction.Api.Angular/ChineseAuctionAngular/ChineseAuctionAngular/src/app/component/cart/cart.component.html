@@ -49,15 +49,15 @@
         <div class="items-list">
           @for (gift of cartGifts(); track gift.idGift) {
             <div class="cart-item gift-item">
-              <button class="delete-btn">🗑️</button>
-              
+              <!-- <button class="delete-btn">🗑️</button> -->
+               <div class="item-name" style="color: rgb(93, 30, 153);">{{ gift.name }}</div>
+
               <div class="item-details gift-details">
                  <div class="quantity-selector">
-                    <button class="qty-btn" (click)="incrementGift(gift.idGift)">+</button>
+                      <button class="qty-btn" (click)="incrementGift(gift.idGift)" [disabled]="!cartService.canAddGift(1)" [attr.title]="!cartService.canAddGift(1) ? cartService.ticketLimitMessage(1) : null">+</button>
                     <span class="qty-val">{{ giftQuantities()[gift.idGift] || gift.amount }}</span>
                     <button class="qty-btn" (click)="decrementGift(gift.idGift)">-</button>
                   </div>
-                  <div class="item-name">{{ gift.name }}</div>
               </div>
 
               <div class="item-thumb">

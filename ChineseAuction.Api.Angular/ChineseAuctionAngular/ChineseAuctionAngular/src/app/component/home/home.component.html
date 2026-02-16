@@ -1,50 +1,42 @@
-<section class="home-hero" aria-labelledby="home-title">
-	<div class="hero-inner">
-		<div class="content">
-			<h1 id="home-title" class="title">מתנה של חיים</h1>
-			<p class="subtitle">הצטרפו למיזם — בחרו מתנה, רכשו כרטיסים ותנו הזדמנות לזכות. עשו טוב, בסטייל.</p>
+<div class="pastel-viewport">
+  <div class="mountain-bg">
+    <div class="peak p1"></div>
+    <div class="peak p2"></div>
+    <div class="mist"></div>
+  </div>
 
-			<div class="cta-row">
-				<a *ngFor="let l of links" [routerLink]="l.url" class="cta" [ngClass]="l.color">
-					<span class="cta-label">{{ l.title }}</span>
-					<svg class="cta-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l8 8-8 8-1.4-1.4L16.2 11H3V9h13.2L10.6 3.4z"/></svg>
-				</a>
-			</div>
+  <div class="glass-container fade-in">
+    <header class="header-section">
+      <span class="tag">#מתנת_חיים</span>
+      <h1 class="title">מתנה של <span class="highlight">נתינה</span></h1>
+      <p class="subtitle">מצילים חיים ברוגע ובסטייל פסטלי.</p>
+    </header>
 
-			<div class="feature-strip" aria-hidden="true">
-				<div class="feature">🎁 תרומות איכותיות</div>
-				<div class="feature">👥 קהילה תומכת</div>
-				<div class="feature">🏆 הגרלות שקופות</div>
-			</div>
-		</div>
+    <div class="actions-grid">
+      <button class="pastel-card donation" pRipple routerLink="/buying">
+        <div class="icon-box"><i class="pi pi-heart"></i></div>
+        <div class="content">
+          <strong>רכישה / תרומה</strong>
+          <span>היו שותפים להצלת חיים</span>
+        </div>
+      </button>
 
-		<div class="visual">
-			<div class="hero-card">
-				<svg class="heart" viewBox="0 0 24 24" aria-hidden="true">
-					<path d="M12 21s-8-5.4-8-10a4 4 0 018-2 4 4 0 018 2c0 4.6-8 10-8 10z"/>
-				</svg>
-				<img src="/assets/hero-gift.png" alt="מתנה" class="hero-img"/>
-				<div class="floating-icons">
-					<div class="icon i1">✨</div>
-					<div class="icon i2">💚</div>
-					<div class="icon i3">🎉</div>
-				</div>
-			</div>
-		</div>
-	</div>
+      <button class="pastel-card catalog" pRipple routerLink="/catalog">
+        <div class="icon-box"><i class="pi pi-images"></i></div>
+        <div class="content">
+          <strong>קטלוג מתנות</strong>
+          <span>הפרסים שמחכים לכם</span>
+        </div>
+      </button>
+    </div>
 
-	<div class="mini-cards" aria-hidden="true">
-		<article class="mini" tabindex="0">
-			<h3>תמיכה</h3>
-			<p>חיבור בין תורמים למתנות שמשנות חיים.</p>
-		</article>
-		<article class="mini" tabindex="0">
-			<h3>שקיפות</h3>
-			<p>דוחות והיסטוריית הזכיות בקלי קלות.</p>
-		</article>
-		<article class="mini" tabindex="0">
-			<h3>קהילה</h3>
-			<p>אירועים, חיבורים ומבצעים קבועים.</p>
-		</article>
-	</div>
-</section>
+    <footer class="admin-glass-dock" *ngIf="isAdmin">
+      <div class="dock-label">ניהול מערכת</div>
+      <div class="dock-actions">
+        <a routerLink="/manager/manage-gifts" title="ניהול"><i class="pi pi-sliders-h"></i></a>
+        <a routerLink="/manager/raffle" title="הגרלות"><i class="pi pi-ticket"></i></a>
+        <a routerLink="/manager/revenue" title="דוחות"><i class="pi pi-chart-line"></i></a>
+      </div>
+    </footer>
+  </div>
+</div>

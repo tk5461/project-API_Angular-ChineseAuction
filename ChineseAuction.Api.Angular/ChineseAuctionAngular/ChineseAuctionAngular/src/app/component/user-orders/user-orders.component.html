@@ -1,0 +1,58 @@
+<div class="orders-root">
+	<p-progressSpinner *ngIf="loading" styleClass="spinner"></p-progressSpinner>
+
+	<div *ngIf="!loading && orders.length === 0" class="empty-state">
+		<h3>אין הזמנות להצגה</h3>
+		<p>נראה שאין הזמנות בחשבונך כרגע.</p>
+	</div>
+
+	<div class="orders-grid" *ngIf="!loading && orders.length > 0">
+		<p-card *ngFor="let order of orders" class="order-card">
+			<ng-template pTemplate="header">
+				<div class="card-header">
+					<p-avatar icon="pi pi-shopping-cart" styleClass="order-avatar"></p-avatar>
+					<div class="header-meta">
+						<div class="order-id">הזמנה #{{ order.idOrder }}</div>
+						<div class="order-date">{{ order.orderDate | date:'medium' }}</div>
+					</div>
+					<p-badge class="status-badge" [value]="getStatusLabel(order)" [styleClass]="order.status === OrderStatus.Draft ? 'badge-draft' : (order.status === OrderStatus.Completed ? 'badge-completed' : 'badge-unknown')"></p-badge>
+				</div>
+			</ng-template>
+
+			<div class="card-body">
+				<div class="order-summary">
+					<div class="items">פריטים: {{ getItemsCount(order) }}</div>
+					<div class="total">סה״כ: {{ getOrderTotal(order) | currency }}</div>
+				</div>
+
+				<p-divider></p-divider>
+
+				<div class="card-actions">
+					<button pButton type="button" label="צפה" icon="pi pi-eye" (click)="viewOrder(order)"></button>
+					<button *ngIf="order.status === OrderStatus.Draft" pButton type="button" label="ביטול" icon="pi pi-times" class="p-button-danger" (click)="cancelOrder(order)"></button>
+				</div>
+
+				<div class="order-details" *ngIf="expandedOrderId === order.idOrder">
+					<h4>פרטי ההזמנה</h4>
+					<div *ngIf="hasGifts(order)" class="gifts-list">
+						<div *ngFor="let g of order.ordersGifts" class="gift-item">
+							<img *ngIf="g.image" [src]="imageUrl + g.image" alt="{{g.name}}" class="gift-thumb" />
+							<div class="gift-meta">
+								<div class="gift-name">{{ g.name }}</div>
+								<div class="gift-qty">כמות: {{ g.amount }}</div>
+								<div class="gift-price">{{ g.price | currency }}</div>
+							</div>
+						</div>
+					</div>
+					<div *ngIf="hasPackages(order)" class="packages-list">
+						<div *ngFor="let p of order.ordersPackages" class="package-item">
+							<div class="package-name">{{ p.name }} x{{ p.quantity }}</div>
+							<div class="package-price">{{ p.price | currency }}</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</p-card>
+	</div>
+</div>
+

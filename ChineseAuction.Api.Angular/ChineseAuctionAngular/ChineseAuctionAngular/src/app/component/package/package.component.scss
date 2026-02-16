@@ -1,173 +1,153 @@
-
- $purple-brand: #6b2d82;
+$purple-brand: #6b2d82;
 $green-brand: #97c05c;
-$bg-light: #f9f9fb;
-$shadow-soft: 0 10px 30px rgba(0,0,0,0.05);
 
+.packages-container {
+  padding: 40px 15px;
+  max-width: 1200px;
+  margin: 0 auto;
 
-.gifts-container {
-  padding: 40px 20px;
-  background-color: $bg-light;
-  min-height: 100vh;
- 
   .section-title {
-    text-align: center;
-    color: $purple-brand;
+    color: #442604;
+    font-size: 2rem;
     font-weight: 800;
     margin-bottom: 40px;
-    font-size: 2.2rem;
+    text-align: right;
   }
 }
 
-
-.gifts-grid {
+.packages-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
   gap: 25px;
-  max-width: 1200px;
-  margin: 0 auto;
 }
 
-
-.gift-card {
-  background: white;
-  border-radius: 20px;
-  padding: 25px;
-  border: 1px solid rgba(0,0,0,0.03);
-  box-shadow: $shadow-soft;
+.package-card {
   position: relative;
-  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  height: 340px;
+  border-radius: 40px;
+  padding: 30px;
+  color: white;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-
+  box-shadow: 0 15px 30px rgba(0,0,0,0.12);
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  overflow: hidden;
 
   &:hover {
     transform: translateY(-10px);
-    box-shadow: 0 20px 40px rgba($purple-brand, 0.12);
- }
-
-
-  .premium-badge {
-    position: absolute;
-    top: 15px;
-    left: 15px;
-    background: $green-brand;
-    color: white;
-    padding: 4px 12px;
-    border-radius: 50px;
-    font-size: 0.75rem;
-    font-weight: bold;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+    
+    .package-img { transform: scale(1.1) rotate(3deg); }
   }
-}
 
+  .premium-badge-glass {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    background: rgba(255, 255, 255, 0.25);
+    backdrop-filter: blur(10px);
+    padding: 6px 14px;
+    border-radius: 15px;
+    font-size: 0.75rem;
+    font-weight: 900;
+    border: 1px solid rgba(255,255,255,0.3);
+    z-index: 10;
+  }
 
-.package-name {
-  color: $purple-brand;
-  margin: 0 0 10px 0;
-  font-size: 1.4rem;
-}
-
-
-.package-desc {
-  color: #777;
-  font-size: 0.9rem;
-  line-height: 1.4;
-  height: 40px;
-  margin-bottom: 20px;
-}
-
-
-.package-details {
-  background: #f8f8f8;
-  border-radius: 12px;
-  padding: 15px;
-  margin-bottom: 20px;
-
-
-  .detail-row {
-    display: flex;
-  justify-content: space-between;
-    font-size: 0.95rem;
-    color: #444;
-    margin-bottom: 5px;
-
-
-    &.premium-text {
-      color: $purple-brand;
-      font-weight: bold;
-      border-top: 1px solid #ddd;
-      padding-top: 5px;
-      margin-top: 5px;
+  .card-content {
+    position: relative;
+    z-index: 5;
+    
+    .label-mini { font-size: 0.9rem; opacity: 0.9; display: block; }
+    .main-title { font-size: 2rem; font-weight: 900; margin: 5px 0; line-height: 1; }
+    
+    .price-bubble {
+      background: rgba(0,0,0,0.1);
+      width: fit-content;
+      padding: 4px 15px;
+      border-radius: 12px;
+      margin-top: 10px;
+      .amount { font-size: 1.4rem; font-weight: 700; }
     }
   }
-}
 
+  .bonus-highlight {
+    margin-top: 25px;
+    background: white;
+    color: #333;
+    padding: 12px 18px;
+    border-radius: 20px;
+    width: fit-content;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    animation: pulse 2s infinite;
+    z-index: 5;
 
-.card-footer {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
+    &.hidden { visibility: hidden; }
 
-
-.price-box {
-  .currency { color: $green-brand; font-weight: bold; margin-left: 3px; }
-  .price-value { font-size: 1.6rem; font-weight: 900; color: #333; }
-}
-
-
-// בורר הכמות המעוגל מהתמונה
-.quantity-picker {
-  display: flex;
-  align-items: center;
-  background: white;
-  border: 2px solid #eee;
-  border-radius: 50px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
-  overflow: hidden;
-
-
-  .qty-btn {
-    background: none;
-    border: none;
-  width: 35px;
-    height: 35px;
-    font-size: 1.2rem;
-    cursor: pointer;
-    transition: background 0.2s;
-    color: #555;
-
-
-    &:hover { background: #f0f0f0; }
+    .bonus-inner {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 0.95rem;
+      strong { color: #e74c3c; font-size: 1.2rem; }
+    }
   }
 
+  .image-wrapper {
+    position: absolute;
+    bottom: 20px;
+    right: 10px;
+    width: 150px;
+    z-index: 1;
+    
+    .package-img {
+      width: 100%;
+      height: auto;
+      filter: drop-shadow(0 10px 15px rgba(0,0,0,0.15));
+      transition: transform 0.4s ease;
+    }
+  }
 
-  .qty-num {
-    padding: 0 10px;
-    font-weight: bold;
-    min-width: 25px;
-    text-align: center;
-    border-left: 1px solid #eee;
-    border-right: 1px solid #eee;
+  .action-footer {
+    margin-top: auto;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    z-index: 5;
+
+    .quantity-pill {
+      background: white;
+      border-radius: 20px;
+      display: flex;
+      align-items: center;
+      padding: 5px 15px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+      
+      .qty-btn {
+        border: none;
+        background: none;
+        color: #442604;
+        font-size: 1.4rem;
+        font-weight: bold;
+        cursor: pointer;
+        padding: 0 10px;
+      }
+      
+      .qty-val {
+        color: #333;
+        font-weight: 800;
+        font-size: 1.2rem;
+        min-width: 30px;
+        text-align: center;
+      }
+    }
+    
+    .add-text { font-weight: 700; font-size: 1rem; }
   }
 }
 
-
-// אנימציית כניסה לכרטיסים
-.animate-in {
-  animation: fadeInUp 0.6s ease forwards;
-  opacity: 0;
-}
-
-
-@keyframes fadeInUp {
-  from {
-    opacity: 0;
-    transform: translateY(30px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+  100% { transform: scale(1); }
 }

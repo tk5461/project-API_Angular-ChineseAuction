@@ -1,9 +1,28 @@
-import { Injectable, signal, computed } from '@angular/core';
+import { Injectable, signal, computed, effect } from '@angular/core';
 
 @Injectable({
   providedIn: 'root'
 })
 export class CartService {
+  constructor() {
+    effect(() => {
+      const remaining = this.remainingTickets();
+      const used = this.totalGiftCount();
+      const total = this.totalTickets();
+      const isModalOpen = this.ticketModalSignal();
+      
+      if (total > 0 && used > 0 && remaining === 0 && !isModalOpen && !this.ticketModalSuppressedSignal()) {
+        const msg = 'כל הכרטיסים שלך כבר בשימוש. יש לרכוש חבילות נוספות.';
+        this.openTicketLimitModal(msg);
+      }
+      
+      // Auto-dismiss modal when limit is no longer exceeded
+      // Close if modal is open AND we now have remaining tickets
+      if (isModalOpen && remaining > 0) {
+        this.closeTicketLimitModal();
+      }
+    });
+  }
   // Package-related signals
   private quantitiesSignal = signal<Record<number, number>>({});
   private cartItemsSignal = signal<any[]>([]);
@@ -68,6 +87,8 @@ export class CartService {
   // Ticket limit modal signals and message
   private ticketModalSignal = signal<boolean>(false);
   private ticketLimitMessageSignal = signal<string>('');
+  // When user manually closes the modal we temporarily suppress auto-opening
+  private ticketModalSuppressedSignal = signal<boolean>(false);
 
   ticketModal = this.ticketModalSignal.asReadonly();
   ticketMessage = this.ticketLimitMessageSignal.asReadonly();
@@ -80,13 +101,33 @@ export class CartService {
     return (gifts + n) <= tickets;
   }
 
+  // Remaining tickets available for assigning to gifts
+  remainingTickets = computed(() => {
+    const tickets = this.totalTickets() || 0;
+    const used = this.totalGiftCount() || 0;
+    return Math.max(0, tickets - used);
+  });
+
+  // Helper: human-friendly ticket-limit message for UI tooltips/modals
+  ticketLimitMessage(n: number = 1): string {
+    const tickets = this.totalTickets();
+    const used = this.totalGiftCount();
+    if (!tickets || tickets <= 0) return 'אין לך כרטיסים בסל — יש לרכוש חבילות כרטיסים.';
+    const missing = Math.max(0, (used + n) - tickets);
+    return `אין מספיק כרטיסים. חסרים ${missing} כרטיסים.`;
+  }
+
   openTicketLimitModal(message: string) {
     this.ticketLimitMessageSignal.set(message);
     this.ticketModalSignal.set(true);
   }
 
-  closeTicketLimitModal() {
+  closeTicketLimitModal(manual: boolean = false) {
     this.ticketModalSignal.set(false);
+    if (manual) {
+      this.ticketModalSuppressedSignal.set(true);
+      setTimeout(() => this.ticketModalSuppressedSignal.set(false), 10000);
+    }
   }
 setQuantity(packageId: number, qty: number) {
   this.quantitiesSignal.update(current => {
@@ -99,7 +140,6 @@ setQuantity(packageId: number, qty: number) {
     return updated;
   });
   
-
 
   this.enforceGiftLimit(); 
 }

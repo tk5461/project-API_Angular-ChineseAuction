@@ -13,12 +13,12 @@ interface TabItem {
 
 @Component({
   selector: 'app-header',
-  standalone: true,
+  standalone: true, // חובה שיהיה true
   imports: [TabsModule, CommonModule],
   templateUrl: './header.component.html',
-  styleUrl: './header.component.scss'
+  styleUrls: ['./header.component.scss']
 })
-export class Header implements OnInit {
+export class Header implements OnInit { 
   private router = inject(Router);
   public authService = inject(AuthService); 
   imageUrl = environment.apiUrl + '/images/main/';
@@ -27,8 +27,8 @@ export class Header implements OnInit {
     { title: 'החבילות', value: 'package' },
     { title: 'הפרסים', value: 'gift' },
     { title: 'על ההגרלה', value: 'about' },
-    { title: 'מי אנחנו', value: 'who-we-are' },
-    { title: 'דברו איתנו', value: 'contact' },
+    { title:  'דף הבית', value: '' },
+    { title: 'הזמנות שלי', value: 'user-orders' },
     { title: 'ניהול', value: 'manager', adminOnly: true },
     { title: 'הרשמה', value: 'register', onlyLoggedOut: true },
     { title: 'כניסה', value: 'login', onlyLoggedOut: true },
@@ -37,9 +37,9 @@ export class Header implements OnInit {
   ];
 
   ngOnInit() {
-    // הטאבים כבר מוגדרים למעלה בצורה טיפוסית (Typed)
+
   }
-// סינון הטאבים בצורה בטוחה לפי מצב המשתמש והמנהל
+
   tabsSee = computed(() => {
     const isLogged = this.authService.isLoggedIn();
     const isAdmin = this.authService.isManager();

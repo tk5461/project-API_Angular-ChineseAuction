@@ -1,0 +1,168 @@
+// משתני צבע
+$primary: #6f4bb5;
+$secondary: #57cbb0;
+$dark-bg: #1a1425; // סגול כהה מאוד ל-Hero
+$light-bg: #f8f9fa;
+$white: #ffffff;
+
+.raffle-about-container {
+  direction: rtl;
+  font-family: 'Segoe UI', Tahoma, sans-serif;
+
+  // --- HERO SECTION (החלק המונפש והזוהר) ---
+  .main-hero {
+    position: relative;
+    background: linear-gradient(135deg, $dark-bg 0%, #000000 100%);
+    padding: 100px 20px 160px;
+    text-align: center;
+    color: $white;
+    overflow: hidden;
+
+    // עיגולי אור זזים ברקע
+    .glow-orb {
+      position: absolute;
+      border-radius: 50%;
+      filter: blur(80px);
+      z-index: 1;
+      opacity: 0.4;
+    }
+    .orb-1 {
+      width: 400px; height: 400px;
+      background: $primary;
+      top: -100px; right: -50px;
+      animation: drift 15s infinite alternate ease-in-out;
+    }
+    .orb-2 {
+      width: 300px; height: 300px;
+      background: $secondary;
+      bottom: -50px; left: -50px;
+      animation: drift 10s infinite alternate-reverse ease-in-out;
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 10;
+      animation: fadeInDown 1s ease-out;
+    }
+
+    .top-label {
+      background: rgba($secondary, 0.2);
+      color: $secondary;
+      border: 1px solid $secondary;
+      padding: 5px 15px;
+      border-radius: 20px;
+      font-size: 0.9rem;
+      font-weight: bold;
+      animation: pulse 2s infinite;
+    }
+
+    .main-title {
+      font-size: 3.5rem;
+      margin: 25px 0;
+      line-height: 1.2;
+      text-shadow: 0 0 20px rgba(255,255,255,0.2);
+      
+      .brand-name {
+        color: $secondary;
+        text-shadow: 0 0 15px rgba($secondary, 0.6);
+        background: linear-gradient(to bottom, #fff, $secondary);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+    }
+
+    .hero-subtitle {
+      font-size: 1.3rem;
+      max-width: 700px;
+      margin: 0 auto 40px;
+      opacity: 0.85;
+    }
+
+    // כפתור ניאון זוהר
+    .neon-cta-button {
+      background-color: $secondary !important;
+      border: none !important;
+      color: #1a1425 !important;
+      font-weight: bold;
+      padding: 15px 40px;
+      font-size: 1.2rem;
+      box-shadow: 0 0 15px rgba($secondary, 0.4);
+      transition: 0.3s;
+      
+      &:hover {
+        box-shadow: 0 0 30px rgba($secondary, 0.8);
+        transform: scale(1.05);
+      }
+    }
+  }
+
+  // --- INFO SECTION (בהיר ונקי) ---
+  .info-grid-section {
+    background: $light-bg;
+    margin-top: -60px;
+    padding: 0 20px 80px;
+    position: relative;
+    z-index: 20;
+
+    .section-header h2 {
+      text-align: center;
+      font-size: 2.5rem;
+      color: #333;
+      margin-bottom: 50px;
+      &:after {
+        content: ''; display: block; width: 60px; height: 4px; background: $secondary; margin: 15px auto;
+      }
+    }
+
+    .cards-grid {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 30px;
+    }
+
+    .info-card {
+      background: $white;
+      padding: 35px;
+      border-radius: 12px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+      border-top: 5px solid $primary;
+      transition: 0.3s;
+      
+      &:hover { transform: translateY(-10px); }
+
+      .card-header {
+        display: flex;
+        align-items: center;
+        gap: 15px;
+        margin-bottom: 20px;
+        i { font-size: 2.2rem; color: $primary; }
+        h3 { margin: 0; font-size: 1.5rem; color: #222; }
+      }
+
+      &.highlight-card {
+        border-top-color: $secondary;
+        background-color: rgba($secondary, 0.05);
+      }
+    }
+  }
+
+  // --- ANIMATIONS ---
+  @keyframes drift {
+    from { transform: translate(0, 0); }
+    to { transform: translate(40px, 40px); }
+  }
+
+  @keyframes pulse {
+    0% { transform: scale(1); opacity: 1; }
+    50% { transform: scale(1.05); opacity: 0.8; }
+    100% { transform: scale(1); opacity: 1; }
+  }
+
+  @keyframes fadeInDown {
+    from { opacity: 0; transform: translateY(-30px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+}
+
