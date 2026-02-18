@@ -58,6 +58,24 @@ totalTickets = computed(() => {
   }, 0);
 });
 
+  // Total price for all packages currently in cart (price * quantity)
+  private totalPriceSignal = computed(() => {
+    const pkgs = this.availablePackagesSignal();
+    const quantities = this.quantitiesSignal();
+    return Object.keys(quantities).reduce((acc, idStr) => {
+      const id = Number(idStr);
+      const pkg = pkgs.find(p => p.idPackage === id || (p as any).id === id);
+      const qty = quantities[id] || 0;
+      const price = pkg ? (pkg.price || 0) : 0;
+      return acc + (price * qty);
+    }, 0);
+  });
+
+  // Template-friendly accessor used as cartService.totalPrice()
+  totalPrice(): number {
+    return this.totalPriceSignal();
+  }
+
 
 
   // Ticket limit modal signals and message

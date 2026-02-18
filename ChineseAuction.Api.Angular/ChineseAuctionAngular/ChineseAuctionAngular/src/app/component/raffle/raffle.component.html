@@ -37,6 +37,18 @@
     </div>
 
     <div style="background: white; border-radius: 40px; padding: 40px; box-shadow: 0 20px 60px rgba(106, 27, 154, 0.08); text-align: center; border: 1px solid #e1bee7; display: flex; flex-direction: column; justify-content: center; height: 100%;">
+      <div style="text-align: right; margin-bottom: 20px;">
+        <div style="background:#fff3e0; border:1px dashed #ffcc80; padding:12px; border-radius:12px; color:#4a148c; font-weight:600;">
+          <div style="margin-bottom:6px;">הסבר קצר — איך עובדת ההגרלה:</div>
+          <div style="font-weight:400; font-size:0.95em; line-height:1.3;">קודם יש להוסיף חבילות; לפי כמות הכרטיסים שבחבילות תינתן האפשרות להוסיף כרטיסים. רק לאחר שיהיו כרטיסים בחבילות ניתן להוסיף כרטיסים למתנות.</div>
+          @if (cartService.totalTickets() === 0) {
+            <div style="margin-top:8px; color:#d32f2f; font-weight:700;">אין לך כרטיסים בסל — יש להוסיף חבילות כדי להפעיל הוספת כרטיסים.</div>
+          } @else {
+            <div style="margin-top:8px; color:#2e7d32; font-weight:700;">יש לך {{ cartService.totalTickets() }} כרטיסים בסל. כרטיסים זמינים להוספה: {{ cartService.remainingTickets() }}</div>
+          }
+        </div>
+      </div>
+
       @if (currentGift()) {
         <div style="margin-bottom: 30px;">
           <span [style.background]="currentGift()?.isDrawn ? '#e8f5e9' : '#f3e5f5'" [style.color]="currentGift()?.isDrawn ? '#2e7d32' : '#6a1b9a'" style="padding: 8px 25px; border-radius: 50px; font-weight: 800; font-size: 0.9em;">

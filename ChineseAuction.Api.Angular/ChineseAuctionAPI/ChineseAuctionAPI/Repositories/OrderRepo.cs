@@ -38,8 +38,8 @@ namespace ChineseAuctionAPI.Repositories
 
             var currentUsedTickets = order.OrdersGift.Sum(og => og.Amount);
 
-            // var existingGift = order.OrdersGift.FirstOrDefault(og => og.IdGift == IdGift);
-            // int extraRequested = deltaAmount > 0 ? deltaAmount : 0; // Only check positive deltas
+            var existingGift = order.OrdersGift.FirstOrDefault(og => og.IdGift == IdGift);
+            int extraRequested = deltaAmount > 0 ? deltaAmount : 0; // Only check positive deltas
 
             if (deltaAmount > 0 && currentUsedTickets + extraRequested > totalTickets)
             {

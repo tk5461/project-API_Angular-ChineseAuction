@@ -1,0 +1,80 @@
+2026-02-18 00:36:14.014 +02:00 [INF] Starting web host - Monitoring all requests
+2026-02-18 00:36:16.061 +02:00 [INF] HTTP GET /swagger/index.html responded 200 in 96.2174 ms
+2026-02-18 00:36:16.240 +02:00 [INF] HTTP GET /swagger/v1/swagger.json responded 200 in 45.1815 ms
+2026-02-18 01:47:01.527 +02:00 [INF] Starting web host - Monitoring all requests
+2026-02-18 01:47:02.808 +02:00 [INF] HTTP GET /swagger/index.html responded 200 in 51.7581 ms
+2026-02-18 01:47:02.902 +02:00 [INF] HTTP GET /swagger/v1/swagger.json responded 200 in 20.2572 ms
+2026-02-18 01:49:51.512 +02:00 [INF] שולף את כל החבילות.
+2026-02-18 01:49:52.623 +02:00 [INF] HTTP GET /api/Packages responded 200 in 1340.0289 ms
+2026-02-18 01:49:52.634 +02:00 [INF] Attempting to retrieve all gifts.
+2026-02-18 01:49:52.636 +02:00 [INF] שולף את רשימת כל המתנות מהמאגר.
+2026-02-18 01:49:52.811 +02:00 [INF] נשלפו בהצלחה 10 מתנות.
+2026-02-18 01:49:52.829 +02:00 [INF] HTTP GET /api/Gift responded 200 in 201.0298 ms
+2026-02-18 01:51:15.090 +02:00 [INF] שולף את כל החבילות.
+2026-02-18 01:51:15.107 +02:00 [INF] HTTP GET /api/Packages responded 200 in 20.2551 ms
+2026-02-18 01:51:15.116 +02:00 [INF] Attempting to retrieve all gifts.
+2026-02-18 01:51:15.118 +02:00 [INF] שולף את רשימת כל המתנות מהמאגר.
+2026-02-18 01:51:15.132 +02:00 [INF] נשלפו בהצלחה 10 מתנות.
+2026-02-18 01:51:15.133 +02:00 [INF] HTTP GET /api/Gift responded 200 in 19.0403 ms
+2026-02-18 01:51:22.756 +02:00 [INF] HTTP OPTIONS /api/User/login responded 204 in 0.9496 ms
+2026-02-18 01:51:22.799 +02:00 [INF] Login attempt for email: Aa123456@example.com
+2026-02-18 01:51:22.807 +02:00 [INF] ניסיון התחברות עבור אימייל: Aa123456@example.com
+2026-02-18 01:51:23.070 +02:00 [INF] Login attempt for email: Aa123456@example.com
+2026-02-18 01:51:23.073 +02:00 [INF] ניסיון התחברות עבור אימייל: Aa123456@example.com
+2026-02-18 01:51:23.163 +02:00 [INF] HTTP POST /api/User/login responded 200 in 398.8760 ms
+2026-02-18 01:51:23.275 +02:00 [INF] HTTP POST /api/User/login responded 200 in 206.4514 ms
+2026-02-18 01:51:28.800 +02:00 [INF] HTTP OPTIONS /api/Gift responded 204 in 0.1118 ms
+2026-02-18 01:51:28.837 +02:00 [INF] Attempting to retrieve all gifts.
+2026-02-18 01:51:28.840 +02:00 [INF] שולף את רשימת כל המתנות מהמאגר.
+2026-02-18 01:51:28.843 +02:00 [INF] נשלפו בהצלחה 10 מתנות.
+2026-02-18 01:51:28.844 +02:00 [INF] HTTP GET /api/Gift responded 200 in 40.3749 ms
+2026-02-18 01:51:28.870 +02:00 [INF] HTTP GET /images/gift/IMG_3313.JPG responded 304 in 13.3129 ms
+2026-02-18 01:51:29.999 +02:00 [INF] HTTP OPTIONS /api/Packages responded 204 in 0.0791 ms
+2026-02-18 01:51:30.000 +02:00 [INF] HTTP OPTIONS /api/Orders/user/1 responded 204 in 0.0918 ms
+2026-02-18 01:51:30.008 +02:00 [INF] שולף את כל החבילות.
+2026-02-18 01:51:30.016 +02:00 [INF] HTTP GET /api/Packages responded 200 in 12.0473 ms
+2026-02-18 01:51:30.024 +02:00 [INF] שולף את כל ההזמנות עבור משתמש 1.
+2026-02-18 01:51:30.069 +02:00 [WRN] Compiling a query which loads related collections for more than one collection navigation, either via 'Include' or through projection, but no 'QuerySplittingBehavior' has been configured. By default, Entity Framework will use 'QuerySplittingBehavior.SingleQuery', which can potentially result in slow query performance. See https://go.microsoft.com/fwlink/?linkid=2134277 for more information. To identify the query that's triggering this warning call 'ConfigureWarnings(w => w.Throw(RelationalEventId.MultipleCollectionIncludeWarning))'.
+2026-02-18 01:51:30.146 +02:00 [INF] HTTP GET /api/Orders/user/1 responded 200 in 138.4483 ms
+2026-02-18 01:51:36.183 +02:00 [INF] HTTP OPTIONS /api/Gift responded 204 in 0.1270 ms
+2026-02-18 01:51:36.187 +02:00 [INF] Attempting to retrieve all gifts.
+2026-02-18 01:51:36.188 +02:00 [INF] שולף את רשימת כל המתנות מהמאגר.
+2026-02-18 01:51:36.191 +02:00 [INF] נשלפו בהצלחה 10 מתנות.
+2026-02-18 01:51:36.192 +02:00 [INF] HTTP GET /api/Gift responded 200 in 5.4449 ms
+2026-02-18 01:51:40.133 +02:00 [INF] Attempting to retrieve all gifts.
+2026-02-18 01:51:40.133 +02:00 [INF] שולף את רשימת כל המתנות מהמאגר.
+2026-02-18 01:51:40.138 +02:00 [INF] נשלפו בהצלחה 10 מתנות.
+2026-02-18 01:51:40.139 +02:00 [INF] HTTP GET /api/Gift responded 200 in 6.9982 ms
+2026-02-18 01:51:43.165 +02:00 [INF] HTTP OPTIONS /api/Packages responded 204 in 0.0657 ms
+2026-02-18 01:51:43.165 +02:00 [INF] HTTP OPTIONS /api/Orders/user/1 responded 204 in 0.0646 ms
+2026-02-18 01:51:43.171 +02:00 [INF] שולף את כל החבילות.
+2026-02-18 01:51:43.172 +02:00 [INF] שולף את כל ההזמנות עבור משתמש 1.
+2026-02-18 01:51:43.175 +02:00 [INF] HTTP GET /api/Packages responded 200 in 4.6996 ms
+2026-02-18 01:51:43.181 +02:00 [INF] HTTP GET /api/Orders/user/1 responded 200 in 9.9457 ms
+2026-02-18 01:54:55.614 +02:00 [INF] Starting web host - Monitoring all requests
+2026-02-18 01:54:56.756 +02:00 [INF] HTTP GET /swagger/index.html responded 200 in 53.5701 ms
+2026-02-18 01:54:56.844 +02:00 [INF] HTTP GET /swagger/v1/swagger.json responded 200 in 17.6728 ms
+2026-02-18 01:56:42.137 +02:00 [INF] HTTP OPTIONS /api/Packages responded 204 in 11.2831 ms
+2026-02-18 01:56:42.137 +02:00 [INF] HTTP OPTIONS /api/Orders/user/1 responded 204 in 11.2843 ms
+2026-02-18 01:56:42.437 +02:00 [INF] שולף את כל החבילות.
+2026-02-18 01:56:42.444 +02:00 [INF] שולף את כל ההזמנות עבור משתמש 1.
+2026-02-18 01:56:43.112 +02:00 [WRN] Compiling a query which loads related collections for more than one collection navigation, either via 'Include' or through projection, but no 'QuerySplittingBehavior' has been configured. By default, Entity Framework will use 'QuerySplittingBehavior.SingleQuery', which can potentially result in slow query performance. See https://go.microsoft.com/fwlink/?linkid=2134277 for more information. To identify the query that's triggering this warning call 'ConfigureWarnings(w => w.Throw(RelationalEventId.MultipleCollectionIncludeWarning))'.
+2026-02-18 01:56:43.453 +02:00 [INF] HTTP GET /api/Packages responded 200 in 1305.7250 ms
+2026-02-18 01:56:43.459 +02:00 [INF] HTTP OPTIONS /api/Gift responded 204 in 0.2517 ms
+2026-02-18 01:56:43.470 +02:00 [INF] Attempting to retrieve all gifts.
+2026-02-18 01:56:43.471 +02:00 [INF] שולף את רשימת כל המתנות מהמאגר.
+2026-02-18 01:56:43.505 +02:00 [INF] HTTP GET /api/Orders/user/1 responded 200 in 1357.4419 ms
+2026-02-18 01:56:43.563 +02:00 [INF] נשלפו בהצלחה 10 מתנות.
+2026-02-18 01:56:43.576 +02:00 [INF] HTTP GET /api/Gift responded 200 in 113.4073 ms
+2026-02-18 01:56:43.583 +02:00 [INF] שולף את כל ההזמנות עבור משתמש 1.
+2026-02-18 01:56:43.589 +02:00 [INF] HTTP GET /api/Orders/user/1 responded 200 in 7.8064 ms
+2026-02-18 01:56:43.964 +02:00 [INF] Attempting to retrieve all gifts.
+2026-02-18 01:56:43.966 +02:00 [INF] שולף את רשימת כל המתנות מהמאגר.
+2026-02-18 01:56:43.973 +02:00 [INF] נשלפו בהצלחה 10 מתנות.
+2026-02-18 01:56:43.975 +02:00 [INF] HTTP GET /api/Gift responded 200 in 11.9768 ms
+2026-02-18 01:56:44.601 +02:00 [INF] שולף את כל החבילות.
+2026-02-18 01:56:44.603 +02:00 [INF] שולף את כל ההזמנות עבור משתמש 1.
+2026-02-18 01:56:44.609 +02:00 [INF] HTTP GET /api/Packages responded 200 in 9.7623 ms
+2026-02-18 01:56:44.613 +02:00 [INF] HTTP GET /api/Orders/user/1 responded 200 in 14.1455 ms
+2026-02-18 01:56:45.448 +02:00 [INF] שולף את כל ההזמנות עבור משתמש 1.
+2026-02-18 01:56:45.456 +02:00 [INF] HTTP GET /api/Orders/user/1 responded 200 in 9.5425 ms

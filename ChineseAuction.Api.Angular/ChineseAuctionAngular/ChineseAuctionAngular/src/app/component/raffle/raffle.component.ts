@@ -1,6 +1,7 @@
 import { Component, OnInit, signal, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { GiftService } from '../../services/gift.service';
+import { CartService } from '../../services/cart.service';
 import { Gift } from '../../models/GiftDTO';
 import { interval, Subscription } from 'rxjs';
 import { environment } from '../../../../environment';
@@ -14,6 +15,7 @@ import { environment } from '../../../../environment';
 })
 export class RaffleComponent implements OnInit {
   private giftService = inject(GiftService);
+  public cartService = inject(CartService);
   
   imageUrl = environment.apiUrl + '/images/gift/';
   gifts = signal<Gift[]>([]);
