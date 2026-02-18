@@ -30,7 +30,6 @@ export class AddGiftComponent implements OnInit {
 
   ngOnInit() {
     this.loadCategories();
-    // מניעת שגיאת 400: השרת דורש כמות בין 1 ל-500
     this.newGift.amount = 1; 
     this.newGift.categoryId = 0; 
     
